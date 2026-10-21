@@ -6,7 +6,7 @@
 
 body {
     background-color: #2F241A;
-    padding: 64px; 
+    padding: 0px; 
 
 }
 
@@ -15,22 +15,30 @@ body {
     height: 1031px;  
     display: flex;
     flex-direction: column; 
+
+    background-image: url('../../assets/img/fundo-quem-somos.png'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 0px 64px 64px 64px; 
 }
 
 .frase-de-efeito {
     font-size: 20px;
     font-family: 'Karma', serif; 
     font-weight: bold;             
-    color: #FFFFFF; 
+    color: #2F241A; 
     align-self: flex-end; 
-    margin: 80px 64px 0px 0px; 
+    margin: 100px 64px 0px 0px; 
 }
 
 .frase-de-efeito-2 {
     font-size: 20px;
     font-family: 'Karma', serif; 
     font-weight: bold;             
-    color: #FFFFFF; 
+    color: #2F241A; 
     align-self: flex-end; 
     margin: 8px 64px 0px 0px; 
 }
@@ -39,7 +47,7 @@ body {
     font-size: 20px;
     font-family: 'Karma', serif; 
     font-weight: bold;             
-    color: #FFFFFF; 
+    color: #2F241A; 
     align-self: flex-end; 
     margin: 8px 64px 0px 0px; 
 }
@@ -48,9 +56,9 @@ h1 {
     font-size: 100px;
     font-family: 'Lato', sans-serif;
     font-weight: normal;
-    color: #FFFFFF; 
+    color: #2F241A; 
     align-self: flex-start; 
-    margin: -80px 0px 64px 0px; 
+    margin: -120px 0px 64px 64px; 
     line-height: 0.85; 
     display: flex;
     align-items: baseline; 
@@ -59,11 +67,36 @@ h1 {
 h1 span {
     font-size: 300px;
     font-family: 'Lato', sans-serif; 
-    font-weight: regular;
+    font-weight: normal;
     margin-right: -0.02em;
     line-height: 1;
 }
 
 h1 span:nth-of-type(2) {
     margin-left: 40px; 
+}
+
+.secao-2 {
+    width: 1440px;   
+    height: 685px;  
+    display: flex;
+    flex-direction: column;
+}
+
+.introducao {
+    font-family: 'Karma', serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: #DBDBDB;
+}
+
+.paragrafo-1 {
+    font-family: 'Karma', serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #DBDBDB;
+}
+
+.paragrafo-1 span {
+    font-weight: bold;
 }
