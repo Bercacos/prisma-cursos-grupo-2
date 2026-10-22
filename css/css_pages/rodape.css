@@ -3,12 +3,6 @@
    ========================================================================== */
 
 /* --- Variáveis de Suporte (Caso não estejam no CSS global) --- */
-
-/* ==========================================================================
-   RODAPÉ (FOOTER) - ESTILOS E RESPONSIVIDADE
-   ========================================================================== */
-
-/* --- Variáveis de Suporte (Caso não estejam no CSS global) --- */
 :root {
     --color-dark: #2F241A;
     --color-light: #DBDBDB;
@@ -154,6 +148,11 @@
         display: block; /* Ativa a quebra do e-mail apenas no mobile */
     }
 
+    /* Oculta completamente a coluna da logo e da marca no mobile */
+    .coluna-logo {
+        display: none !important;
+    }
+
     .rodape {
         padding: 20px 8px;
     }
@@ -165,22 +164,6 @@
         align-items: flex-start;
         gap: 6px;
         width: 100%;
-    }
-
-    .coluna-logo {
-        flex: 0 0 60px;
-        min-width: 60px;
-    }
-
-    .logo-rodape {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nome-marca {
-        font-size: 9px;
-        margin-top: 3px;
-        white-space: nowrap;
     }
 
     .coluna-links, 
