@@ -23,6 +23,11 @@ body {
     padding-top: 80px; /* Reserva espaço para a Navbar fixa */
 }
 
+/* Quebra de linha do e-mail desativada por padrão em telas maiores */
+.quebra-mobile {
+    display: none;
+}
+
 /* ==========================================================================
    2. SEÇÃO 1 - BANNER PRINCIPAL (ESTILOS PADRÃO / DESKTOP)
    ========================================================================== */
@@ -320,7 +325,7 @@ h1 span:nth-of-type(2) {
     height: 24px;
     object-fit: contain;
     flex-shrink: 0;
-    /* Converte o ícone de preto para claro */
+    /* Converte o ícone de preto para tom claro */
     filter: brightness(0) invert(0.9);
 }
 
@@ -330,7 +335,17 @@ h1 span:nth-of-type(2) {
 
 /* DISPOSITIVOS MÓVEIS (Até 768px) */
 @media (max-width: 768px) {
-    /* Ajustes das Seções */
+    /* Força a tag <br> a funcionar como quebra de linha no mobile */
+    .quebra-mobile {
+        display: block;
+    }
+
+    /* Oculta completamente a logo e a marca no mobile */
+    .coluna-logo {
+        display: none !important;
+    }
+
+    /* Ajustes das Seções do Conteúdo Principal */
     .secao-1 {
         flex-direction: row !important;
         justify-content: space-between !important;
@@ -389,7 +404,7 @@ h1 span:nth-of-type(2) {
         font-size: 16px;
     }
 
-    /* Ajustes do Rodapé no Mobile (3 Colunas Lado a Lado sem invasão de limites) */
+    /* Rodapé no Mobile (Layout Lado a Lado / Row sem a Logo) */
     .rodape {
         padding: 20px 8px;
     }
@@ -399,24 +414,8 @@ h1 span:nth-of-type(2) {
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 6px;
+        gap: 12px;
         width: 100%;
-    }
-
-    .coluna-logo {
-        flex: 0 0 60px;
-        min-width: 60px;
-    }
-
-    .logo-rodape {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nome-marca {
-        font-size: 9px;
-        margin-top: 3px;
-        white-space: nowrap;
     }
 
     .coluna-links, 
@@ -451,7 +450,7 @@ h1 span:nth-of-type(2) {
     }
 
     .rodape .link-email {
-        white-space: normal;
+        white-space: normal !important;
         overflow-wrap: anywhere;
         word-break: normal;
     }
@@ -592,29 +591,5 @@ h1 span:nth-of-type(2) {
     .link-b, 
     .link-c {
         font-size: 20px;
-    }
-}
-
-/* ==========================================================================
-   ESTILO PADRÃO (DESKTOP & TABLET)
-   ========================================================================== */
-/* Oculta a quebra de linha em telas maiores */
-.quebra-mobile {
-    display: none;
-}
-
-
-/* ==========================================================================
-   MEDIA QUERY - MOBILE (Até 768px)
-   ========================================================================== */
-@media (max-width: 768px) {
-    /* Força a tag <br> a funcionar como quebra de linha no mobile */
-    .quebra-mobile {
-        display: block;
-    }
-
-    /* Permite que o link organize a imagem e o texto quebrado */
-    .coluna-comunicacao .link-email {
-        white-space: normal !important;
     }
 }
