@@ -23,7 +23,7 @@ body {
     padding-top: 80px; /* Reserva espaço para a Navbar fixa */
 }
 
-/* Quebra de linha do e-mail desativada por padrão em telas maiores */
+/* Quebra de linha do e-mail desativada por padrão */
 .quebra-mobile {
     display: none;
 }
@@ -295,7 +295,7 @@ h1 span:nth-of-type(2) {
     color: var(--color-light, #DBDBDB);
 }
 
-/* Links Exclusivos do Rodapé (Isolados com .rodape) */
+/* Links Exclusivos do Rodapé (Isolados com .rodape para não conflitar com .link-a, .link-b, .link-c) */
 .rodape [class^="link-"] {
     color: var(--color-light, #DBDBDB);
     text-decoration: none;
@@ -309,7 +309,7 @@ h1 span:nth-of-type(2) {
     text-decoration: underline;
 }
 
-/* Coluna Comunicação e Ícones */
+/* Coluna Comunicação e Ícones PNG/WEBP */
 .coluna-comunicacao li {
     margin-bottom: 16px;
 }
@@ -325,7 +325,6 @@ h1 span:nth-of-type(2) {
     height: 24px;
     object-fit: contain;
     flex-shrink: 0;
-    /* Converte o ícone de preto para tom claro */
     filter: brightness(0) invert(0.9);
 }
 
@@ -335,17 +334,12 @@ h1 span:nth-of-type(2) {
 
 /* DISPOSITIVOS MÓVEIS (Até 768px) */
 @media (max-width: 768px) {
-    /* Força a tag <br> a funcionar como quebra de linha no mobile */
-    .quebra-mobile {
-        display: block;
-    }
-
-    /* Oculta completamente a logo e a marca no mobile */
+    /* Oculta a logo e o nome do rodapé no mobile */
     .coluna-logo {
         display: none !important;
     }
 
-    /* Ajustes das Seções do Conteúdo Principal */
+    /* Ajustes das Seções de Conteúdo */
     .secao-1 {
         flex-direction: row !important;
         justify-content: space-between !important;
@@ -404,64 +398,41 @@ h1 span:nth-of-type(2) {
         font-size: 16px;
     }
 
-    /* Rodapé no Mobile (Layout Lado a Lado / Row sem a Logo) */
+    /* Rodapé no Mobile (Empilhado em Column com apenas as seções Cursos, Navegação e Comunicação) */
     .rodape {
-        padding: 20px 8px;
+        padding: 40px 20px;
     }
 
     .rodape-container {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 12px;
-        width: 100%;
-    }
-
-    .coluna-links, 
-    .coluna-comunicacao {
-        flex: 1 1 0;
-        min-width: 0;
-        overflow: hidden;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 35px !important;
     }
 
     .titulo-coluna {
-        font-size: 11px;
-        margin-bottom: 6px;
-        white-space: nowrap;
+        font-size: 20px;
+        margin-bottom: 12px;
     }
 
     .coluna-links ul {
-        padding-left: 8px;
+        padding-left: 20px;
     }
 
     .coluna-links li {
-        margin-bottom: 3px;
+        margin-bottom: 8px;
     }
 
     .coluna-comunicacao li {
-        margin-bottom: 6px;
+        margin-bottom: 12px;
     }
 
     .rodape [class^="link-"] {
-        font-size: 10px;
-        line-height: 1.25;
-        white-space: nowrap;
-    }
-
-    .rodape .link-email {
-        white-space: normal !important;
-        overflow-wrap: anywhere;
-        word-break: normal;
-    }
-
-    .coluna-comunicacao [class^="link-"] {
-        gap: 3px;
+        font-size: 16px;
     }
 
     .icone-rodape {
-        width: 12px;
-        height: 12px;
+        width: 22px;
+        height: 22px;
     }
 }
 
