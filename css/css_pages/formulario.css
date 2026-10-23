@@ -12,6 +12,8 @@ body {
     gap: 32px;
 }
 
+/*Tiutlo e subtitulo*/
+
 .formulario-texto h1 {
     color: #FFF;
     text-align: center;
@@ -43,4 +45,73 @@ body {
     line-height: normal;
     align-self: MIN;
     margin-top: 0;
+}
+
+/*Formulário*/
+
+.formulario-form {
+    background-color: #dbdbdb;
+    border-radius: 40px;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.formulario-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; 
+    background-color: #dbdbdb;   
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;  
+    background-color: #dbdbdb;           
+}
+
+.campo label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2e251b;
+    background-color: #dbdbdb;   
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box; 
+    background-color: #2e251b;
+    color: #fff;
+    padding: 0.9rem 1.2rem;
+    font-family: Karma;
+    font-size: 20px;
+    border-radius: 999px;  
+}
+
+/* Redimensionar caixa da mensagem */
+
+.campo textarea {
+    border-radius: 30px;
+    resize: vertical;       
+}
+
+/*Botão*/
+
+.formulario-form button {
+    align-self: center;    
+    background-color: #9a2f2e;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.9rem 2rem;
+    font-family: Karma;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.formulario-form button:hover {
+    filter: brightness(1.15);
 }
