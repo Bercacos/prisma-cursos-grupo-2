@@ -93,7 +93,7 @@
 
 /* Tablet */
 
-@media (max-width: 1024px){
+@media (max-width: 1100px){
     .navbar {
         padding: 0px 20px;
         box-sizing: border-box;
@@ -113,8 +113,9 @@
     }
 
     .navbar-menu {
-    gap: 108px;
-    }
+    align-items: center;
+    gap: clamp(16px, 4vw, 108px);
+}
 
     .navbar-letters a {
     font-size: 16px;
@@ -125,10 +126,12 @@
 
 /* Mobile */
 
-@media (max-width: 402px) {
+@media (max-width: 850px) {
     .navbar {
-        padding: 0px 5px;
-        height: 60px; 
+        padding: 0 5px;
+        height: 60px;
+        justify-content: space-evenly;
+        gap: 8px;
     }
 
     .navbar-logo {
@@ -146,24 +149,52 @@
     }
 
     .navbar-menu {
-    gap: 7px;
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    gap: clamp(8px, 3vw, 24px);
     }
 
     .navbar-letters ul {
-    gap: 7px;
+    gap: 6px;
     margin: 0;
     padding: 0;
     align-items: center;
     }
 
     .navbar-letters a {
-    font-size: 8px;
+    font-size: clamp(6px, 2vw, 10px);
     }
 
     .navbar-button .navbar-button-link {
-    font-size: 8px;
+    font-size: clamp(6px, 2vw, 10px);
     border-radius: 8px;
     height: 25px;
+}
+
+/* Mobile Small */
+@media (max-width: 360px) {
+    .navbar {
+        height: auto;
+        padding: 10px 8px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar-letters ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar-letters a {
+        white-space: nowrap;
+    }
 }
 
 }
