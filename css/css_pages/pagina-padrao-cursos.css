@@ -246,8 +246,6 @@ body {
     margin-top: clamp(60px, 5vw, 110px);
 }
 
-
-
 /* ==========================================================================
    5. SEÇÃO 4 - TRILHA DA VIAGEM
    ========================================================================== */
@@ -256,7 +254,7 @@ body {
     --icone: clamp(120px, 17vw, 300px);
     width: 100%;
     padding: clamp(24px, 2.5vw, 48px) var(--pad-x) clamp(40px, 5vw, 96px);
-    background-color: var(--color-dark); /* Cor alterada para corresponder à Seção 2 */
+    background-color: var(--color-dark);
     color: var(--color-light);
     font-family: var(--font-primary);
 }
@@ -269,7 +267,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Cada etapa: marco (ícone + nome + tempo) de um lado e o card do outro */
 .etapa {
     display: grid;
     grid-template-columns: var(--icone) minmax(0, 1fr);
@@ -345,7 +342,6 @@ body {
     font-weight: bold;
 }
 
-/* Caminho tracejado entre duas etapas (Desktop) */
 .trajeto {
     padding-left: calc(var(--icone) / 2);
     padding-right: calc(var(--icone) / 2);
@@ -362,7 +358,7 @@ body {
 }
 
 /* ==========================================================================
-   SEÇÃO 5 - INVESTIMENTO (FORÇA ALINHAMENTO LADO A LADO)
+   6. SEÇÃO 5 - INVESTIMENTO (BASE DESKTOP)
    ========================================================================== */
 .secao-5 {
     width: 100%;
@@ -374,15 +370,15 @@ body {
 }
 
 .card-investimento {
-    display: flex !important;
-    flex-direction: row !important;  /* Força ícone na esquerda e texto na direita */
-    align-items: center !important;  /* Centraliza a imagem verticalmente */
-    justify-content: flex-start !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     gap: clamp(24px, 3.5vw, 48px);
     background-color: #A38C6D;
-    padding: clamp(20px, 2.5vw, 30px) clamp(24px, 3vw, 40px);
+    padding: clamp(20px, 2.5vw, 30px) clamp(28px, 3.5vw, 52px);
     border-radius: clamp(20px, 2.5vw, 36px);
-    width: fit-content;
+    width: 100%;
     max-width: 760px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -391,15 +387,15 @@ body {
     width: clamp(110px, 12vw, 170px);
     height: auto;
     object-fit: contain;
-    flex-shrink: 0 !important;       /* Impede que o baú encolha */
+    flex-shrink: 0;
     display: block;
 }
 
 .conteudo-investimento {
-    display: flex !important;
-    flex-direction: column !important; /* Mantém as 3 frases em linhas separadas */
-    align-items: flex-start !important; /* Alinha o texto à esquerda */
-    text-align: left !important;        /* Força alinhamento de texto à esquerda */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     gap: 8px;
     font-family: var(--font-primary);
     color: var(--color-light);
@@ -422,10 +418,59 @@ body {
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
+/* ==========================================================================
+   7. SEÇÃO 6 - FAQ (DÚVIDAS FREQUENTES)
+   ========================================================================== */
+.secao-6 {
+    width: 100%;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-family: var(--font-primary);
+    padding: 40px 24px;
+    margin: 0 auto;
+    max-width: 1312px;
+}
 
+.titulo-faq {
+    font-size: clamp(24px, 3.2vw, 48px);
+    font-weight: bold;
+    line-height: 1.25;
+    margin-bottom: clamp(32px, 4vw, 56px);
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.lista-faq {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(28px, 3.5vw, 48px);
+}
+
+.item-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pergunta-faq {
+    font-size: clamp(16px, 1.8vw, 26px);
+    font-weight: bold;
+    line-height: 1.35;
+    color: var(--color-light);
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.resposta-faq {
+    font-size: clamp(14px, 1.45vw, 22px);
+    line-height: 1.6;
+    font-weight: normal;
+    color: var(--color-light);
+    text-align: justify;
+    hyphens: auto;
+    opacity: 0.95;
+}
 
 /* ==========================================================================
-   6. RESPONSIVIDADE
+   8. RESPONSIVIDADE (MEDIA QUERIES)
    ========================================================================== */
 
 /* TABLET (769px a 1024px) */
@@ -460,10 +505,59 @@ body {
     .imagem-navio {
         display: none;
     }
+
+    .secao-6 {
+        padding: 48px 32px 64px;
+    }
+
+    .lista-faq {
+        gap: 36px;
+    }
 }
 
 /* MOBILE (Até 768px) */
 @media (max-width: 768px) {
+    .secao-1 {
+        height: auto;
+        min-height: 480px;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .titulo-banner,
+    .subtitulo-banner,
+    .botao-banner {
+        position: static;
+        transform: none;
+    }
+
+    .titulo-banner,
+    .subtitulo-banner {
+        white-space: normal;
+    }
+
+    .titulo-banner {
+        font-size: clamp(26px, 7vw, 36px);
+    }
+
+    .subtitulo-banner {
+        font-size: clamp(16px, 4.2vw, 22px);
+        margin-top: 20px;
+    }
+
+    .botao-banner {
+        font-size: 18px;
+        margin-top: 32px;
+        padding: 12px 26px;
+    }
+
+    .botao-banner:hover {
+        transform: none;
+    }
+
     .secao-2 {
         flex-direction: column;
         padding: 40px 20px;
@@ -485,11 +579,6 @@ body {
         text-align: left;
     }
 
-    .botao-diario:hover {
-        transform: none;
-    }
-
-    /* Seção 3 */
     .secao-3 {
         grid-template-columns: 1fr;
         row-gap: 36px;
@@ -516,7 +605,6 @@ body {
         display: none;
     }
 
-    /* Seção 4 (Mobile) */
     .secao-4 {
         --icone: 100px;
         padding: 28px 16px 48px;
@@ -533,7 +621,6 @@ body {
         margin-top: 0;
     }
 
-    /* Ilha com o ícone em cima e os subtítulos (nome e tempo) embaixo */
     .etapa-marco {
         display: flex;
         flex-direction: column;
@@ -575,7 +662,6 @@ body {
         font-size: 14px;
     }
 
-    /* Trajeto em Seta vertical centralizada */
     .trajeto {
         display: flex;
         justify-content: center;
@@ -593,69 +679,29 @@ body {
         display: none;
     }
 
-    /* Desenha a seta apontada para baixo com tamanho ampliado */
     .trajeto::after {
         content: '↓';
-        font-size: 48px; /* Aumentado de 32px para 48px */
+        font-size: 48px;
         font-weight: bold;
         color: #DBDBDB;
         line-height: 1;
     }
 
-    .secao-1 {
-        height: auto;
-        min-height: 480px;
-        padding: 40px 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+    /* Seção 5 - Responsividade Mobile */
+    .secao-5 {
+        padding: 32px 20px 56px;
     }
 
-    .titulo-banner,
-    .subtitulo-banner,
-    .botao-banner {
-        position: static;
-        transform: none;
-    }
-
-    .titulo-banner,
-    .subtitulo-banner {
-        white-space: normal;
-    }
-
-    .titulo-banner {
-        font-size: clamp(26px, 7vw, 36px);
-    }
-
-    .subtitulo-banner {
-        font-size: clamp(16px, 4.2vw, 22px);
-        margin-top: 20px;
-    }
-
-    .botao-banner {
-        font-size: 18px;
-        margin-top: 32px;
-        padding: 12px 26px;
-    }
-
-    .botao-banner:hover {
-        transform: none;
-    }
-}
-
-@media (max-width: 768px) {
     .card-investimento {
-        flex-direction: column !important; /* Empilha no mobile */
-        text-align: center !important;
+        flex-direction: column;
+        text-align: center;
         padding: 28px 20px;
         gap: 16px;
     }
 
     .conteudo-investimento {
-        align-items: center !important;
-        text-align: center !important;
-        
+        align-items: center;
+        text-align: center;
     }
 
     .imagem-investimento {
@@ -668,6 +714,30 @@ body {
 
     .opcao-investimento {
         font-size: 16px;
+    }
+
+    /* Seção 6 - Responsividade Mobile */
+    .secao-6 {
+        padding: 36px 20px 60px;
+    }
+
+    .titulo-faq {
+        font-size: clamp(22px, 6.2vw, 32px);
+        margin-bottom: 28px;
+    }
+
+    .lista-faq {
+        gap: 28px;
+    }
+
+    .pergunta-faq {
+        font-size: 17px;
+    }
+
+    .resposta-faq {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
     }
 }
 
@@ -690,4 +760,3 @@ body {
         padding: 0.6em 1em;
     }
 }
-
