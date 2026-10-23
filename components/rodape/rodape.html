@@ -1,72 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+================================================================================
+  COMO IMPORTAR O RODAPÉ NA SUA PÁGINA
+================================================================================
+  Este arquivo é um MODELO para copiar. Ele não é carregado sozinho pelas
+  páginas. Os caminhos abaixo foram escritos para páginas que ficam DENTRO da
+  pasta "pages/". Para ver o rodapé funcionando, abra "pages/rodapeteste.html".
+
+  Estrutura esperada do projeto:
+
+    prisma-cursos-grupo-2/
+    ├── index.html
+    ├── assets/icons/        (logo-prisma-fundo.png, Email_Icon.png, ...)
+    ├── components/rodape/   (rodape.css e este rodape.html)
+    └── pages/               (as páginas: quem-somos.html, cursos.html, ...)
+
+  PASSO 1 - No <head> da sua página, antes de </head>, adicione:
+
+      <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="../components/rodape/rodape.css">
+
+      (se a página já carrega a fonte Karma, não repita essa linha)
+
+  PASSO 2 - Copie o bloco <footer> ... </footer> que fica entre os marcadores
+  "COPIE DAQUI" e "ATÉ AQUI" (logo abaixo) e cole no final do <body> da sua
+  página: depois do </main> e antes dos <script>.
+
+  PASSO 3 - Apague o rodapé antigo da página, para não ficar duplicado:
+      - o <footer> antigo no HTML;
+      - no CSS da página, as regras do rodapé: .rodape, .rodape-container,
+        .coluna-logo, .logo-rodape, .nome-marca, .titulo-coluna (a do rodapé),
+        .coluna-links, .coluna-comunicacao, .icone-rodape, .quebra-mobile, e
+        também as regras do rodapé dentro dos @media.
+
+  PASSO 4 - Confira no navegador:
+      - uma linha branca de 2px no topo do rodapé, em todos os tamanhos;
+      - desktop e tablet: logo e 3 colunas lado a lado;
+      - mobile (até 768px): sem logo, colunas empilhadas e títulos alinhados à
+        esquerda, na mesma margem do restante da página.
+
+  CUIDADOS
+  1) Nomes de classe: o rodapé usa .rodape, .rodape-container, .coluna-logo,
+     .coluna-links, .coluna-comunicacao, .titulo-coluna, .logo-rodape,
+     .nome-marca, .icone-rodape, .quebra-mobile e as classes que começam com
+     "link-". Se a sua página usar um desses nomes para outra coisa, os estilos
+     se misturam. Foi assim que os títulos do rodapé saíram deslocados no
+     mobile: a página de curso também tinha uma classe .titulo-coluna.
+     Dê outro nome à classe da sua página.
+  2) Caminhos: se a página NÃO estiver em pages/ (por exemplo, o index.html na
+     raiz), ajuste os caminhos do bloco:
+
+        Em pages/                          Na raiz (index.html)
+        ../components/rodape/rodape.css    components/rodape/rodape.css
+        ../assets/icons/...                assets/icons/...
+        ../index.html                      index.html
+        curso-python.html                  pages/curso-python.html
+
+  3) Cores e fonte: o rodapé usa --color-dark, --color-light e --font-primary
+     se a página os definir em :root. Se não definir, usa os valores padrão
+     (#2F241A, #DBDBDB e Karma). Não é preciso fazer nada.
+  4) Largura total: o rodapé ocupa 100% da largura. Se aparecer uma borda
+     lateral, é a margem padrão do navegador: use "margin: 0" no body da página.
+================================================================================
+-->
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../components/rodape/rodape.css">
+    <title>Rodapé | Prisma Cursos</title>
 
+    <!-- PASSO 1: copie estas duas linhas para o <head> da sua página -->
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../components/rodape/rodape.css">
 </head>
 <body>
-    
+
+    <!-- PASSO 2: ================= COPIE DAQUI ================= -->
     <footer class="rodape">
-            <div class="rodape-container">
-                <!-- Coluna 1: Logo & Marca -->
-                <div class="coluna-logo">
-                    <img src="../assets/icons/logo-prisma-fundo.png" alt="Logo Prisma Cursos" class="logo-rodape">
-                    <p class="nome-marca">Prisma Cursos</p>
-                </div>
-
-                <!-- Coluna 2: Cursos -->
-                <div class="coluna-links">
-                    <h3 class="titulo-coluna">Cursos</h3>
-                    <ul>
-                        <li><a href="curso-marketing.html" class="link-marketing-digital">Marketing Digital</a></li>
-                        <li><a href="curso-empreendedorismo.html" class="link-empreendedorismo">Empreendedorismo</a></li>
-                        <li><a href="curso-python.html" class="link-python">Python</a></li>
-                        <li><a href="curso-after-effects.html" class="link-after-effects">After Effects</a></li>
-                        <li><a href="curso-gestao.html" class="link-gestao-de-projetos">Gestão de projetos</a></li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 3: Navegação -->
-                <div class="coluna-links">
-                    <h3 class="titulo-coluna">Navegação</h3>
-                    <ul>
-                        <li><a href="index.html" class="link-inicio">Início</a></li>
-                        <li><a href="cursos.html" class="link-cursos">Cursos</a></li>
-                        <li><a href="quem-somos.html" class="link-quem-somos">Quem somos</a></li>
-                        <li><a href="formulario.html" class="link-contato">Contato</a></li>
-                        <li><a href="depoimentos.html" class="link-feedbacks">Feedbacks</a></li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 4: Comunicações -->
-                <div class="coluna-comunicacao">
-                    <h3 class="titulo-coluna">Comunicações</h3>
-                    <ul>
-                        <li>
-                            <a href="mailto:prisma_cursos@gmail.com" class="link-email">
-                                <img src="../assets/icons/Email_Icon.png" alt="Ícone E-mail" class="icone-rodape">
-                                prisma_cursos<br class="quebra-mobile">@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/5512123456789" target="_blank" rel="noopener noreferrer" class="link-whatsapp">
-                                <img src="../assets/icons/WhatsApp_Icon.png" alt="Ícone WhatsApp" class="icone-rodape">
-                                (12) 12345-6789
-                            </a>
-                        </li>
-                        <li>
-                            <a href="formulario.html" class="link-formulario">
-                                <img src="../assets/icons/Garra_icon.png" alt="Ícone Formulário" class="icone-rodape">
-                                Formulário
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="rodape-container">
+            <!-- Coluna 1: Logo & Marca -->
+            <div class="coluna-logo">
+                <img src="../assets/icons/logo-prisma-fundo.png" alt="Logo Prisma Cursos" class="logo-rodape">
+                <p class="nome-marca">Prisma Cursos</p>
             </div>
-        </footer>
+
+            <!-- Coluna 2: Cursos -->
+            <div class="coluna-links">
+                <h3 class="titulo-coluna">Cursos</h3>
+                <ul>
+                    <li><a href="curso-marketing.html" class="link-marketing-digital">Marketing Digital</a></li>
+                    <li><a href="curso-empreendedorismo.html" class="link-empreendedorismo">Empreendedorismo</a></li>
+                    <li><a href="curso-python.html" class="link-python">Python</a></li>
+                    <li><a href="curso-after-effects.html" class="link-after-effects">After Effects</a></li>
+                    <li><a href="curso-gestao.html" class="link-gestao-de-projetos">Gestão de projetos</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Navegação -->
+            <div class="coluna-links">
+                <h3 class="titulo-coluna">Navegação</h3>
+                <ul>
+                    <li><a href="../index.html" class="link-inicio">Início</a></li>
+                    <li><a href="cursos.html" class="link-cursos">Cursos</a></li>
+                    <li><a href="quem-somos.html" class="link-quem-somos">Quem somos</a></li>
+                    <li><a href="formulario.html" class="link-contato">Contato</a></li>
+                    <li><a href="depoimentos.html" class="link-feedbacks">Feedbacks</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 4: Comunicações -->
+            <div class="coluna-comunicacao">
+                <h3 class="titulo-coluna">Comunicações</h3>
+                <ul>
+                    <li>
+                        <a href="mailto:prisma_cursos@gmail.com" class="link-email">
+                            <img src="../assets/icons/Email_Icon.png" alt="Ícone E-mail" class="icone-rodape">
+                            prisma_cursos<br class="quebra-mobile">@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/5512123456789" target="_blank" rel="noopener noreferrer" class="link-whatsapp">
+                            <img src="../assets/icons/WhatsApp_Icon.png" alt="Ícone WhatsApp" class="icone-rodape">
+                            (12) 12345-6789
+                        </a>
+                    </li>
+                    <li>
+                        <a href="formulario.html" class="link-formulario">
+                            <img src="../assets/icons/Garra_icon.png" alt="Ícone Formulário" class="icone-rodape">
+                            Formulário
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- ================== ATÉ AQUI ================== -->
 
 </body>
 </html>

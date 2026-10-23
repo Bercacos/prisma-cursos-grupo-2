@@ -2,6 +2,17 @@
    RODAPÉ (FOOTER) - ESTILOS BASE E RESPONSIVIDADE
    ========================================================================== */
 
+/* --- Reset interno: o rodapé não depende do reset da página em que for colado --- */
+.rodape,
+.rodape * {
+    box-sizing: border-box;
+}
+
+.rodape * {
+    margin: 0;
+    padding: 0;
+}
+
 /* --- Oculta a quebra de linha do e-mail por padrão (Desktop e Tablet) --- */
 .quebra-mobile {
     display: none;
@@ -11,7 +22,7 @@
 .rodape {
     width: 100%;
     background-color: var(--color-dark, #2F241A);
-    border-top: 1px solid rgba(219, 219, 219, 0.1);
+    border-top: 2px solid #DBDBDB; /* linha branca de 2px no topo (todos os formatos) */
     padding: 50px 64px;
     font-family: var(--font-primary, 'Karma', serif);
     color: var(--color-light, #DBDBDB);
