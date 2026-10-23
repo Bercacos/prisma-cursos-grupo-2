@@ -138,34 +138,26 @@ body {
     line-height: 1.5;
     text-align: justify;
     hyphens: auto;
+    padding-bottom: 1%;
 }
 
-.botao-diario {
-    display: inline-flex;
+.titulo-diario {
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.4em;
-    padding: 0.5em 1.9em;
-    background: linear-gradient(180deg, #E6E6E6, #CFCFCF);
+    min-height: clamp(52px, 4.4vw, 90px);
+    padding: 0.4em 0.8em;
+    white-space: nowrap;
+    background-color: var(--color-light);
     color: var(--color-dark);
     font-family: var(--font-primary);
     font-weight: bold;
-    font-size: 1.2em;
-    text-decoration: none;
-    text-shadow: none;
+    font-size: clamp(18px, 2.1vw, 42px);
+    line-height: 1;
+    text-align: center;
     border-radius: 999px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.botao-diario:hover {
-    transform: scale(1.04);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
-}
-
-.botao-diario:focus-visible {
-    outline: 3px solid var(--color-light);
-    outline-offset: 3px;
+    -webkit-text-stroke: none;
+    text-shadow: none;
 }
 
 .detalhes-curso {
@@ -253,6 +245,8 @@ body {
     align-self: center;
     margin-top: clamp(60px, 5vw, 110px);
 }
+
+
 
 /* ==========================================================================
    5. SEÇÃO 4 - TRILHA DA VIAGEM
@@ -366,6 +360,69 @@ body {
 .trajeto + .etapa {
     margin-top: 0;
 }
+
+/* ==========================================================================
+   SEÇÃO 5 - INVESTIMENTO (FORÇA ALINHAMENTO LADO A LADO)
+   ========================================================================== */
+.secao-5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(40px, 5vw, 80px) var(--margem-lateral);
+    background-color: var(--color-dark);
+}
+
+.card-investimento {
+    display: flex !important;
+    flex-direction: row !important;  /* Força ícone na esquerda e texto na direita */
+    align-items: center !important;  /* Centraliza a imagem verticalmente */
+    justify-content: flex-start !important;
+    gap: clamp(24px, 3.5vw, 48px);
+    background-color: #A38C6D;
+    padding: clamp(20px, 2.5vw, 30px) clamp(24px, 3vw, 40px);
+    border-radius: clamp(20px, 2.5vw, 36px);
+    width: fit-content;
+    max-width: 760px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.imagem-investimento {
+    width: clamp(110px, 12vw, 170px);
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0 !important;       /* Impede que o baú encolha */
+    display: block;
+}
+
+.conteudo-investimento {
+    display: flex !important;
+    flex-direction: column !important; /* Mantém as 3 frases em linhas separadas */
+    align-items: flex-start !important; /* Alinha o texto à esquerda */
+    text-align: left !important;        /* Força alinhamento de texto à esquerda */
+    gap: 8px;
+    font-family: var(--font-primary);
+    color: var(--color-light);
+    flex: 1;
+}
+
+.titulo-investimento {
+    font-size: clamp(20px, 2.1vw, 32px);
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.opcao-investimento {
+    font-size: clamp(16px, 1.7vw, 26px);
+    line-height: 1.3;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+
 
 /* ==========================================================================
    6. RESPONSIVIDADE
@@ -587,6 +644,33 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .card-investimento {
+        flex-direction: column !important; /* Empilha no mobile */
+        text-align: center !important;
+        padding: 28px 20px;
+        gap: 16px;
+    }
+
+    .conteudo-investimento {
+        align-items: center !important;
+        text-align: center !important;
+        
+    }
+
+    .imagem-investimento {
+        width: 120px;
+    }
+
+    .titulo-investimento {
+        font-size: 20px;
+    }
+
+    .opcao-investimento {
+        font-size: 16px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .botao-banner {
         transition: none;
@@ -606,3 +690,4 @@ body {
         padding: 0.6em 1em;
     }
 }
+
