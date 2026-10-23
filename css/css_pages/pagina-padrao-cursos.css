@@ -195,7 +195,7 @@ body {
         clamp(32px, 3.6vw, 72px)
         clamp(20px, 3.6vw, 72px)
         clamp(48px, 6vw, 120px);
-    background-color: #FFFFFF;
+    background-color: #DBDBDB;
     color: var(--color-dark);
 }
 
@@ -541,7 +541,7 @@ body {
         content: '↓';
         font-size: 48px; /* Aumentado de 32px para 48px */
         font-weight: bold;
-        color: #FFFFFF;
+        color: #DBDBDB;
         line-height: 1;
     }
 
