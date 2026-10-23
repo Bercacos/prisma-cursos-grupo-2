@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empreendedorismo | Prisma Cursos</title>
+    <title>Página de Curso Padrão | Prisma Cursos</title>
 
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karma:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Vínculo do CSS do Rodapé (Caminho corrigido para incluir /components/) -->
+    <link rel="stylesheet" href="../components/rodape/rodape.css">
 
     <!-- Ficheiro de Estilos Principal -->
     <link rel="stylesheet" href="../css/css_pages/pagina-padrao-cursos.css">
 </head>
 <body>
 
-    <!-- Espaço da navbar (preenchido dinamicamente pelo JS) -->
+    <!-- Container da Navbar (Injetado via navbar.js) -->
     <div id="navbar"></div>
 
     <main>
@@ -213,9 +216,42 @@
             </div>
         </section>
 
+        <!-- Seção 7: Chamada Final (CTA) -->
+        <section class="secao-7">
+            <div class="container-cta">
+                <!-- Imagem do Pirata (Esquerda) -->
+                <img src="../assets/icons/Pirata-design.svg" alt="Ilustração de um pirata segurando um computador e megafone" class="imagem-pirata-cta">
+
+                <!-- Bloco Direita: Card de Texto + Botão -->
+                <div class="bloco-conteudo-cta">
+                    <div class="card-texto-cta">
+                        <p>O horizonte está lá, esperando por você. Hasteie a vela, pegue o leme e comece a criar animações que ninguém vai esquecer!</p>
+                    </div>
+                    <a href="formulario.html" class="botao-cta">Embarcar na aventura</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Script de Injeção da Navbar/Componentes -->
+    <!-- Container do Rodapé -->
+    <div id="rodape-container"></div>
+
+    <!-- 1. Script automático da Navbar (Aponta para ../components/navbar/navbar.js) -->
     <script type="module" src="../components/navbar/navbar.js"></script>
+
+    <!-- 2. Script para carregar o Rodapé (Aponta para ../components/rodape/rodape.html) -->
+    <script>
+        fetch('../components/rodape/rodape.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Erro ao carregar rodape.html');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('rodape-container').innerHTML = data;
+            })
+            .catch(err => console.error('Erro no Rodapé:', err));
+    </script>
+
 </body>
 </html>
