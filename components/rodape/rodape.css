@@ -60,8 +60,19 @@
     margin-top: 12px;
 }
 
-/* --- Títulos das Colunas --- */
-.titulo-coluna {
+/* --- Títulos das Colunas ---
+   Escopado com ".rodape" e com os valores explícitos para que uma classe de mesmo
+   nome na página (ex.: .titulo-coluna) não desloque nem estilize os títulos do rodapé. */
+.rodape .titulo-coluna {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    white-space: normal;
+    text-align: left;
+    line-height: normal;
+    font-family: inherit;
     font-size: 22px;
     font-weight: bold;
     color: #D3C3A8;
@@ -137,7 +148,7 @@
         gap: 30px;
     }
 
-    .titulo-coluna {
+    .rodape .titulo-coluna {
         font-size: 20px;
     }
 
@@ -162,7 +173,7 @@
         gap: 35px !important;
     }
 
-    .titulo-coluna {
+    .rodape .titulo-coluna {
         font-size: 20px;
         margin-bottom: 12px;
     }
