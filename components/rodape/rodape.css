@@ -1,0 +1,179 @@
+/* ==========================================================================
+   RODAPÉ (FOOTER) - ESTILOS BASE E RESPONSIVIDADE
+   ========================================================================== */
+
+/* --- Oculta a quebra de linha do e-mail por padrão (Desktop e Tablet) --- */
+.quebra-mobile {
+    display: none;
+}
+
+/* --- Container Principal do Rodapé --- */
+.rodape {
+    width: 100%;
+    background-color: var(--color-dark, #2F241A);
+    border-top: 1px solid rgba(219, 219, 219, 0.1);
+    padding: 50px 64px;
+    font-family: var(--font-primary, 'Karma', serif);
+    color: var(--color-light, #DBDBDB);
+}
+
+.rodape-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* --- Coluna 1: Logo e Marca --- */
+.coluna-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-rodape {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.nome-marca {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-light, #DBDBDB);
+    margin-top: 12px;
+}
+
+/* --- Títulos das Colunas --- */
+.titulo-coluna {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D3C3A8;
+    margin-bottom: 18px;
+}
+
+/* --- Listas --- */
+.coluna-links ul, 
+.coluna-comunicacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coluna-links ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.coluna-links li {
+    margin-bottom: 10px;
+    color: var(--color-light, #DBDBDB);
+}
+
+.coluna-links li::marker {
+    color: var(--color-light, #DBDBDB);
+}
+
+/* --- Links Exclusivos do Rodapé --- */
+.rodape [class^="link-"] {
+    color: var(--color-light, #DBDBDB);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.rodape [class^="link-"]:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* --- Coluna Comunicação e Ícones PNG/WEBP --- */
+.coluna-comunicacao li {
+    margin-bottom: 16px;
+}
+
+.coluna-comunicacao [class^="link-"] {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-rodape {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: brightness(0) invert(0.9);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE DO RODAPÉ
+   ========================================================================== */
+
+/* Tablets (De 769px até 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .rodape {
+        padding: 40px 32px;
+    }
+
+    .rodape-container {
+        gap: 30px;
+    }
+
+    .titulo-coluna {
+        font-size: 20px;
+    }
+
+    .rodape [class^="link-"] {
+        font-size: 16px;
+    }
+}
+
+/* Mobile (Até 768px) - Layout em Column sem Logo/Marca */
+@media (max-width: 768px) {
+    .coluna-logo {
+        display: none !important;
+    }
+
+    .rodape {
+        padding: 40px 20px;
+    }
+
+    .rodape-container {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 35px !important;
+    }
+
+    .titulo-coluna {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .coluna-links ul {
+        padding-left: 20px;
+    }
+
+    .coluna-links li {
+        margin-bottom: 8px;
+    }
+
+    .coluna-comunicacao li {
+        margin-bottom: 12px;
+    }
+
+    .rodape [class^="link-"] {
+        font-size: 16px;
+    }
+
+    .icone-rodape {
+        width: 22px;
+        height: 22px;
+    }
+}
