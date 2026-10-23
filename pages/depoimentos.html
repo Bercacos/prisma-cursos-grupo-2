@@ -3,11 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Depoimentos - Prisma Cursos</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../components/rodape/rodape.css" />
     <link rel="stylesheet" href="../css/css_pages/depoimentos.css" />
   </head>
   <body>
-    <h1>Titulo bla bla bla</h1>
+    <div id="navbar"></div>
+
+    <main class="depoimentos">
+      <h1>Depoimentos de Marinheiros Formados</h1>
+      <p class="depoimentos__intro">
+        Alguns relatos deixados por alguns alunos que fizeram os nossos cursos e
+        deixaram as suas experiências registradas.
+      </p>
+
+      <section class="lista">
+        <article class="card card--1">
+          <img
+            class="avatar"
+            src="../assets/icons/avatar-1.png"
+            alt="Avatar de pirata"
+          />
+          <div class="card__texto">
+            <h2>João, Aluno de Empreendedorismo Voltado à Tecnologia</h2>
+            <p>
+              “Fui aluno de EVT (Empreendedorismo Voltado à Tecnologia) na
+              modalidade presencial na Prisma Curso. Não só tive a oportunidade
+              de criar um startup que hoje é o meu sustento principal, mas
+              também pude conhecer pessoas e viver experiências que me fazem
+              quem sou hoje.”
+            </p>
+          </div>
+        </article>
+
+        <article class="card card--2">
+          <img
+            class="avatar"
+            src="../assets/icons/avatar-1.png"
+            alt="Avatar de pirata"
+          />
+          <div class="card__texto">
+            <h2>Alex Martins - Estudante universitário</h2>
+            <p>
+              “Antes do curso, eu publicava nas redes sociais sem uma estratégia
+              clara. O projeto final me ajudou a definir o público, organizar um
+              calendário e acompanhar os resultados. Hoje consigo explicar
+              minhas decisões e planejar campanhas com muito mais segurança.”
+            </p>
+          </div>
+        </article>
+
+        <article class="card card--3">
+          <img
+            class="avatar"
+            src="../assets/icons/avatar-1.png"
+            alt="Avatar de pirata"
+          />
+          <div class="card__texto">
+            <h2>Pedro Moreira - Estudante de TI</h2>
+            <p>
+              Trabalhava no administrativo de uma loja, passando boa parte do
+              dia copiando dados entre planilhas. Ao começar o curso, achava que
+              programação não era para mim, e travei várias vezes na segunda
+              aula. O laboratório, com apoio constante para resolver problemas,
+              fez a diferença. No projeto final, criei um script que
+              automatizava a união das planilhas da loja. Usei esse projeto em
+              uma entrevista e consegui meu primeiro estágio em TI.
+            </p>
+          </div>
+        </article>
+
+        <article class="card card--4">
+          <img
+            class="avatar"
+            src="../assets/icons/avatar-2.png"
+            alt="Avatar de pirata"
+          />
+          <div class="card__texto">
+            <h2>Mariana Santos - Estudante de Administração</h2>
+            <p>
+              “Eu já participava de projetos na faculdade, mas tinha dificuldade
+              para transformar as ideias do grupo em um plano que todos
+              conseguissem seguir. Na Prisma, aprendi a organizar entregas,
+              distribuir responsabilidades e acompanhar os prazos. As oficinas e
+              o projeto final me ajudaram a aplicar o conteúdo durante a
+              graduação. Hoje consigo explicar melhor minhas decisões e
+              apresentar um projeto com muito mais segurança.”
+            </p>
+          </div>
+        </article>
+
+        <article class="card card--5">
+          <img
+            class="avatar"
+            src="../assets/icons/avatar-2.png"
+            alt="Avatar de pirata"
+          />
+          <div class="card__texto">
+            <h2>Diana Fachini, Estudante da Prisma Cursos</h2>
+            <p>
+              Cheguei à Prisma Cursos em um momento difícil: estava desempregada
+              e sem perspectivas. Os cursos me deram um novo rumo,
+              principalmente o de After Effects, que me abriu as portas do
+              mercado de trabalho. Os projetos que desenvolvi me deram um
+              diferencial na hora de me apresentar. Sou muito grata por fazer
+              parte da tripulação da Prisma Cursos!
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="rodape-container">
+        <!-- Coluna 1: Logo & Marca -->
+        <div class="coluna-logo">
+          <img src="../assets/icons/logo-prisma-fundo.png" alt="Logo Prisma Cursos" class="logo-rodape">
+          <p class="nome-marca">Prisma Cursos</p>
+        </div>
+
+        <!-- Coluna 2: Cursos -->
+        <div class="coluna-links">
+          <h3 class="titulo-coluna">Cursos</h3>
+          <ul>
+            <li><a href="curso-marketing.html" class="link-marketing-digital">Marketing Digital</a></li>
+            <li><a href="curso-empreendedorismo.html" class="link-empreendedorismo">Empreendedorismo</a></li>
+            <li><a href="curso-python.html" class="link-python">Python</a></li>
+            <li><a href="curso-after-effects.html" class="link-after-effects">After Effects</a></li>
+            <li><a href="curso-gestao.html" class="link-gestao-de-projetos">Gestão de projetos</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Navegação -->
+        <div class="coluna-links">
+          <h3 class="titulo-coluna">Navegação</h3>
+          <ul>
+            <li><a href="../index.html" class="link-inicio">Início</a></li>
+            <li><a href="cursos.html" class="link-cursos">Cursos</a></li>
+            <li><a href="quem-somos.html" class="link-quem-somos">Quem somos</a></li>
+            <li><a href="formulario.html" class="link-contato">Contato</a></li>
+            <li><a href="depoimentos.html" class="link-feedbacks">Feedbacks</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Comunicações -->
+        <div class="coluna-comunicacao">
+          <h3 class="titulo-coluna">Comunicações</h3>
+          <ul>
+            <li>
+              <a href="mailto:prisma_cursos@gmail.com" class="link-email">
+                <img src="../assets/icons/Email_Icon.png" alt="Ícone E-mail" class="icone-rodape">
+                prisma_cursos<br class="quebra-mobile">@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/5512123456789" target="_blank" rel="noopener noreferrer" class="link-whatsapp">
+                <img src="../assets/icons/WhatsApp_Icon.png" alt="Ícone WhatsApp" class="icone-rodape">
+                (12) 12345-6789
+              </a>
+            </li>
+            <li>
+              <a href="formulario.html" class="link-formulario">
+                <img src="../assets/icons/Garra_icon.png" alt="Ícone Formulário" class="icone-rodape">
+                Formulário
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="../components/navbar/navbar.js"></script>
   </body>
 </html>

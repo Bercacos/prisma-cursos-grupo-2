@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2f241a;
+  color: #fff;
+  font-family: "Karma", serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Conteúdo */
+.depoimentos {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 70px 86px 0;
+}
+
+.depoimentos h1 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.depoimentos__intro {
+  max-width: 1100px;
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+.lista {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 83px;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 172px;
+  height: 172px;
+}
+
+.card__texto {
+  width: 890px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 36px;
+  background-color: #a89273;
+  color: #171310;
+  border-radius: 50px;
+}
+
+.card__texto h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.card__texto p {
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.card--1 .card__texto {
+  height: 256px;
+}
+.card--2 .card__texto {
+  height: 237px;
+}
+.card--3 .card__texto {
+  height: 329px;
+}
+.card--4 .card__texto {
+  height: 400px;
+}
+.card--5 .card__texto {
+  height: 290px;
+}
+
+.card--4 h2 {
+  line-height: 2;
+}
+
+/* Rodapé (estilos em components/rodape/rodape.css) */
+.rodape {
+  margin-top: 93px;
+}
+
+/* Responsivo */
+@media (max-width: 1100px) {
+  .depoimentos {
+    padding: 40px 20px 0;
+  }
+
+  .depoimentos h1 {
+    font-size: 36px;
+  }
+
+  .depoimentos__intro {
+    font-size: 20px;
+  }
+
+  .lista {
+    margin-top: 60px;
+    gap: 50px;
+  }
+
+  .card {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .card__texto {
+    height: auto !important;
+    padding: 24px;
+  }
+
+  .card__texto h2 {
+    font-size: 24px;
+  }
+
+  .card__texto p {
+    font-size: 18px;
+  }
+}
