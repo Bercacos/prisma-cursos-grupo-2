@@ -290,28 +290,42 @@ nav a {
         font-size: 24px;
     }
 
-    .missao {
-        grid-template-columns: 1fr;
+    .missao,
+    .missao-direita {
+        grid-template-columns: minmax(0, 1fr);
         gap: 16px;
+        margin-bottom: 32px;
     }
 
-    .conteudo-missao {
-        padding: 18px;
+    .missao .info-missao,
+    .missao-direita .info-missao {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 16px;
     }
+
+    .missao .conteudo-missao,
+.missao-direita .conteudo-missao {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+}
 
     .conteudo-missao h3 {
         font-size: 19px;
-    }
-
-    .info-missao {
-        padding: 16px;
+        overflow-wrap: break-word;
     }
 }
 
-/* Alternância das missões */
+
+/* Alternância das missões no computador */
 
 .missao-direita {
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 220px minmax(0, 1fr);
 }
 
 .missao-direita .conteudo-missao {
@@ -324,26 +338,28 @@ nav a {
     grid-row: 1;
 }
 
-/* Em telas pequenas, todas as missões ficam empilhadas */
+/* Correção para celulares */
 
 @media (max-width: 768px) {
+    .missao,
     .missao-direita {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    .missao-direita .conteudo-missao,
     .missao-direita .info-missao {
         grid-column: 1;
-    }
-
-    .missao-direita .conteudo-missao {
         grid-row: 1;
     }
 
-    .missao-direita .info-missao {
+    .missao-direita .conteudo-missao {
+        grid-column: 1;
         grid-row: 2;
+        width: 100%;
+        min-width: 0;
     }
 }
+
+
 
 /* Investimento na jornada */
 
