@@ -66,6 +66,19 @@
                 <button type="submit">Enviar ao Capitão!</button>
             </form>
         </div>
+        
+            <img id="confirmacao" class="escondido" src="../assets/img/form-img-conf.png" alt="Mensagem a bordo!">
+
+            <script>
+                const form = document.getElementById('form-contato');
+                const confirmacao = document.getElementById('confirmacao');
+
+                form.addEventListener('submit', function (evento) {
+                evento.preventDefault(); // impede a página de recarregar
+                confirmacao.classList.remove('escondido');
+                form.reset(); // limpa os campos (opcional)
+            });
+            </script>
         </div>
     </section>
         <footer class="rodape">

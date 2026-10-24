@@ -127,3 +127,21 @@ body {
 .formulario-form button:hover {
     filter: brightness(1.15);
 }
+
+*/Imagem de confirmação */
+
+.escondido {
+    display: none;
+}
+
+#confirmacao {
+    display: block;
+    margin: 24px auto 0;
+    width: 285px;
+    height: 285px;
+    max-width: 100%;
+}
+
+#confirmacao.escondido {
+    display: none;
+}
