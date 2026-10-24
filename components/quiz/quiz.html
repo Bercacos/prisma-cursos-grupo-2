@@ -1,0 +1,28 @@
+<dialog class="quiz-dialog" aria-labelledby="quiz-titulo">
+    <button type="button" class="quiz-fechar" aria-label="Fechar quiz">&times;</button>
+    <h2 id="quiz-titulo" tabindex="-1">Atenção Marujos!</h2>
+    <section class="quiz-introducao">
+        <p class="quiz-painel">Você vai começar um quiz referente ao curso que estava lendo. Ao final você ganhará um cupom de desconto, mas para isso você deve responder corretamente às três perguntas. Caso você erre alguma, perderá o direito à recompensa. Boa sorte, marujos!</p>
+        <button type="button" class="quiz-acao quiz-iniciar">Iniciar Quiz</button>
+    </section>
+    <form class="quiz-form" hidden>
+        <fieldset class="quiz-pergunta">
+            <legend class="quiz-enunciado quiz-painel"></legend>
+            <div class="quiz-alternativas"></div>
+        </fieldset>
+    </form>
+    <section class="quiz-resultado" hidden>
+        <p class="quiz-resumo quiz-painel"></p>
+        <div class="quiz-premio" hidden>
+            <div class="quiz-cartao-cupom">
+                <p>Seu código do cupom:</p>
+                <button type="button" class="quiz-cupom" aria-label="Copiar cupom de desconto" title="Clique para copiar"></button>
+            </div>
+            <div class="quiz-bau" aria-hidden="true">
+                <img alt="" class="quiz-bau-imagem">
+            </div>
+        </div>
+        <a class="quiz-acao quiz-voltar" href="../index.html">Voltar à Tela Inicial</a>
+    </section>
+    <p class="quiz-status" role="status"></p>
+</dialog>
