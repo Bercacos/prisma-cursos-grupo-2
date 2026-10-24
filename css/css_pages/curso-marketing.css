@@ -32,7 +32,7 @@ body {
     height: clamp(440px, 30.6vw, 720px);
     background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url('../../assets/img/fundo-marketing.png') center/cover no-repeat;
+        url('../../assets/img/fundo-curso-emprendedorismo.png') center/cover no-repeat;
 }
 
 .titulo-banner,
@@ -470,6 +470,45 @@ body {
 }
 
 /* ==========================================================================
+   DEPOIMENTO (CTA - DESKTOP BASE)
+   ========================================================================== */
+
+.secao-depoimento {
+    width: 100%;
+    max-width: 1312px;
+    margin: 0 auto;
+    padding: clamp(40px, 4vw, 64px) 24px clamp(48px, 5vw, 80px);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-family: var(--font-primary);
+    text-shadow: var(--shadow-text);
+}
+
+.titulo-depoimento {
+    font-size: clamp(24px, 3.2vw, 48px);
+    font-weight: bold;
+    line-height: 1.25;
+    margin-bottom: clamp(24px, 3vw, 44px);
+}
+
+.depoimento-autor,
+.depoimento-texto,
+.depoimento-convite {
+    font-size: clamp(16px, 2vw, 32px);
+    font-weight: normal;
+    line-height: 1.75;
+}
+
+.depoimento-autor,
+.depoimento-texto {
+    margin-bottom: 0.5em;
+}
+
+.depoimento-autor strong {
+    font-weight: bold;
+}
+
+/* ==========================================================================
    8. SEÇÃO 7 - CHAMADA FINAL (CTA - DESKTOP BASE)
    ========================================================================== */
 .secao-7 {
@@ -593,6 +632,10 @@ body {
 
     .lista-faq {
         gap: 36px;
+    }
+
+    .secao-depoimento {
+        padding: 48px 32px 64px;
     }
 }
 
@@ -856,6 +899,22 @@ body {
 
     .botao-cta:hover {
         transform: none;
+    }
+
+    .secao-depoimento {
+    padding: 36px 20px 60px;
+    }
+
+    .titulo-depoimento {
+        font-size: clamp(22px, 6.2vw, 32px);
+        margin-bottom: 24px;
+    }
+
+    .depoimento-autor,
+    .depoimento-texto,
+    .depoimento-convite {
+        font-size: 16px;
+        line-height: 1.6;
     }
 }
 
