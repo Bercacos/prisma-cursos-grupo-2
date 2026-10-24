@@ -56,26 +56,40 @@ nav a {
     }
 }
 
+
 /* Apresentação do curso */
 
+
 .apresentacao-curso {
+    min-height: 516px;
     padding: 80px 8%;
-    text-align: center;
-    background-color: #F5EFE6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    background-image: linear-gradient(
+        rgba(17, 39, 53, 0.25),
+        rgba(17, 39, 53, 0.25)
+    ), url("../../assets/img/fundo-gestao-projetos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 .apresentacao-curso h1 {
-    max-width: 800px;
-    margin: 0 auto 24px;
-    color: #30251F;
+    max-width: 700px;
+    margin: 0 0 24px;
+    color: #DBDBDB;
     font-size: 40px;
     line-height: 1.2;
 }
 
 .apresentacao-curso p {
-    max-width: 750px;
-    margin: 0 auto 32px;
-    color: #51463F;
+    max-width: 650px;
+    margin: 0 0 32px;
+    color: #DBDBDB;
     font-size: 18px;
     line-height: 1.7;
 }
@@ -83,21 +97,21 @@ nav a {
 .botao-principal {
     display: inline-block;
     padding: 14px 28px;
-    background-color: #30251F;
+    background-color: #A52D2D;
     color: #FFFFFF;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .botao-principal:hover {
-    background-color: #514034;
+    background-color: #812222;
 }
-
-/* Ajustes da apresentação em telas menores */
 
 @media (max-width: 768px) {
     .apresentacao-curso {
+        min-height: 420px;
         padding: 48px 6%;
     }
 
@@ -109,6 +123,13 @@ nav a {
         font-size: 16px;
     }
 }
+
+
+
+    .botao-principal {
+        padding: 13px 26px;
+        font-size: 15px;
+    }
 
 
 /* Diário de Bordo */
@@ -618,3 +639,82 @@ nav a {
 .rodape-cursos a:hover {
     text-decoration: underline;
 }
+
+/* Seção Diário de Bordo */
+.secao-2 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 6%;
+    background-color: #30251F;
+    color: #DBDBDB;
+    font-family: Georgia, serif;
+}
+
+.conteudo-imagem {
+    flex: 0 0 40%;
+}
+
+.conteudo-imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bloco-texto {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.descricao-curso {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.titulo-diario {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background-color: #DBDBDB;
+    color: #30251F;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.detalhes-curso {
+    padding-left: 24px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .secao-2 {
+        flex-direction: column;
+        gap: 24px;
+        padding: 32px 6%;
+    }
+
+    .conteudo-imagem {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .descricao-curso {
+        font-size: 17px;
+    }
+
+    .titulo-diario {
+        font-size: 24px;
+    }
+
+    .detalhes-curso {
+        font-size: 16px;
+    }
+}
+
