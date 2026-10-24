@@ -152,7 +152,11 @@
             <!-- Etapa 4: Ilha do Tesouro -->
             <article class="etapa etapa--icone-direita">
                 <div class="etapa-marco">
-                    <img src="../assets/icons/treasure-1.svg" alt="Ilha do Tesouro" class="etapa-icone">
+                    <button type="button" class="botao-tesouro botao-tesouro--ilha"
+                        data-quiz="empreendedorismo" aria-label="Abrir desafio da Ilha do Tesouro"
+                        aria-haspopup="dialog">
+                        <img src="../assets/icons/treasure-1.svg" alt="" class="etapa-icone">
+                    </button>
                     <h3 class="etapa-nome">Ilha do Tesouro</h3>
                     <p class="etapa-tempo">Tempo da Aventura: 6 meses</p>
                 </div>
@@ -161,6 +165,7 @@
                     <ul class="etapa-lista">
                         <li><strong>Aulas sobre Crescimento</strong> – Indicadores de performance do navio (KPIs) e estratégias para escalar o negócio por todos os sete mares.</li>
                         <li><strong>Aulas sobre Inovação e Adaptação</strong> – Adaptação às novas ferramentas digitais e automação de processos.</li>
+                        <li><strong>Báu do tesouro à vista!</strong> – Clique no báu do tesouro ao lado para pegar sua recompensa!</li>
                         <li><strong>Aulas sobre Investimentos e Pitch</strong> – Como apresentar a sua empreitada de forma rápida, valente e impactante para investidores-anjo ou fundos de Venture Capital.</li>
                     </ul>
                 </div>
@@ -294,6 +299,8 @@
 
     <!-- Navbar e rodapé: cada um carrega o próprio CSS e HTML (caminhos a partir de pages/) -->
     <script type="module" src="../components/navbar/navbar.js"></script>
+    <div id="quiz"></div>
+    <script type="module" src="../components/quiz/quiz.js"></script>
 
 </body>
 </html>
