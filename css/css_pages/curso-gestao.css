@@ -1,0 +1,604 @@
+
+/* Estilos do cabeçalho */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #30251F;
+}
+
+/* Nome da empresa */
+
+.logo {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Links de navegação */
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Botão para ver os cursos */
+
+.botao-cursos {
+    background-color: #FFFFFF;
+    color: #30251F;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Ajustes para telas menores */
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+/* Apresentação do curso */
+
+.apresentacao-curso {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #F5EFE6;
+}
+
+.apresentacao-curso h1 {
+    max-width: 800px;
+    margin: 0 auto 24px;
+    color: #30251F;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.apresentacao-curso p {
+    max-width: 750px;
+    margin: 0 auto 32px;
+    color: #51463F;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.botao-principal {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #30251F;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.botao-principal:hover {
+    background-color: #514034;
+}
+
+/* Ajustes da apresentação em telas menores */
+
+@media (max-width: 768px) {
+    .apresentacao-curso {
+        padding: 48px 6%;
+    }
+
+    .apresentacao-curso h1 {
+        font-size: 30px;
+    }
+
+    .apresentacao-curso p {
+        font-size: 16px;
+    }
+}
+
+
+/* Diário de Bordo */
+
+.diario-bordo {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 28px;
+    background-color: #30251F;
+    color: #FFFFFF;
+    border-radius: 12px;
+}
+
+.diario-bordo h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.diario-bordo ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.diario-bordo li {
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+.diario-bordo li:last-child {
+    margin-bottom: 0;
+}
+
+/* Diário de Bordo em telas menores */
+
+@media (max-width: 768px) {
+    .diario-bordo {
+        margin: 28px 6%;
+        padding: 22px;
+    }
+
+    .diario-bordo h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* Público-alvo e objetivos */
+
+.publico-objetivos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    padding: 48px 6%;
+}
+
+.bloco-informacao {
+    min-width: 0;
+}
+
+.bloco-informacao h2 {
+    margin: 0 0 20px;
+    padding: 12px 18px;
+    background-color: #30251F;
+    color: #FFFFFF;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 21px;
+}
+
+.bloco-informacao ul {
+    padding-left: 24px;
+}
+
+.bloco-informacao li {
+    margin-bottom: 18px;
+    color: #51463F;
+    line-height: 1.7;
+}
+
+/* Adaptação para celulares e tablets menores */
+
+@media (max-width: 768px) {
+    .publico-objetivos {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 32px 6%;
+    }
+
+    .bloco-informacao h2 {
+        font-size: 19px;
+    }
+}
+
+
+/* Jornada de aprendizagem */
+
+.jornada {
+    padding: 48px 6%;
+    background-color: #30251F;
+    color: #FFFFFF;
+}
+
+.titulo-jornada {
+    margin: 0 0 48px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.missao {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.conteudo-missao {
+    padding: 24px;
+    background-color: #45352A;
+    border-radius: 12px;
+}
+
+.conteudo-missao h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.conteudo-missao ul {
+    padding-left: 24px;
+}
+
+.conteudo-missao li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.missao-secundaria,
+.conquista {
+    padding: 12px;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.missao-secundaria {
+    background-color: #F5E7BC;
+    color: #30251F;
+}
+
+.conquista {
+    background-color: #E8D2A0;
+    color: #30251F;
+    font-weight: bold;
+}
+
+.info-missao {
+    text-align: center;
+}
+
+.info-missao h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.info-missao p {
+    line-height: 1.6;
+}
+
+/* Adaptação para telas menores */
+
+@media (max-width: 768px) {
+    .jornada {
+        padding: 32px 6%;
+    }
+
+    .titulo-jornada {
+        font-size: 24px;
+    }
+
+    .missao {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .conteudo-missao {
+        padding: 18px;
+    }
+
+    .conteudo-missao h3 {
+        font-size: 19px;
+    }
+
+    .info-missao {
+        padding: 16px;
+    }
+}
+
+/* Alternância das missões */
+
+.missao-direita {
+    grid-template-columns: 220px 1fr;
+}
+
+.missao-direita .conteudo-missao {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.missao-direita .info-missao {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Em telas pequenas, todas as missões ficam empilhadas */
+
+@media (max-width: 768px) {
+    .missao-direita {
+        grid-template-columns: 1fr;
+    }
+
+    .missao-direita .conteudo-missao,
+    .missao-direita .info-missao {
+        grid-column: 1;
+    }
+
+    .missao-direita .conteudo-missao {
+        grid-row: 1;
+    }
+
+    .missao-direita .info-missao {
+        grid-row: 2;
+    }
+}
+
+/* Investimento na jornada */
+
+.investimento {
+    padding: 56px 6%;
+    text-align: center;
+    background-color: #F5EFE6;
+    color: #30251F;
+}
+
+.investimento h2 {
+    margin: 0 0 24px;
+    font-size: 28px;
+}
+
+.preco-parcelado {
+    margin: 0 0 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.preco-vista {
+    margin: 0 0 28px;
+    font-size: 20px;
+}
+
+.investimento .botao-principal {
+    margin-top: 8px;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .investimento {
+        padding: 40px 6%;
+    }
+
+    .investimento h2 {
+        font-size: 24px;
+    }
+
+    .preco-parcelado {
+        font-size: 25px;
+    }
+
+    .preco-vista {
+        font-size: 18px;
+    }
+}
+
+
+/* Perguntas frequentes */
+
+.faq {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 56px 6%;
+}
+
+.faq > h2 {
+    margin: 0 0 32px;
+    color: #30251F;
+    text-align: center;
+    font-size: 28px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 22px;
+    background-color: #F5EFE6;
+    border-radius: 10px;
+}
+
+.faq-item h3 {
+    margin: 0 0 12px;
+    color: #30251F;
+    font-size: 19px;
+}
+
+.faq-item p {
+    margin: 0;
+    color: #51463F;
+    line-height: 1.7;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .faq {
+        padding: 40px 6%;
+    }
+
+    .faq > h2 {
+        font-size: 24px;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+
+    .faq-item h3 {
+        font-size: 17px;
+    }
+}
+
+/* Depoimento de aluno */
+
+.depoimento {
+    padding: 56px 6%;
+    background-color: #30251F;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.depoimento h2 {
+    margin: 0 0 28px;
+    font-size: 28px;
+}
+
+.depoimento blockquote {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 28px;
+    background-color: #45352A;
+    border-radius: 12px;
+}
+
+.depoimento blockquote p {
+    margin: 0 0 24px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.depoimento blockquote footer {
+    line-height: 1.6;
+    color: #F5EFE6;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .depoimento {
+        padding: 40px 6%;
+    }
+
+    .depoimento h2 {
+        font-size: 24px;
+    }
+
+    .depoimento blockquote {
+        padding: 20px;
+    }
+
+    .depoimento blockquote p {
+        font-size: 16px;
+    }
+}
+
+
+/* Chamada final */
+
+.chamada-final {
+    padding: 64px 6%;
+    background-color: #F5EFE6;
+    color: #30251F;
+    text-align: center;
+}
+
+.chamada-final h2 {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    font-size: 32px;
+    line-height: 1.3;
+}
+
+.chamada-final p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .chamada-final {
+        padding: 44px 6%;
+    }
+
+    .chamada-final h2 {
+        font-size: 26px;
+    }
+
+    .chamada-final p {
+        font-size: 16px;
+    }
+}
+
+/* Rodapé */
+
+.rodape {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    padding: 40px 6%;
+    background-color: #30251F;
+    color: #FFFFFF;
+}
+
+.rodape h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.rodape p {
+    line-height: 1.6;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodape-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.rodape-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .rodape {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+
+
+.rodape-cursos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape-cursos li {
+    margin-bottom: 10px;
+}
+
+.rodape-cursos a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.rodape-cursos a:hover {
+    text-decoration: underline;
+}
