@@ -2,6 +2,17 @@
    RODAPÉ (FOOTER) - ESTILOS BASE E RESPONSIVIDADE
    ========================================================================== */
 
+/* --- Reset interno: o rodapé não depende do reset da página em que for colado --- */
+.rodape,
+.rodape * {
+    box-sizing: border-box;
+}
+
+.rodape * {
+    margin: 0;
+    padding: 0;
+}
+
 /* --- Oculta a quebra de linha do e-mail por padrão (Desktop e Tablet) --- */
 .quebra-mobile {
     display: none;
@@ -11,7 +22,7 @@
 .rodape {
     width: 100%;
     background-color: var(--color-dark, #2F241A);
-    border-top: 1px solid rgba(219, 219, 219, 0.1);
+    border-top: 2px solid #DBDBDB; /* linha branca de 2px no topo (todos os formatos) */
     padding: 50px 64px;
     font-family: var(--font-primary, 'Karma', serif);
     color: var(--color-light, #DBDBDB);
@@ -49,8 +60,19 @@
     margin-top: 12px;
 }
 
-/* --- Títulos das Colunas --- */
-.titulo-coluna {
+/* --- Títulos das Colunas ---
+   Escopado com ".rodape" e com os valores explícitos para que uma classe de mesmo
+   nome na página (ex.: .titulo-coluna) não desloque nem estilize os títulos do rodapé. */
+.rodape .titulo-coluna {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    white-space: normal;
+    text-align: left;
+    line-height: normal;
+    font-family: inherit;
     font-size: 22px;
     font-weight: bold;
     color: #D3C3A8;
@@ -126,7 +148,7 @@
         gap: 30px;
     }
 
-    .titulo-coluna {
+    .rodape .titulo-coluna {
         font-size: 20px;
     }
 
@@ -151,7 +173,7 @@
         gap: 35px !important;
     }
 
-    .titulo-coluna {
+    .rodape .titulo-coluna {
         font-size: 20px;
         margin-bottom: 12px;
     }

@@ -1,72 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+===============================================================================
+RODAPÉ PRISMA CURSOS — INSTRUÇÕES DE USO
+===============================================================================
+
+Este arquivo contém o HTML do rodapé. Ele pode ser usado de duas maneiras.
+
+MÉTODO A — CARREGAMENTO AUTOMÁTICO (recomendado)
+1. Na página, depois do conteúdo principal, coloque:
+   <div id="rodape"></div>
+
+2. Antes de </body>, adicione o script conforme a localização da página:
+
+   Página dentro de pages/:
+   <script type="module" src="../components/rodape/rodape.js"></script>
+
+   Página index.html na raiz:
+   <script type="module" src="./components/rodape/rodape.js"></script>
+
+3. Abra o projeto usando Live Server ou outro servidor HTTP. O fetch() não
+   funciona corretamente ao abrir a página diretamente com file://.
+
+MÉTODO B — INSERIR O RODAPÉ DIRETAMENTE NO HTML
+1. No <head> da página, adicione os links abaixo (ajuste o caminho do CSS
+   conforme a localização da página):
+   <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../components/rodape/rodape.css">
+
+2. Copie somente o bloco <footer class="rodape"> ... </footer> abaixo e cole
+   depois do conteúdo principal (por exemplo, depois de </main>) e antes de
+   </body>.
+
+3. Use apenas um método por página. Se usar os dois, o rodapé pode aparecer
+   duplicado.
+
+CAMINHOS
+- Os caminhos de imagem e de links abaixo são relativos a uma página dentro
+  da pasta pages/.
+- Se a página estiver na raiz do projeto (por exemplo, index.html), ajuste:
+    ../assets/icons/arquivo.png  -> assets/icons/arquivo.png
+    ../index.html                -> index.html
+    curso-python.html            -> pages/curso-python.html
+
+- Ajuste os nomes dos arquivos de curso se os nomes usados no seu projeto forem
+  diferentes.
+- Confirme também o endereço de e-mail, o número do WhatsApp e os destinos dos
+  links antes de publicar.
+
+IMPORTANTE
+- O JavaScript do método automático procura exatamente:
+  <footer class="rodape">
+- Mantenha essa tag e essa classe para que o rodape.js reconheça o componente.
+===============================================================================
+-->
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rodapé | Prisma Cursos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../components/rodape/rodape.css">
-
 </head>
 <body>
-    
+
+    <!-- Copie este bloco inteiro para usar o método B. -->
     <footer class="rodape">
-            <div class="rodape-container">
-                <!-- Coluna 1: Logo & Marca -->
-                <div class="coluna-logo">
-                    <img src="../assets/icons/logo-prisma-fundo.png" alt="Logo Prisma Cursos" class="logo-rodape">
-                    <p class="nome-marca">Prisma Cursos</p>
-                </div>
-
-                <!-- Coluna 2: Cursos -->
-                <div class="coluna-links">
-                    <h3 class="titulo-coluna">Cursos</h3>
-                    <ul>
-                        <li><a href="curso-marketing.html" class="link-marketing-digital">Marketing Digital</a></li>
-                        <li><a href="curso-empreendedorismo.html" class="link-empreendedorismo">Empreendedorismo</a></li>
-                        <li><a href="curso-python.html" class="link-python">Python</a></li>
-                        <li><a href="curso-after-effects.html" class="link-after-effects">After Effects</a></li>
-                        <li><a href="curso-gestao.html" class="link-gestao-de-projetos">Gestão de projetos</a></li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 3: Navegação -->
-                <div class="coluna-links">
-                    <h3 class="titulo-coluna">Navegação</h3>
-                    <ul>
-                        <li><a href="index.html" class="link-inicio">Início</a></li>
-                        <li><a href="cursos.html" class="link-cursos">Cursos</a></li>
-                        <li><a href="quem-somos.html" class="link-quem-somos">Quem somos</a></li>
-                        <li><a href="formulario.html" class="link-contato">Contato</a></li>
-                        <li><a href="depoimentos.html" class="link-feedbacks">Feedbacks</a></li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 4: Comunicações -->
-                <div class="coluna-comunicacao">
-                    <h3 class="titulo-coluna">Comunicações</h3>
-                    <ul>
-                        <li>
-                            <a href="mailto:prisma_cursos@gmail.com" class="link-email">
-                                <img src="../assets/icons/Email_Icon.png" alt="Ícone E-mail" class="icone-rodape">
-                                prisma_cursos<br class="quebra-mobile">@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/5512123456789" target="_blank" rel="noopener noreferrer" class="link-whatsapp">
-                                <img src="../assets/icons/WhatsApp_Icon.png" alt="Ícone WhatsApp" class="icone-rodape">
-                                (12) 12345-6789
-                            </a>
-                        </li>
-                        <li>
-                            <a href="formulario.html" class="link-formulario">
-                                <img src="../assets/icons/Garra_icon.png" alt="Ícone Formulário" class="icone-rodape">
-                                Formulário
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="rodape-container">
+            <div class="coluna-logo">
+                <img src="../assets/icons/logo-prisma-fundo.png" alt="Logo Prisma Cursos" class="logo-rodape">
+                <p class="nome-marca">Prisma Cursos</p>
             </div>
-        </footer>
+
+            <div class="coluna-links">
+                <h3 class="titulo-coluna">Cursos</h3>
+                <ul>
+                    <li><a href="curso-marketing.html" class="link-marketing-digital">Marketing Digital</a></li>
+                    <li><a href="curso-empreendedorismo.html" class="link-empreendedorismo">Empreendedorismo</a></li>
+                    <li><a href="curso-python.html" class="link-python">Python</a></li>
+                    <li><a href="curso-after-effects.html" class="link-after-effects">After Effects</a></li>
+                    <li><a href="curso-gestao.html" class="link-gestao-de-projetos">Gestão de projetos</a></li>
+                </ul>
+            </div>
+
+            <div class="coluna-links">
+                <h3 class="titulo-coluna">Navegação</h3>
+                <ul>
+                    <li><a href="../index.html" class="link-inicio">Início</a></li>
+                    <li><a href="cursos.html" class="link-cursos">Cursos</a></li>
+                    <li><a href="quem-somos.html" class="link-quem-somos">Quem somos</a></li>
+                    <li><a href="formulario.html" class="link-contato">Contato</a></li>
+                    <li><a href="depoimentos.html" class="link-feedbacks">Feedbacks</a></li>
+                </ul>
+            </div>
+
+            <div class="coluna-comunicacao">
+                <h3 class="titulo-coluna">Comunicações</h3>
+                <ul>
+                    <li>
+                        <a href="mailto:prisma_cursos@gmail.com" class="link-email">
+                            <img src="../assets/icons/Email_Icon.png" alt="" class="icone-rodape">
+                            prisma_cursos<br class="quebra-mobile">@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/5512123456789" target="_blank" rel="noopener noreferrer" class="link-whatsapp">
+                            <img src="../assets/icons/WhatsApp_Icon.png" alt="" class="icone-rodape">
+                            (12) 12345-6789
+                        </a>
+                    </li>
+                    <li>
+                        <a href="formulario.html" class="link-formulario">
+                            <img src="../assets/icons/Garra_icon.png" alt="" class="icone-rodape">
+                            Formulário
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
