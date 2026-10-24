@@ -3,11 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Curso de After Effects</title>
 
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karma:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../components/rodape/rodape.css">
+
+    <!-- Ficheiro de Estilos Principal -->
     <link rel="stylesheet" href="../css/css_pages/curso-after-effects.css">
 </head>
 <body>
-    
+
+    <!-- Container da Navbar (Injetado via navbar.js) -->
+    <div id="navbar"></div>
+
+    <main>
+
+        <!-- Seção 1: Banner Principal -->
+        <section class="secao-1">
+            <h1 class="titulo-banner">AFTER EFFECTS: Do Marujo ao Capitão </h1>
+            <p class="subtitulo-banner">Aprenda a dar vida aos seus vídeos com animações dignas de lenda. Do zero ao tesouro, com projetos práticos. </p>
+            <a href="formulario.html" class="botao-banner">Embarcar na aventura</a>
+        </section>
+
+        <!-- Seção 2: Sobre o Curso -->
+        <section class="secao-2">
+            <!-- Imagem (Esquerda) -->
+            <div class="conteudo-imagem">
+                <img src="../assets/icons/Pirates-amico_1.png" alt="Ilustração de um pirata segurando uma bandeira em uma ilha, com um navio ao fundo">
+            </div>
+
+            <!-- Texto (Direita) -->
+            <div class="bloco-texto">
+                <p class="descricao-curso">Aprenda <strong>After Effects</strong>, a ferramenta mais usada do mercado para <strong>animação e efeitos visuais</strong>. Com <strong>projetos reais</strong> e um instrutor no leme guiando cada milha, você cria vinhetas, logos animados e vídeos para redes sociais, sem precisar de experiência prévia.</p>
+
+                <h2 class="titulo-diario">Diário de Bordo</h2>
+
+                <ul class="detalhes-curso">
+                    <li><strong>Duração da viagem:</strong> 120 horas</li>
+                    <li><strong>Tipo de navio:</strong> Híbrido.</li>
+                    <li><strong>Patente exigida:</strong> Iniciante, não precisa ter navegado antes.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 3: Público e Resultados -->
+        <section class="secao-3">
+            <!-- Coluna Esquerda: Requisitos -->
+            <div class="coluna-requisitos">
+                <h2 class="titulo-coluna">Quem pode entrar na tripulação</h2>
+                <ul class="lista-secao-3">
+                    <li><strong>Designers</strong> que querem tirar suas criações do papel e fazê-las ganhar movimento.</li>
+                    <li><strong>Editores de vídeo</strong> que desejam conquistar novos mares (e clientes). </li>
+                    <li><strong>Criadores de conteúdo</strong> que querem vídeos que prendam a atenção do primeiro ao último segundo. </li>
+                    <li><strong>Marujos de primeira viagem</strong> sem nenhuma experiência prévia necessária, só vontade de aprender e mudar de vida.</li>
+                </ul>
+            </div>
+
+            <!-- Imagem Central -->
+            <img src="../assets/icons/pirate_boat-cuate_1.png" alt="Ilustração de um navio pirata no mar" class="imagem-navio">
+
+            <!-- Coluna Direita: Benefícios -->
+            <div class="coluna-beneficios">
+                <h2 class="titulo-coluna">Seu butim ao final da viagem</h2>
+                <ul class="lista-secao-3">
+                    <li>Navegar pela interface do After Effects sem se perder. </li>
+                    <li>Criar animações suaves com keyframes e curvas de velocidade.</li>
+                    <li>Animar textos e logos que chamam atenção. </li>
+                    <li>Automatizar tarefas com expressões. </li>
+                    <li>Exportar tudo pronto para redes sociais, web e TV.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 4: Trilha da Viagem -->
+        <section class="secao-4" aria-labelledby="titulo-trilha">
+            <h2 class="trilha-titulo" id="titulo-trilha">Içar a âncora, marujos! A primeira aventura de vocês está para começar!</h2>
+
+            <!-- Etapa 1: Ilha 1 -->
+            <article class="etapa etapa--icone-esquerda">
+                <div class="etapa-marco">
+                    <img src="../assets/icons/ilha-1.png" alt="Ilha 1" class="etapa-icone">
+                    <h3 class="etapa-nome">Ilha 1</h3>
+                    <p class="etapa-tempo">Tempo da Parada: 30 horas</p>
+                </div>
+                <div class="etapa-card">
+                    <p class="etapa-descricao"><strong>Ilha 1: Conhecendo o navio </strong> <br><br><strong>Introdução e animação básica</strong> <br><br>Composições, importação de arquivos e organização do projeto.</p>
+                </div>
+            </article>
+
+            <!-- Trajeto 1 -->
+            <div class="trajeto" aria-hidden="true">
+                <img src="../assets/icons/trajeto-1-recortado.svg" alt="">
+            </div>
+
+            <!-- Etapa 2: Ilha 2 -->
+            <article class="etapa etapa--icone-direita">
+                <div class="etapa-marco">
+                    <img src="../assets/icons/shipwreck-1.svg" alt="Ilha 2" class="etapa-icone">
+                    <h3 class="etapa-nome">Ilha 2</h3>
+                    <p class="etapa-tempo">Tempo da Parada: 30 horas</p>
+                </div>
+                <div class="etapa-card">
+                    <p class="etapa-descricao"><strong>Ilha 2: Bandeiras e ventos</strong> <br><br><strong>Texto, formas e máscaras</strong> <br><br>Animação de textos, shape layers, logotipos em movimento, recortes e track mattes.</p>
+                </div>
+            </article>
+
+            <!-- Trajeto 2 -->
+            <div class="trajeto" aria-hidden="true">
+                <img src="../assets/icons/trajeto-2-recortado.svg" alt="">
+            </div>
+
+            <!-- Etapa 3: Alto Mar -->
+            <article class="etapa etapa--icone-esquerda">
+                <div class="etapa-marco">
+                    <img src="../assets/icons/ship-1.svg" alt="Alto Mar" class="etapa-icone">
+                    <h3 class="etapa-nome">Alto Mar</h3>
+                    <p class="etapa-tempo">Tempo da Navegação: 30 horas</p>
+                </div>
+                <div class="etapa-card">
+                    <p class="etapa-descricao"><strong>Alto mar: Magia das profundezas</strong> <br><br><strong>Efeitos, expressões e finalização</strong> <br><br>Chroma key, tracking, expressões essenciais, integração com Premiere, Photoshop e Illustrator, e exportação com Media Encoder.</p>
+                </div>
+            </article>
+
+            <!-- Trajeto 3 -->
+            <div class="trajeto" aria-hidden="true">
+                <img src="../assets/icons/trajeto-1-recortado.svg" alt="">
+            </div>
+
+            <!-- Etapa 4: Ilha do Tesouro -->
+            <article class="etapa etapa--icone-direita">
+                <div class="etapa-marco">
+                    <button type="button" class="botao-tesouro botao-tesouro--ilha"
+                        data-quiz="empreendedorismo" aria-label="Abrir desafio da Ilha do Tesouro"
+                        aria-haspopup="dialog">
+                        <img src="../assets/icons/treasure-1.svg" alt="" class="etapa-icone">
+                    </button>
+                    <h3 class="etapa-nome">Ilha do Tesouro</h3>
+                    <p class="etapa-tempo">Tempo da Aventura: 30 horas</p>
+                </div>
+                <div class="etapa-card">
+                    <p class="etapa-descricao"><strong>Missão final: Seu tesouro Projeto final</strong> <br><br>Criação de um pacote de motion para a sua própria marca, com vinheta, animação da sua logo e um vídeo para Instagram/Reels.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Seção 5: Investimentos -->
+        <section class="secao-5">
+            <div class="card-investimento">
+                <img src="../assets/icons/inverstimento.png" alt="Baú do tesouro na ilha" class="imagem-investimento">
+                <div class="conteudo-investimento">
+                    <h2 class="titulo-investimento">Investimento na sua jornada:</h2>
+                    <p class="opcao-investimento">R$ 1.159,99 à vista </p>
+                    <p class="opcao-investimento">ou 12x de R$ 129,99 (sem juros no cartão) </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Perguntas Frequentes (FAQ) -->
+        <section class="secao-6" aria-labelledby="titulo-faq">
+            <h2 class="titulo-faq" id="titulo-faq">Dúvidas Frequentes da Marujada (FAQ):</h2>
+
+            <div class="lista-faq">
+                <article class="item-faq">
+                    <h3 class="pergunta-faq">1. Nunca usei o After Effects. Posso entrar? </h3>
+                    <p class="resposta-faq">
+                        Pode, sim. Começamos do básico, e o mar só fica mais agitado aos poucos. 
+                    </p>
+                </article>
+
+                <article class="item-faq">
+                    <h3 class="pergunta-faq">2. Posso parcelar o investimento? </h3>
+                    <p class="resposta-faq">
+                        Aceitamos parcelamento em até 12x sem juros no cartão. 
+                    </p>
+                </article>
+
+                <article class="item-faq">
+                    <h3 class="pergunta-faq">3. Por quanto tempo tenho acesso às aulas? </h3>
+                    <p class="resposta-faq">
+                        Depois de uma vez adquirido seu tesouro, seu acesso é ilimitado! 
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Depoimento de aluno (entre a seção 6 e a seção 7) -->
+        <section class="secao-depoimento" aria-labelledby="titulo-depoimento">
+            <h2 class="titulo-depoimento" id="titulo-depoimento">Depoimento de aluno</h2>
+
+            <p class="depoimento-autor">Diana Fachini — <strong>Estudante de After Effects</strong></p>
+
+            <blockquote class="depoimento-texto">“Cheguei à Prisma Cursos em um momento difícil: estava desempregada e sem perspectivas.
+                Os cursos me deram um novo rumo, principalmente o de After Effects, que me abriu as
+                portas do mercado de trabalho. Os projetos que desenvolvi me deram um diferencial na hora
+                de me apresentar. Sou muito grata por fazer parte da tripulação da Prisma Cursos!”
+                </blockquote>
+
+            <p class="depoimento-convite">Se você chegou até aqui volte ao ícone da ilha do tesouro e clique nele, há uma oportunidade te esperando...</p>
+        </section>
+
+        <!-- Seção 7: Chamada Final (CTA) -->
+        <section class="secao-7">
+            <div class="container-cta">
+                <!-- Imagem do Pirata (Esquerda) -->
+                <img src="../assets/icons/Pirata-design.svg" alt="Ilustração de um pirata segurando um computador e megafone" class="imagem-pirata-cta">
+
+                <!-- Bloco Direita: Card de Texto + Botão -->
+                <div class="bloco-conteudo-cta">
+                    <div class="card-texto-cta">
+                        <p>O horizonte está lá, esperando por você. Hasteie a vela, pegue o leme e comece a criar animações que ninguém vai esquecer!</p>
+                    </div>
+                    <a href="formulario.html" class="botao-cta">Embarcar na aventura</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé inserido diretamente no HTML -->
+    <footer class="rodape">
+        <div class="rodape-container">
+            <!-- Coluna 1: Logo & Marca -->
+            <div class="coluna-logo">
+                <img src="../assets/icons/logo-prisma-fundo.png" alt="Logo Prisma Cursos" class="logo-rodape">
+                <p class="nome-marca">Prisma Cursos</p>
+            </div>
+
+            <!-- Coluna 2: Cursos -->
+            <div class="coluna-links">
+                <h3 class="titulo-coluna">Cursos</h3>
+                <ul>
+                    <li><a href="curso-marketing.html" class="link-marketing-digital">Marketing Digital</a></li>
+                    <li><a href="curso-empreendedorismo.html" class="link-empreendedorismo">Empreendedorismo</a></li>
+                    <li><a href="curso-python.html" class="link-python">Python</a></li>
+                    <li><a href="curso-after-effects.html" class="link-after-effects">After Effects</a></li>
+                    <li><a href="curso-gestao.html" class="link-gestao-de-projetos">Gestão de projetos</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Navegação -->
+            <div class="coluna-links">
+                <h3 class="titulo-coluna">Navegação</h3>
+                <ul>
+                    <li><a href="../index.html" class="link-inicio">Início</a></li>
+                    <li><a href="cursos.html" class="link-cursos">Cursos</a></li>
+                    <li><a href="quem-somos.html" class="link-quem-somos">Quem somos</a></li>
+                    <li><a href="formulario.html" class="link-contato">Contato</a></li>
+                    <li><a href="depoimentos.html" class="link-feedbacks">Feedbacks</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 4: Comunicações -->
+            <div class="coluna-comunicacao">
+                <h3 class="titulo-coluna">Comunicações</h3>
+                <ul>
+                    <li>
+                        <a href="mailto:prisma_cursos@gmail.com" class="link-email">
+                            <img src="../assets/icons/Email_Icon.png" alt="Ícone E-mail" class="icone-rodape">
+                            prisma_cursos<br class="quebra-mobile">@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/5512123456789" target="_blank" rel="noopener noreferrer" class="link-whatsapp">
+                            <img src="../assets/icons/WhatsApp_Icon.png" alt="Ícone WhatsApp" class="icone-rodape">
+                            (12) 12345-6789
+                        </a>
+                    </li>
+                    <li>
+                        <a href="formulario.html" class="link-formulario">
+                            <img src="../assets/icons/Garra_icon.png" alt="Ícone Formulário" class="icone-rodape">
+                            Formulário
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar e rodapé: cada um carrega o próprio CSS e HTML (caminhos a partir de pages/) -->
+    <script type="module" src="../components/navbar/navbar.js"></script>
+    <div id="quiz"></div>
+    <script type="module" src="../components/quiz/quiz.js"></script>
+
 </body>
 </html>
