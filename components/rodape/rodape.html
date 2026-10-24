@@ -1,58 +1,26 @@
 <!DOCTYPE html>
-<!--
-===============================================================================
-RODAPÉ PRISMA CURSOS — INSTRUÇÕES DE USO
-===============================================================================
+MÉTODO DE UTILIZAÇÃO — CARREGAMENTO AUTOMÁTICO
+----------------------------------------------
 
-Este arquivo contém o HTML do rodapé. Ele pode ser usado de duas maneiras.
+PASSO 1 — CRIAR O CONTAINER
+Em qualquer página, depois do fechamento do conteúdo principal,
+crie uma div com o ID "rodape".
 
-MÉTODO A — CARREGAMENTO AUTOMÁTICO (recomendado)
-1. Na página, depois do conteúdo principal, coloque:
-   <div id="rodape"></div>
+O JavaScript localizará esse elemento e inserirá o rodapé nele.
 
-2. Antes de </body>, adicione o script conforme a localização da página:
 
-   Página dentro de pages/:
-   <script type="module" src="../components/rodape/rodape.js"></script>
+PASSO 2 — IMPORTAR O JAVASCRIPT
+O arquivo rodape.js deve ser importado usando type="module".
 
-   Página index.html na raiz:
-   <script type="module" src="./components/rodape/rodape.js"></script>
+Os caminhos variam conforme a localização da página:
 
-3. Abra o projeto usando Live Server ou outro servidor HTTP. O fetch() não
-   funciona corretamente ao abrir a página diretamente com file://.
+Página index.html (raiz):
+    ./components/rodape/rodape.js
 
-MÉTODO B — INSERIR O RODAPÉ DIRETAMENTE NO HTML
-1. No <head> da página, adicione os links abaixo (ajuste o caminho do CSS
-   conforme a localização da página):
-   <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../components/rodape/rodape.css">
+Páginas dentro de pages/:
+    ../components/rodape/rodape.js
 
-2. Copie somente o bloco <footer class="rodape"> ... </footer> abaixo e cole
-   depois do conteúdo principal (por exemplo, depois de </main>) e antes de
-   </body>.
-
-3. Use apenas um método por página. Se usar os dois, o rodapé pode aparecer
-   duplicado.
-
-CAMINHOS
-- Os caminhos de imagem e de links abaixo são relativos a uma página dentro
-  da pasta pages/.
-- Se a página estiver na raiz do projeto (por exemplo, index.html), ajuste:
-    ../assets/icons/arquivo.png  -> assets/icons/arquivo.png
-    ../index.html                -> index.html
-    curso-python.html            -> pages/curso-python.html
-
-- Ajuste os nomes dos arquivos de curso se os nomes usados no seu projeto forem
-  diferentes.
-- Confirme também o endereço de e-mail, o número do WhatsApp e os destinos dos
-  links antes de publicar.
-
-IMPORTANTE
-- O JavaScript do método automático procura exatamente:
-  <footer class="rodape">
-- Mantenha essa tag e essa classe para que o rodape.js reconheça o componente.
-===============================================================================
--->
+O script pode ser colocado no head ou antes do fechamento do body.
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
