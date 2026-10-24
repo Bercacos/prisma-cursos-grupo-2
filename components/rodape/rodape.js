@@ -1,77 +1,88 @@
-// 1. Carrega o CSS do rodapé se ainda não existir
-const urlCss = new URL("./rodape.css", import.meta.url).href;
-const cssJaExiste = [...document.querySelectorAll('link[rel="stylesheet"]')]
-    .some(link => link.href === urlCss);
 
-if (!cssJaExiste) {
-    const estiloRodape = document.createElement("link");
-    estiloRodape.rel = "stylesheet";
-    estiloRodape.href = urlCss;
-    document.head.appendChild(estiloRodape);
+ // Pasta onde está o rodape.js
+const pastaRodape = new URL(".", import.meta.url);
+
+// Carrega o CSS do rodapé.
+const urlCss = new URL("rodape.css", pastaRodape).href;
+
+if (![...document.querySelectorAll('link[rel="stylesheet"]')]
+    .some(link => link.href === urlCss)) {
+
+    const estilo = document.createElement("link");
+    estilo.rel = "stylesheet";
+    estilo.href = urlCss;
+    document.head.appendChild(estilo);
 }
 
-// 2. HTML do rodapé incorporado diretamente
-const htmlRodape = `
-    <footer class="rodape">
-        <div class="rodape-container">
-            <div class="coluna-logo">
-                <img src="../assets/icons/logo-prisma-fundo.png" alt="Logo Prisma Cursos" class="logo-rodape">
-                <p class="nome-marca">Prisma Cursos</p>
-            </div>
+// Busca o HTML do rodapé.
+fetch(new URL("rodape.html", pastaRodape))
+    .then(resposta => {
+        if (!resposta.ok) {
+            throw new Error("Erro ao carregar rodape.html");
+        }
 
-            <div class="coluna-links">
-                <h3 class="titulo-coluna">Cursos</h3>
-                <ul>
-                    <li><a href="curso-marketing.html" class="link-marketing-digital">Marketing Digital</a></li>
-                    <li><a href="curso-empreendedorismo.html" class="link-empreendedorismo">Empreendedorismo</a></li>
-                    <li><a href="curso-python.html" class="link-python">Python</a></li>
-                    <li><a href="curso-after-effects.html" class="link-after-effects">After Effects</a></li>
-                    <li><a href="curso-gestao.html" class="link-gestao-de-projetos">Gestão de projetos</a></li>
-                </ul>
-            </div>
+        return resposta.text();
+    })
+    .then(html => {
+        const modelo = document.createElement("template");
+        modelo.innerHTML = html;
 
-            <div class="coluna-links">
-                <h3 class="titulo-coluna">Navegação</h3>
-                <ul>
-                    <li><a href="../index.html" class="link-inicio">Início</a></li>
-                    <li><a href="cursos.html" class="link-cursos">Cursos</a></li>
-                    <li><a href="quem-somos.html" class="link-quem-somos">Quem somos</a></li>
-                    <li><a href="formulario.html" class="link-contato">Contato</a></li>
-                    <li><a href="depoimentos.html" class="link-feedbacks">Feedbacks</a></li>
-                </ul>
-            </div>
+        const rodape = modelo.content.querySelector("footer.rodape");
 
-            <div class="coluna-comunicacao">
-                <h3 class="titulo-coluna">Comunicações</h3>
-                <ul>
-                    <li>
-                        <a href="mailto:prisma_cursos@gmail.com" class="link-email">
-                            <img src="../assets/icons/Email_Icon.png" alt="" class="icone-rodape">
-                            prisma_cursos<br class="quebra-mobile">@gmail.com
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/5512123456789" target="_blank" rel="noopener noreferrer" class="link-whatsapp">
-                            <img src="../assets/icons/WhatsApp_Icon.png" alt="" class="icone-rodape">
-                            (12) 12345-6789
-                        </a>
-                    </li>
-                    <li>
-                        <a href="formulario.html" class="link-formulario">
-                            <img src="../assets/icons/Garra_icon.png" alt="" class="icone-rodape">
-                            Formulário
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-`;
+        if (!rodape) {
+            throw new Error("Elemento footer.rodape não encontrado.");
+        }
 
-// 3. Renderiza o rodapé na div container assim que o DOM estiver pronto
-document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("rodape");
-    if (container) {
-        container.innerHTML = htmlRodape;
-    }
-});
+        // Referência à pasta pages, onde os links originais
+        // do rodape.html foram definidos.
+        const pastaPages = new URL("../../pages/", pastaRodape);
+
+        // Corrige os links internos.
+        rodape.querySelectorAll("a[href]").forEach(link => {
+            const caminho = link.getAttribute("href");
+            link.href = new URL(caminho, pastaPages).href;
+        });
+
+        // Corrige os caminhos das imagens.
+        rodape.querySelectorAll("img[src]").forEach(imagem => {
+            const caminho = imagem.getAttribute("src");
+            imagem.src = new URL(caminho, pastaPages).href;
+        });
+
+        // Insere o rodapé no container.
+        const container = document.getElementById("rodape");
+
+        if (!container) {
+            throw new Error("Container #rodape não encontrado.");
+        }
+
+        container.replaceChildren(rodape);
+
+        // Identifica a página atual.
+        const paginaAtual = window.location.pathname.replace(
+            /\/index\.html$/,
+            "/"
+        );
+
+        rodape.querySelectorAll("a[href]").forEach(link => {
+            const urlLink = new URL(link.href);
+
+            if (urlLink.origin !== window.location.origin) {
+                return;
+            }
+
+            const paginaLink = urlLink.pathname.replace(
+                /\/index\.html$/,
+                "/"
+            );
+
+            if (paginaLink === paginaAtual) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    })
+    .catch(erro => {
+        console.error("Erro no rodapé:", erro);
+    });
