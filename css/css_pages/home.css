@@ -1,16 +1,28 @@
+/* ============================================================
+   HOME — CSS ORGANIZADO
+   Regras e valores originais preservados; @media consolidados.
+   ============================================================ */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Karma:wght@400;500;600;700&display=swap");
+
+
+/* ===================== 01. ESTILOS GERAIS ===================== */
 body {
     margin: 0;
     background-color: #2F241A;
-   }
+}
 
-body h1,h2,h3{
+body h1,
+h2,
+h3 {
     margin: 0;
 }
 
+
+/* ===================== 02. INÍCIO / HERO ===================== */
 .inicio {
-    
     background-image: url("../../assets/img/fundo_navio_inicio.png");
     background-size: cover;
     background-position: center;
@@ -27,12 +39,6 @@ body h1,h2,h3{
     min-height: calc(100dvh - 80px);
 }
 
-.inicio-logo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
 .titulo-frase-efeito {
     max-width: 740px;
     font-family: "Inter", sans-serif;
@@ -44,7 +50,6 @@ body h1,h2,h3{
     font-size: clamp(36px, 6.5vw, 96px);
     font-weight: 600;
     line-height: 1.2;
-
     /* Contorno discreto para destacar sobre a imagem */
     -webkit-text-stroke: 1px #171310;
     paint-order: stroke fill;
@@ -67,69 +72,71 @@ body h1,h2,h3{
     height: auto;
 }
 
+
+/* ===================== 03. CURSOS ===================== */
 .cursos {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     background-color: #2F241A;
-    padding: 80px 64px 140px;
+    padding: 0px 64px;
+    padding-top: 80px;
 }
 
-
-.cursos-container{
+.cursos-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.sub-titulo{
+.sub-titulo {
     display: flex;
     flex-direction: column;
     gap: 0px;
     padding-bottom: 0;
 }
 
-.sub-titulo h2{
+.sub-titulo h2 {
     font-family: "Karma", serif;
     font-size: 100px;
     font-weight: bold;
     color: #A89273;
-}   
+}
 
-.sub-titulo p{
+.sub-titulo p {
     font-family: "Karma", serif;
     font-size: 35px;
     color: #dbdbdb;
     font-weight: bold;
 }
 
-.adobe-effects{
+.adobe-effects {
     gap: 3px;
     display: flex;
     flex-direction: column;
 }
 
-.adobe-effects h3{
+.adobe-effects h3 {
     font-family: "Karma", serif;
     font-size: 35px;
     color: #dbdbdb;
     font-weight: bold;
 }
 
-.descricao-adobe{
-    gap :22px;
+.descricao-adobe {
+    gap: 22px;
     display: flex;
 }
 
-.deserto-adobe{
+.deserto-adobe {
     width: 60%;
     max-width: 778px;
     height: auto;
     display: block;
 }
 
-.descricao-adobe p{
+.descricao-adobe p {
     font-family: "Karma", serif;
     font-size: 25px;
     color: #dbdbdb;
@@ -139,30 +146,30 @@ body h1,h2,h3{
     gap: 22px;
 }
 
-.programaçao-python{
+.programaçao-python {
     gap: 0px;
 }
 
-.programaçao-python h3{
+.programaçao-python h3 {
     font-family: "Karma", serif;
     font-size: 35px;
     color: #dbdbdb;
     font-weight: bold;
 }
 
-.descricao-python{
-    gap :22px;
+.descricao-python {
+    gap: 22px;
     display: flex;
 }
 
-.setup-python{
+.setup-python {
     width: 60%;
     max-width: 778px;
     height: auto;
     display: block;
 }
 
-.descricao-python p{
+.descricao-python p {
     font-family: "Karma", serif;
     font-size: 25px;
     color: #dbdbdb;
@@ -172,32 +179,32 @@ body h1,h2,h3{
     gap: 22px;
 }
 
-.markting-digital{
+.markting-digital {
     gap: 3px;
     display: flex;
     flex-direction: column;
 }
 
-.markting-digital h3{
+.markting-digital h3 {
     font-family: "Karma", serif;
     font-size: 35px;
     color: #dbdbdb;
     font-weight: bold;
 }
 
-.descricao-markting{
-    gap :22px;
+.descricao-markting {
+    gap: 22px;
     display: flex;
 }
 
-.mulher-markting{
+.mulher-markting {
     width: 60%;
     max-width: 778px;
     height: auto;
     display: block;
 }
 
-.descricao-markting p{
+.descricao-markting p {
     font-family: "Karma", serif;
     font-size: 25px;
     color: #dbdbdb;
@@ -207,32 +214,32 @@ body h1,h2,h3{
     gap: 22px;
 }
 
-.empreendedorismo-digital{
+.empreendedorismo-digital {
     gap: 3px;
     display: flex;
     flex-direction: column;
 }
 
-.empreendedorismo-digital h3{
+.empreendedorismo-digital h3 {
     font-family: "Karma", serif;
     font-size: 35px;
     color: #dbdbdb;
     font-weight: bold;
 }
 
-.descricao-empreendedorismo{
-    gap :22px;
+.descricao-empreendedorismo {
+    gap: 22px;
     display: flex;
 }
 
-.mulher-empreendedorismo{
+.mulher-empreendedorismo {
     width: 60%;
     max-width: 778px;
     height: auto;
     display: block;
 }
 
-.descricao-empreendedorismo p{
+.descricao-empreendedorismo p {
     font-family: "Karma", serif;
     font-size: 25px;
     color: #dbdbdb;
@@ -242,32 +249,32 @@ body h1,h2,h3{
     gap: 22px;
 }
 
-.gestao{
+.gestao {
     gap: 3px;
     display: flex;
     flex-direction: column;
 }
 
-.gestao h3{
+.gestao h3 {
     font-family: "Karma", serif;
     font-size: 35px;
     color: #dbdbdb;
     font-weight: bold;
 }
 
-.descricao-gestao{
-    gap :22px;
+.descricao-gestao {
+    gap: 22px;
     display: flex;
 }
 
-.cubiculos-gestao{
+.cubiculos-gestao {
     width: 60%;
     max-width: 778px;
     height: auto;
     display: block;
 }
 
-.descricao-gestao p{
+.descricao-gestao p {
     font-family: "Karma", serif;
     font-size: 25px;
     color: #dbdbdb;
@@ -277,26 +284,29 @@ body h1,h2,h3{
     gap: 22px;
 }
 
-.quem-somos{
+
+/* ===================== 04. QUEM SOMOS ===================== */
+.quem-somos {
     background-color: #dbdbdb;
-    padding: 0px 64px;
-    padding-top: 80px; 
-    height: 780px;
+    padding: 80px 64px 120px;
+    min-height: 780px;
+    height: auto;
+    box-sizing: border-box;
 }
 
-.quem-somos-container{
+.quem-somos-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.quem-somos-container .sub-titulo p{
+.quem-somos-container .sub-titulo p {
     color: #2F241A;
     font-family: "Karma", serif;
     font-size: 35px;
 }
 
-.descricao-quem-somos p{
+.descricao-quem-somos p {
     color: #2F241A;
     font-family: "Karma", serif;
     font-size: 25px;
@@ -309,6 +319,7 @@ body h1,h2,h3{
 }
 
 
+/* ===================== 05. DEPOIMENTOS ===================== */
 .depoimentos {
     background-color: #2F241A;
     padding: 80px 64px;
@@ -354,6 +365,7 @@ body h1,h2,h3{
 }
 
 
+/* ===================== 06. CONTATO ===================== */
 .contato {
     background-color: #dbdbdb;
     padding: 80px 64px;
@@ -369,7 +381,6 @@ body h1,h2,h3{
 .contato-container .sub-titulo p {
     color: #2F241A;
     padding-right: 320px;
-
 }
 
 .descricao-contato {
@@ -435,6 +446,14 @@ body h1,h2,h3{
     display: flex;
     margin-inline: auto;
 }
+
+/* CELULAR — até 768px */
+
+/* CELULAR PEQUENO — até 400px */
+
+
+/* ===================== 07. RESPONSIVIDADE ===================== */
+
 @media (max-width: 1024px) {
     .inicio-container {
         padding: 0 32px;
@@ -563,9 +582,13 @@ body h1,h2,h3{
     main .botao-escuro {
         font-size: 36px;
     }
-}
 
-/* CELULAR — até 768px */
+    .quem-somos {
+        height: auto;
+        min-height: 0;
+        box-sizing: border-box;
+    }
+}
 
 @media (max-width: 768px) {
     .inicio-container {
@@ -712,9 +735,42 @@ body h1,h2,h3{
         padding: 12px 20px;
         font-size: 28px;
     }
-}
 
-/* CELULAR PEQUENO — até 400px */
+    .cursos {
+        padding-bottom: 80px;
+    }
+
+    .quem-somos {
+        padding-bottom: 80px;
+    }
+
+    .descricao-depoimentos {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        text-align: center;
+        min-width: 0;
+    }
+
+    .imagem-depoimentos {
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+    .texto-depoimento {
+        min-width: 0;
+        max-width: 100%;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .depoimentos-container .botao-claro {
+        box-sizing: border-box;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
 
 @media (max-width: 400px) {
     .inicio-container {
@@ -740,6 +796,11 @@ body h1,h2,h3{
     .depoimentos,
     .contato {
         padding: 40px 16px;
+    }
+
+    /* Mantém o padding-bottom de 80px definido em até 768px. */
+    .cursos {
+        padding-bottom: 80px;
     }
 
     .sub-titulo h2 {
@@ -816,5 +877,88 @@ body h1,h2,h3{
     main .botao-escuro {
         padding: 10px 16px;
         font-size: 24px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .cursos {
+        padding-bottom: 140px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cursos {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quem-somos {
+        padding-bottom: 64px;
+    }
+
+    .contato {
+        padding: 48px 16px;
+    }
+
+    .contato-container .sub-titulo {
+        padding-right: 0;
+        min-height: 0;
+    }
+
+    .contato-container .sub-titulo p {
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    .imagem-contato {
+        position: static;
+        display: block;
+        width: 110px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .descricao-contato {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cursos {
+        padding-bottom: 64px;
+    }
+
+    .inicio {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .inicio-container {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 32px 16px;
+    }
+
+    .titulo-frase-efeito {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .inicio-logo {
+        right: 16px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .titulo-frase-efeito {
+        padding-top: 35px;
     }
 }
