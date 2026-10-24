@@ -10,35 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;700&family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../css/css_pages/formulario.css">
-    <link rel="stylesheet" href="../components/navbar/navbar.css">
     <link rel="stylesheet" href="../components/rodape/rodape.css">
 </head>
 <body>
-    <nav class="navbar" aria-label="Navegação principal">
-        <div class="navbar-logo">
-            <img
-                src="../assets/icons/logo-prisma-fundo.png"
-                alt=""
-                class="navbar-logo-imagem"
-            >
-            <p>Prisma Cursos</p>
-        </div>
-
-        <div class="navbar-menu">
-            <div class="navbar-letters">
-                <ul>
-                    <li><a href="../index.html">Início</a></li>
-                    <li><a href="../pages/cursos.html">Cursos</a></li>
-                    <li><a href="../pages/quem-somos.html">Quem somos</a></li>
-                    <li><a href="../pages/formulario.html">Contato</a></li>
-                    <li><a href="../pages/depoimentos.html">Feedbacks</a></li>
-                </ul>
-            </div>
-            <div class="navbar-button">
-                <a href="../../pages/cursos.html" class="navbar-button-link">Ver cursos</a>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
     <section class="formulario-container">
         <div class="formulario-content">
@@ -134,6 +109,8 @@
             </div>
         </div>
     </footer>
+    
+    <script type="module" src="../components/navbar/navbar.js"></script>
 
 </body>
 </html>
