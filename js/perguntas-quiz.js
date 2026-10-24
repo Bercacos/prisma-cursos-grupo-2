@@ -4,7 +4,7 @@ export const quizzes = {
         cupom: "TESOURO-MARKETING",
         perguntas: [
             { enunciado: "Qual dos seguintes conteúdos será abordado no módulo 'Conhecer o Mercado'?", alternativas: ["Criação de campanhas para redes sociais.", "Pesquisa, segmentação e definição de público.", "Desenvolvimento de identidade visual.",], correta: 1 },
-            { enunciado: "Qual é a modalidade de ensino oferecida durante a jornada de Marketing Digital?", alternativas: ["Totalmente presencial, com aulas diárias.", "Totalmente online, com aulas gravadas.", "Híbrida, combinando atividades online e presenciais",], correta: 0 },
+            { enunciado: "Qual é a modalidade de ensino oferecida durante a jornada de Marketing Digital?", alternativas: ["Totalmente presencial, com aulas diárias.", "Totalmente online, com aulas gravadas.", "Híbrida, combinando atividades online e presenciais",], correta: 2 },
             { enunciado: "Qual dos seguintes assuntos será estudado no módulo 'Engajar nas Redes Sociais'?", alternativas: ["Atendimento e reputação.", "Desenvolvimento de proposta de valor.", "Identidade e propósito da marca.",], correta: 0 }
         ]
     },
@@ -32,7 +32,7 @@ export const quizzes = {
         perguntas: [
             { enunciado: "No “Diário de Bordo”, qual a patente necessária para a aventura?", alternativas: ["Intermediário, conhecimento médio em programação. ", "Experiente, altas vivências no mar de negócios.", "Iniciante, não precisa ter navegado antes.",], correta: 2 },
             { enunciado: "Em qual parte da jornada o aluno terá que criar um protótipo?", alternativas: ["Ilha 2.", "Alto-Mar.", "Ilha 1.",], correta: 0 },
-            { enunciado: "Quais assuntos são tratados na “Ilha do Tesouro”?", alternativas: ["Marketing, Aspectos Legais e Gestão.", "Crescimento, Inovação, Adaptação e Investimentos", "Modelagem de Negócios e Decision Making.",], correta: 2 }
+            { enunciado: "Quais assuntos são tratados na “Ilha do Tesouro”?", alternativas: ["Marketing, Aspectos Legais e Gestão.", "Crescimento, Inovação, Adaptação e Investimentos", "Modelagem de Negócios e Decision Making.",], correta: 1 }
         ]
     },
     "after-effects": {
