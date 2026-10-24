@@ -1,3 +1,15 @@
+/* ==========================================================================
+   1. RESET GLOBAL & VARIÁVEIS
+   ========================================================================== */
+:root {
+    --color-dark: #2F241A;
+    --color-light: #DBDBDB;
+    --font-primary: 'Karma', serif;
+    --font-secondary: 'Lato', sans-serif;
+    --shadow-dark: 2px 3px 4px rgba(0, 0, 0, 0.8);
+    --shadow-light: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,98 +17,550 @@
 }
 
 body {
-    background-color: #2F241A;
-    padding: 0px; 
-
+    background-color: var(--color-dark);
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: 80px; /* Reserva espaço para a Navbar fixa */
 }
 
+/* Quebra de linha do e-mail desativada por padrão */
+.quebra-mobile {
+    display: none;
+}
+
+/* ==========================================================================
+   2. SEÇÃO 1 - BANNER PRINCIPAL (ESTILOS PADRÃO / DESKTOP)
+   ========================================================================== */
 .secao-1 {
-    width: 1440px;   
-    height: 1031px;  
+    width: 100%;   
+    height: clamp(280px, 67vw, 1031px); 
     display: flex;
-    flex-direction: column; 
-
-    background-image: url('../../assets/img/fundo-quem-somos.png'); 
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    padding: 0px 64px 64px 64px; 
+    flex-direction: row;            
+    justify-content: space-between; 
+    align-items: flex-start;        
+    background: url('../../assets/img/fundo-quem-somos.png') center/cover no-repeat;
+    padding: clamp(15px, 3.5vw, 40px) clamp(20px, 4.5vw, 64px); 
 }
 
-.frase-de-efeito {
-    font-size: 20px;
-    font-family: 'Karma', serif; 
-    font-weight: bold;             
-    color: #2F241A; 
-    align-self: flex-end; 
-    margin: 100px 64px 0px 0px; 
-}
-
-.frase-de-efeito-2 {
-    font-size: 20px;
-    font-family: 'Karma', serif; 
-    font-weight: bold;             
-    color: #2F241A; 
-    align-self: flex-end; 
-    margin: 8px 64px 0px 0px; 
-}
-
-.prisma-cursos {
-    font-size: 20px;
-    font-family: 'Karma', serif; 
-    font-weight: bold;             
-    color: #2F241A; 
-    align-self: flex-end; 
-    margin: 8px 64px 0px 0px; 
-}
-
+/* Título e Tipografia da Seção 1 */
 h1 {
-    font-size: 100px;
-    font-family: 'Lato', sans-serif;
+    font-family: var(--font-secondary);
     font-weight: normal;
-    color: #2F241A; 
-    align-self: flex-start; 
-    margin: -120px 0px 64px 64px; 
-    line-height: 0.85; 
-    display: flex;
-    align-items: baseline; 
+    color: var(--color-dark); 
+    display: inline-flex;
+    align-items: baseline;          
+    line-height: 0.8;
+    margin-top: clamp(4px, 1vw, 10px);               
+    white-space: nowrap;            
+    font-size: clamp(14px, 5.2vw, 100px); 
 }
 
 h1 span {
-    font-size: 300px;
-    font-family: 'Lato', sans-serif; 
+    font-family: var(--font-secondary); 
     font-weight: normal;
-    margin-right: -0.02em;
-    line-height: 1;
+    line-height: 0.75;
+    display: inline-block;
+    font-size: clamp(42px, 15.6vw, 300px); 
 }
 
 h1 span:nth-of-type(2) {
-    margin-left: 40px; 
+    margin-left: 0.15em;
 }
 
-.secao-2 {
-    width: 1440px;   
-    height: 685px;  
+/* Bloco de Frases (Topo Direito) */
+.bloco-frase-topo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin-top: clamp(4px, 1vw, 20px);
+    max-width: 50%;
+}
+
+.frase-de-efeito, 
+.frase-de-efeito-2, 
+.prisma-cursos {
+    font-family: var(--font-primary); 
+    font-weight: bold;             
+    color: var(--color-dark); 
+    font-size: clamp(8px, 1.2vw, 20px);
+    line-height: 1.25;
+    margin: 0;
+}
+
+.prisma-cursos {
+    margin-top: clamp(6px, 1.5vw, 25px); 
+}
+
+/* ==========================================================================
+   3. ESTRUTURA DAS SEÇÕES REUTILIZÁVEIS (2 A 5)
+   ========================================================================== */
+.secao-2, .secao-3, .secao-4, .secao-5 {
+    width: 100%;             
+    min-height: 685px;       
+    display: flex;
+    align-items: center;      
+    padding: 64px;         
+    gap: 40px;
+}
+
+/* Cores de Fundo e Disposição Alternadas */
+.secao-2, .secao-4 {
+    background-color: var(--color-dark);
+    flex-direction: row; /* Texto na Esquerda, Imagem na Direita */
+}
+
+.secao-3, .secao-5 {
+    background-color: var(--color-light);
+    flex-direction: row-reverse; /* Imagem na Esquerda, Texto na Direita */
+}
+
+/* Layout dos Conteúdos */
+[class^="bloco-texto-"] {
+    flex: 1;                 
+    max-width: 600px;        
     display: flex;
     flex-direction: column;
 }
 
-.introducao {
-    font-family: 'Karma', serif;
+[class^="conteudo-imagem-"] {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-imagem-1, 
+.conteudo-imagem-3 {
+    justify-content: flex-end;
+}
+
+.conteudo-imagem-2, 
+.conteudo-imagem-4 {
+    justify-content: flex-start;
+}
+
+[class^="conteudo-imagem-"] img {
+    width: clamp(280px, 35vw, 500px); 
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ==========================================================================
+   4. TIPOGRAFIA & ELEMENTOS DAS SEÇÕES
+   ========================================================================== */
+/* Títulos das Seções */
+.introducao, 
+.missao {
+    font-family: var(--font-primary);
     font-size: 45px;
     font-weight: bold;
-    color: #DBDBDB;
+    color: var(--color-light);
+    margin-bottom: 25px;     
+    text-shadow: var(--shadow-dark);
 }
 
-.paragrafo-1 {
-    font-family: 'Karma', serif;
+.modalidades, 
+.o-que-oferecemos {
+    font-family: var(--font-primary);
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--color-dark);
+    margin-bottom: 25px;
+    text-shadow: var(--shadow-light);
+}
+
+/* Parágrafos */
+.paragrafo-1, 
+.paragrafo-3 {
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: normal;
-    color: #DBDBDB;
+    color: var(--color-light);
+    text-align: justify;
+    text-shadow: var(--shadow-dark);
 }
 
-.paragrafo-1 span {
+.paragrafo-2, 
+.paragrafo-4 {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--color-dark);
+    text-align: justify;
+    text-shadow: var(--shadow-light);
+}
+
+[class^="paragrafo-"] span {
     font-weight: bold;
+}
+
+/* Links do Conteúdo Principal */
+.link-a, 
+.link-c {
+    color: var(--color-dark);              
+    font-family: var(--font-primary);
+    font-size: 20px;
+    margin-top: 147px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-b {
+    color: var(--color-light);              
+    font-family: var(--font-primary);
+    font-size: 20px;
+    margin-top: 147px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-a:hover, 
+.link-b:hover, 
+.link-c:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   5. RODAPÉ (FOOTER)
+   ========================================================================== */
+.rodape {
+    width: 100%;
+    background-color: var(--color-dark, #2F241A);
+    border-top: 1px solid rgba(219, 219, 219, 0.1);
+    padding: 50px 64px;
+    font-family: var(--font-primary, 'Karma', serif);
+    color: var(--color-light, #DBDBDB);
+}
+
+.rodape-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Coluna 1: Logo */
+.coluna-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-rodape {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.nome-marca {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-light, #DBDBDB);
+    margin-top: 12px;
+}
+
+/* Títulos das Colunas */
+.titulo-coluna {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D3C3A8;
+    margin-bottom: 18px;
+}
+
+/* Listas */
+.coluna-links ul, 
+.coluna-comunicacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coluna-links ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.coluna-links li {
+    margin-bottom: 10px;
+    color: var(--color-light, #DBDBDB);
+}
+
+.coluna-links li::marker {
+    color: var(--color-light, #DBDBDB);
+}
+
+/* Links Exclusivos do Rodapé (Isolados com .rodape para não conflitar com .link-a, .link-b, .link-c) */
+.rodape [class^="link-"] {
+    color: var(--color-light, #DBDBDB);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.rodape [class^="link-"]:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Coluna Comunicação e Ícones PNG/WEBP */
+.coluna-comunicacao li {
+    margin-bottom: 16px;
+}
+
+.coluna-comunicacao [class^="link-"] {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-rodape {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: brightness(0) invert(0.9);
+}
+
+/* ==========================================================================
+   6. MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================================================== */
+
+/* DISPOSITIVOS MÓVEIS (Até 768px) */
+@media (max-width: 768px) {
+    /* Oculta a logo e o nome do rodapé no mobile */
+    .coluna-logo {
+        display: none !important;
+    }
+
+    /* Ajustes das Seções de Conteúdo */
+    .secao-1 {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+    }
+
+    .bloco-frase-topo {
+        align-self: flex-start;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .secao-2, 
+    .secao-3, 
+    .secao-4, 
+    .secao-5 {
+        flex-direction: column !important;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    [class^="bloco-texto-"] {
+        max-width: 100%;
+    }
+
+    [class^="conteudo-imagem-"] {
+        justify-content: center !important;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    [class^="conteudo-imagem-"] img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .link-a, 
+    .link-b, 
+    .link-c {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    .introducao, 
+    .modalidades, 
+    .missao, 
+    .o-que-oferecemos {
+        font-size: 32px;
+    }
+
+    .paragrafo-1, 
+    .paragrafo-2, 
+    .paragrafo-3, 
+    .paragrafo-4 {
+        font-size: 16px;
+    }
+
+    /* Rodapé no Mobile (Empilhado em Column com apenas as seções Cursos, Navegação e Comunicação) */
+    .rodape {
+        padding: 40px 20px;
+    }
+
+    .rodape-container {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 35px !important;
+    }
+
+    .titulo-coluna {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .coluna-links ul {
+        padding-left: 20px;
+    }
+
+    .coluna-links li {
+        margin-bottom: 8px;
+    }
+
+    .coluna-comunicacao li {
+        margin-bottom: 12px;
+    }
+
+    .rodape [class^="link-"] {
+        font-size: 16px;
+    }
+
+    .icone-rodape {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* TABLETS (De 769px até 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Seção Principal */
+    .secao-1 {
+        padding: 40px 48px;
+        height: auto;
+        min-height: 580px; 
+    }
+
+    h1 {
+        font-size: clamp(50px, 7.5vw, 85px);
+    }
+
+    h1 span {
+        font-size: clamp(130px, 18vw, 220px);
+    }
+
+    .bloco-frase-topo {
+        max-width: 48%;
+        margin-top: 10px;
+    }
+
+    .frase-de-efeito, 
+    .frase-de-efeito-2, 
+    .prisma-cursos {
+        font-size: 16px;
+    }
+
+    /* Ajustes do Conteúdo */
+    .secao-2, 
+    .secao-3, 
+    .secao-4, 
+    .secao-5 {
+        padding: 48px 32px;
+        gap: 24px;
+        min-height: auto;
+    }
+
+    [class^="bloco-texto-"] {
+        flex: 1.2;
+    }
+
+    [class^="conteudo-imagem-"] {
+        flex: 0.8;
+    }
+
+    [class^="conteudo-imagem-"] img {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .introducao, 
+    .modalidades, 
+    .missao, 
+    .o-que-oferecemos {
+        font-size: 34px;
+        margin-bottom: 16px;
+    }
+
+    .paragrafo-1, 
+    .paragrafo-2, 
+    .paragrafo-3, 
+    .paragrafo-4 {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .link-a, 
+    .link-b, 
+    .link-c {
+        margin-top: 32px;
+        font-size: 17px;
+    }
+
+    /* Rodapé no Tablet */
+    .rodape {
+        padding: 40px 32px;
+    }
+
+    .rodape-container {
+        gap: 30px;
+    }
+
+    .titulo-coluna {
+        font-size: 20px;
+    }
+
+    .rodape [class^="link-"] {
+        font-size: 16px;
+    }
+}
+
+/* DESKTOPS GRANDES (A partir de 1209px) */
+@media (min-width: 1209px) {
+    h1 {
+        font-size: 100px !important;
+    }
+
+    h1 span {
+        font-size: 300px !important;
+    }
+
+    .frase-de-efeito, 
+    .frase-de-efeito-2, 
+    .prisma-cursos {
+        font-size: 15px !important;
+    }
+
+    .introducao, 
+    .modalidades, 
+    .missao, 
+    .o-que-oferecemos {
+        font-size: 50px;
+    }
+
+    .paragrafo-1, 
+    .paragrafo-2, 
+    .paragrafo-3, 
+    .paragrafo-4 {
+        font-size: 20px;
+    }
+
+    .link-a, 
+    .link-b, 
+    .link-c {
+        font-size: 20px;
+    }
 }

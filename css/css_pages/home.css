@@ -1,0 +1,821 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karma:wght@400;500;600;700&display=swap");
+body {
+    margin: 0;
+    background-color: #2F241A;
+   }
+
+body h1,h2,h3{
+    margin: 0;
+}
+
+.inicio {
+    
+    background-image: url("../../assets/img/fundo_navio_inicio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.inicio-container {
+    position: static;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0px 64px;
+    min-height: calc(100dvh - 80px);
+}
+
+.inicio-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.titulo-frase-efeito {
+    max-width: 740px;
+    font-family: "Inter", sans-serif;
+}
+
+.titulo-frase-efeito h1,
+.titulo-frase-efeito h2 {
+    margin: 0;
+    font-size: clamp(36px, 6.5vw, 96px);
+    font-weight: 600;
+    line-height: 1.2;
+
+    /* Contorno discreto para destacar sobre a imagem */
+    -webkit-text-stroke: 1px #171310;
+    paint-order: stroke fill;
+}
+
+.titulo-frase-efeito h1 {
+    color: #FFFFFF;
+}
+
+.titulo-frase-efeito h2 {
+    margin-top: 12px;
+    color: #A52F2F;
+}
+
+.inicio-logo {
+    position: absolute;
+    top: 20px;
+    right: 64px;
+    width: 130px;
+    height: auto;
+}
+
+.cursos{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: #2F241A;
+    padding: 0px 64px;
+    padding-top: 80px;
+}
+
+
+.cursos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sub-titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-bottom: 0;
+}
+
+.sub-titulo h2{
+    font-family: "Karma", serif;
+    font-size: 100px;
+    font-weight: bold;
+    color: #A89273;
+}   
+
+.sub-titulo p{
+    font-family: "Karma", serif;
+    font-size: 35px;
+    color: #dbdbdb;
+    font-weight: bold;
+}
+
+.adobe-effects{
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.adobe-effects h3{
+    font-family: "Karma", serif;
+    font-size: 35px;
+    color: #dbdbdb;
+    font-weight: bold;
+}
+
+.descricao-adobe{
+    gap :22px;
+    display: flex;
+}
+
+.deserto-adobe{
+    width: 60%;
+    max-width: 778px;
+    height: auto;
+    display: block;
+}
+
+.descricao-adobe p{
+    font-family: "Karma", serif;
+    font-size: 25px;
+    color: #dbdbdb;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.programaçao-python{
+    gap: 0px;
+}
+
+.programaçao-python h3{
+    font-family: "Karma", serif;
+    font-size: 35px;
+    color: #dbdbdb;
+    font-weight: bold;
+}
+
+.descricao-python{
+    gap :22px;
+    display: flex;
+}
+
+.setup-python{
+    width: 60%;
+    max-width: 778px;
+    height: auto;
+    display: block;
+}
+
+.descricao-python p{
+    font-family: "Karma", serif;
+    font-size: 25px;
+    color: #dbdbdb;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.markting-digital{
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.markting-digital h3{
+    font-family: "Karma", serif;
+    font-size: 35px;
+    color: #dbdbdb;
+    font-weight: bold;
+}
+
+.descricao-markting{
+    gap :22px;
+    display: flex;
+}
+
+.mulher-markting{
+    width: 60%;
+    max-width: 778px;
+    height: auto;
+    display: block;
+}
+
+.descricao-markting p{
+    font-family: "Karma", serif;
+    font-size: 25px;
+    color: #dbdbdb;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.empreendedorismo-digital{
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.empreendedorismo-digital h3{
+    font-family: "Karma", serif;
+    font-size: 35px;
+    color: #dbdbdb;
+    font-weight: bold;
+}
+
+.descricao-empreendedorismo{
+    gap :22px;
+    display: flex;
+}
+
+.mulher-empreendedorismo{
+    width: 60%;
+    max-width: 778px;
+    height: auto;
+    display: block;
+}
+
+.descricao-empreendedorismo p{
+    font-family: "Karma", serif;
+    font-size: 25px;
+    color: #dbdbdb;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.gestao{
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gestao h3{
+    font-family: "Karma", serif;
+    font-size: 35px;
+    color: #dbdbdb;
+    font-weight: bold;
+}
+
+.descricao-gestao{
+    gap :22px;
+    display: flex;
+}
+
+.cubiculos-gestao{
+    width: 60%;
+    max-width: 778px;
+    height: auto;
+    display: block;
+}
+
+.descricao-gestao p{
+    font-family: "Karma", serif;
+    font-size: 25px;
+    color: #dbdbdb;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.quem-somos{
+    background-color: #dbdbdb;
+    padding: 0px 64px;
+    padding-top: 80px; 
+    height: 780px;
+}
+
+.quem-somos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.quem-somos-container .sub-titulo p{
+    color: #2F241A;
+    font-family: "Karma", serif;
+    font-size: 35px;
+}
+
+.descricao-quem-somos p{
+    color: #2F241A;
+    font-family: "Karma", serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.quem-somos-container .botao-escuro {
+    display: flex;
+    margin-inline: auto;
+}
+
+
+.depoimentos {
+    background-color: #2F241A;
+    padding: 80px 64px;
+}
+
+.depoimentos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.descricao-depoimentos {
+    display: grid;
+    grid-template-columns: minmax(120px, 220px) minmax(0, 1fr);
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 48px;
+}
+
+.imagem-depoimentos {
+    display: block;
+    width: 148px;
+    height: auto;
+    object-fit: contain;
+}
+
+.texto-depoimento {
+    min-width: 0;
+    color: #dbdbdb;
+    font-family: "Karma", serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.texto-depoimento p {
+    margin: 0;
+}
+
+.depoimentos-container .botao-claro {
+    display: flex;
+    margin-inline: auto;
+}
+
+
+.contato {
+    background-color: #dbdbdb;
+    padding: 80px 64px;
+    position: relative;
+}
+
+.contato-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contato-container .sub-titulo p {
+    color: #2F241A;
+    padding-right: 320px;
+
+}
+
+.descricao-contato {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.canais-contato {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 40px;
+}
+
+.canal-contato {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.icone-contato {
+    display: block;
+    width: 122px;
+    height: 122px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.canal-contato > div {
+    min-width: 0;
+}
+
+.canal-contato h3 {
+    margin: 0;
+    color: #2F241A;
+    font-family: "Karma", serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.canal-contato p {
+    margin: 4px 0 0;
+    color: #2F241A;
+    font-family: "Karma", serif;
+    font-size: 25px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    font-weight: bold;
+}
+
+.imagem-contato {
+    position: absolute;
+    top: 40px;
+    right: 64px;
+    width: 450px;
+    height: auto;
+}
+
+.contato-container .botao-escuro {
+    display: flex;
+    margin-inline: auto;
+}
+@media (max-width: 1024px) {
+    .inicio-container {
+        padding: 0 32px;
+    }
+
+    .inicio-logo {
+        top: 24px;
+        right: 32px;
+        width: 100px;
+    }
+
+    .titulo-frase-efeito {
+        max-width: calc(100% - 130px);
+    }
+
+    .titulo-frase-efeito h1,
+    .titulo-frase-efeito h2 {
+        font-size: clamp(40px, 6vw, 64px);
+    }
+
+    .cursos,
+    .quem-somos,
+    .depoimentos,
+    .contato {
+        padding: 64px 32px;
+    }
+
+    .sub-titulo h2 {
+        font-size: 72px;
+        line-height: 1.2;
+    }
+
+    .sub-titulo p,
+    .quem-somos-container .sub-titulo p,
+    .contato-container .sub-titulo p {
+        font-size: 30px;
+    }
+
+    .cursos h3 {
+        font-size: 30px;
+    }
+
+    .descricao-adobe,
+    .descricao-python,
+    .descricao-markting,
+    .descricao-empreendedorismo,
+    .descricao-gestao {
+        align-items: center;
+        gap: 24px;
+    }
+
+    .deserto-adobe,
+    .setup-python,
+    .mulher-markting,
+    .mulher-empreendedorismo,
+    .cubiculos-gestao {
+        width: 50%;
+        min-width: 0;
+    }
+
+    .descricao-adobe p,
+    .descricao-python p,
+    .descricao-markting p,
+    .descricao-empreendedorismo p,
+    .descricao-gestao p {
+        flex: 1;
+        min-width: 0;
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .descricao-quem-somos p {
+        font-size: 24px;
+        line-height: 1.6;
+    }
+
+    .quem-somos {
+        min-height: 0;
+    }
+
+    .descricao-depoimentos {
+        grid-template-columns: 160px minmax(0, 1fr);
+        column-gap: 32px;
+        row-gap: 40px;
+    }
+
+    .texto-depoimento {
+        font-size: 24px;
+    }
+
+    .contato {
+        position: relative;
+    }
+
+    .contato-container .sub-titulo {
+        padding-right: 210px;
+    }
+
+    .imagem-contato {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 180px;
+        height: auto;
+    }
+
+    .canais-contato {
+        width: 100%;
+        gap: 32px;
+    }
+
+    .canal-contato h3 {
+        font-size: 30px;
+    }
+
+    .canal-contato p {
+        font-size: 23px;
+    }
+
+    .icone-contato {
+        width: 60px;
+        height: 60px;
+    }
+
+    main .botao-claro,
+    main .botao-escuro {
+        font-size: 36px;
+    }
+}
+
+/* CELULAR — até 768px */
+
+@media (max-width: 768px) {
+    .inicio-container {
+        padding: 32px 24px;
+        min-height: calc(100dvh - 80px);
+    }
+
+    .inicio-logo {
+        top: 24px;
+        right: 24px;
+        width: 75px;
+    }
+
+    .titulo-frase-efeito {
+        max-width: 100%;
+        padding-top: 100px;
+    }
+
+    .titulo-frase-efeito h1,
+    .titulo-frase-efeito h2 {
+        font-size: clamp(36px, 7vw, 52px);
+        -webkit-text-stroke: 0.5px #171310;
+    }
+
+    .cursos,
+    .quem-somos,
+    .depoimentos,
+    .contato {
+        padding: 48px 24px;
+    }
+
+    .cursos-container,
+    .quem-somos-container,
+    .depoimentos-container,
+    .contato-container {
+        gap: 32px;
+    }
+
+    .sub-titulo h2 {
+        font-size: 48px;
+    }
+
+    .sub-titulo p,
+    .quem-somos-container .sub-titulo p,
+    .contato-container .sub-titulo p {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    .cursos h3 {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    .descricao-adobe,
+    .descricao-python,
+    .descricao-markting,
+    .descricao-empreendedorismo,
+    .descricao-gestao {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .deserto-adobe,
+    .setup-python,
+    .mulher-markting,
+    .mulher-empreendedorismo,
+    .cubiculos-gestao {
+        width: 100%;
+        height: auto;
+    }
+
+    .descricao-adobe p,
+    .descricao-python p,
+    .descricao-markting p,
+    .descricao-empreendedorismo p,
+    .descricao-gestao p {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .descricao-quem-somos p {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .descricao-depoimentos {
+        grid-template-columns: 100px minmax(0, 1fr);
+        column-gap: 20px;
+        row-gap: 32px;
+    }
+
+    .texto-depoimento {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .contato-container .sub-titulo {
+        padding-right: 120px;
+        min-height: 120px;
+    }
+
+    .imagem-contato {
+        top: 32px;
+        right: 24px;
+        width: 110px;
+    }
+
+    .descricao-contato {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .canais-contato {
+        flex: auto;
+    }
+
+    .canal-contato {
+        gap: 16px;
+    }
+
+    .icone-contato {
+        width: 52px;
+        height: 52px;
+    }
+
+    .canal-contato h3 {
+        font-size: 26px;
+    }
+
+    .canal-contato p {
+        font-size: 21px;
+        overflow-wrap: anywhere;
+    }
+
+    main .botao-claro,
+    main .botao-escuro {
+        display: flex;
+        width: 100%;
+        min-width: 0;
+        margin-inline: auto;
+        padding: 12px 20px;
+        font-size: 28px;
+    }
+}
+
+/* CELULAR PEQUENO — até 400px */
+
+@media (max-width: 400px) {
+    .inicio-container {
+        padding-inline: 16px;
+    }
+
+    .inicio-logo {
+        right: 16px;
+        width: 60px;
+    }
+
+    .titulo-frase-efeito {
+        padding-top: 80px;
+    }
+
+    .titulo-frase-efeito h1,
+    .titulo-frase-efeito h2 {
+        font-size: 32px;
+    }
+
+    .cursos,
+    .quem-somos,
+    .depoimentos,
+    .contato {
+        padding: 40px 16px;
+    }
+
+    .sub-titulo h2 {
+        font-size: 38px;
+    }
+
+    .sub-titulo p,
+    .quem-somos-container .sub-titulo p,
+    .contato-container .sub-titulo p {
+        font-size: 22px;
+    }
+
+    .cursos h3 {
+        font-size: 24px;
+    }
+
+    .descricao-adobe p,
+    .descricao-python p,
+    .descricao-markting p,
+    .descricao-empreendedorismo p,
+    .descricao-gestao p,
+    .descricao-quem-somos p {
+        font-size: 20px;
+    }
+
+    .descricao-depoimentos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        text-align: center;
+    }
+
+    .imagem-depoimentos {
+        width: 120px;
+        margin-inline: auto;
+    }
+
+    .texto-depoimento {
+        font-size: 20px;
+    }
+
+    .texto-depoimento + .imagem-depoimentos {
+        margin-top: 16px;
+    }
+
+    .contato-container .sub-titulo {
+        padding-right: 85px;
+        min-height: 95px;
+    }
+
+    .imagem-contato {
+        top: 24px;
+        right: 16px;
+        width: 80px;
+    }
+
+    .icone-contato {
+        width: 40px;
+        height: 40px;
+    }
+
+    .canal-contato {
+        gap: 12px;
+    }
+
+    .canal-contato h3 {
+        font-size: 24px;
+    }
+
+    .canal-contato p {
+        font-size: 18px;
+    }
+
+    main .botao-claro,
+    main .botao-escuro {
+        padding: 10px 16px;
+        font-size: 24px;
+    }
+}

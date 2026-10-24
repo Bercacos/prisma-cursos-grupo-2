@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+}
+
+.botao-claro,
+.botao-escuro {
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    min-width: 0;
+
+    padding: clamp(10px, 2vw, 14px) clamp(16px, 3vw, 24px);
+
+    border: 2px solid #dbdbdb;
+    border-radius: 50px;
+
+    font-family: "Karma", serif;
+    font-size: clamp(24px, 4vw, 45px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+    text-align: center;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao-claro {
+    background-color: #584d42;
+    color: #FFFFFF;
+}
+
+.botao-escuro {
+    background-color: #2F241A;
+    color: #dbdbdb;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .botao-claro:hover {
+        background-color: #685c51;
+        transform: scale(1.05);
+    }
+
+    .botao-escuro:hover {
+        background-color: #42352a;
+        transform: scale(1.05);
+    }
+}
