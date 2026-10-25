@@ -32,7 +32,7 @@ body {
     height: clamp(440px, 30.6vw, 720px);
     background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url('../../assets/img/fundo-curso-emprendedorismo.png') center/cover no-repeat;
+        url('../../assets/img/fundo-marketing.png') center/cover no-repeat;
 }
 
 .titulo-banner,
