@@ -1,13 +1,432 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Python | Prisma Cursos</title>
 
-    <link rel="stylesheet" href="../css/css_pages/curso-python.css">
-</head>
-<body>
-    
-</body>
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karma:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../components/rodape/rodape.css" />
+
+    <!-- Ficheiro de Estilos Principal -->
+    <link rel="stylesheet" href="../css/css_pages/curso-python.css" />
+  </head>
+  <body>
+    <!-- Container da Navbar (Injetado via navbar.js) -->
+    <div id="navbar"></div>
+
+    <main>
+      <!-- Seção 1: Banner Principal -->
+      <section class="secao-1">
+        <h1 class="titulo-banner">Curso de Python: A rota do Código</h1>
+        <p class="subtitulo-banner">
+          Aprenda a automatizar e desenvolver programas que podem mudar o
+          mercado.
+        </p>
+        <a href="formulario.html" class="botao-banner">Embarcar na aventura</a>
+      </section>
+
+      <!-- Seção 2: Sobre o Curso -->
+      <section class="secao-2">
+        <!-- Imagem (Esquerda) -->
+        <div class="conteudo-imagem">
+          <img
+            src="../assets/icons/Pirates-amico_1.png"
+            alt="Ilustração de um pirata segurando uma bandeira em uma ilha, com um navio ao fundo"
+          />
+        </div>
+
+        <!-- Texto (Direita) -->
+        <div class="bloco-texto">
+          <p class="descricao-curso">
+            Você começa sem saber nada de programação e termina com um projeto
+            seu em <strong>Python</strong>, rodando e publicado no
+            <strong>GitHub</strong>. Dá pra mostrar em entrevista e colocar no
+            currículo!
+          </p>
+
+          <h2 class="titulo-diario">Diário de Bordo</h2>
+
+          <ul class="detalhes-curso">
+            <li><strong>Duração:</strong> 64h, 8 semanas</li>
+            <li><strong>Tipo de navio:</strong> Híbrido.</li>
+            <li>
+              <strong>Patente exigida:</strong> Iniciante, não precisa ter
+              navegado antes.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Seção 3: Público e Resultados -->
+      <section class="secao-3">
+        <!-- Coluna Esquerda: Requisitos -->
+        <div class="coluna-requisitos">
+          <h2 class="titulo-coluna">Quem pode entrar na tripulação</h2>
+          <ul class="lista-secao-3">
+            <li>
+              <strong>Editores de vídeo</strong> que desejam conquistar novos
+              mares (e clientes).
+            </li>
+            <li>
+              <strong>Criadores de conteúdo</strong> que querem vídeos que
+              prendam a atenção do primeiro ao último segundo.
+            </li>
+            <li>
+              <strong>Marujos de primeira viagem</strong> nenhuma experiência
+              prévia necessária, só vontade de aprender e mudar de vida.
+            </li>
+            <li>
+              <strong>Marujos</strong> que estão atrás do primeiro emprego.
+            </li>
+            <li>
+              <strong>Quem</strong> trabalha em outra área e quer migrar pra
+              tecnologia (ou só automatizar aquela planilha chata).
+            </li>
+            <li>
+              <strong>Quem</strong> já tentou aprender sozinho por vídeo e
+              travou no meio do caminho.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Imagem Central -->
+        <img
+          src="../assets/icons/pirate_boat-cuate_1.png"
+          alt="Ilustração de um navio pirata no mar"
+          class="imagem-navio"
+        />
+
+        <!-- Coluna Direita: Benefícios -->
+        <div class="coluna-beneficios">
+          <h2 class="titulo-coluna">Seu butim ao final da viagem</h2>
+          <ul class="lista-secao-3">
+            <li>Navegar pela interface do After Effects sem se perder.</li>
+            <li>Lógica de programação e o básico do Python</li>
+            <li>
+              Listas, dicionários, arquivos (TXT, CSV, JSON) e tratamento de
+              erros
+            </li>
+            <li>Bibliotecas e consumo de APIs</li>
+            <li>Orientação a objetos, Git, GitHub e testes simples</li>
+            <li>
+              Saber explicar o que você fez, que conta muito em entrevista
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Seção 4: Trilha da Viagem -->
+      <section class="secao-4" aria-labelledby="titulo-trilha">
+        <h2 class="trilha-titulo" id="titulo-trilha">
+          Içar a âncora, marujos! A primeira aventura de vocês está para
+          começar!
+        </h2>
+
+        <!-- Etapa 1: Ilha 1 -->
+        <article class="etapa etapa--icone-esquerda">
+          <div class="etapa-marco">
+            <img
+              src="../assets/icons/ilha-1.png"
+              alt="Ilha 1"
+              class="etapa-icone"
+            />
+            <h3 class="etapa-nome">Ilha 1</h3>
+            <p class="etapa-tempo">Tempo da Parada: 6 meses</p>
+          </div>
+          <div class="etapa-card">
+            <p class="etapa-descricao">Ilha 1, Porto do Embarque</p>
+            <ul class="etapa-lista">
+              <li>
+                Conteúdo: instalação do Python e do VS Code, variáveis, tipos de
+                dados, entrada e saída pelo terminal, condicionais (if, elif,
+                else) e laços (for e while). Começa com o diário de bordo como
+                aquecimento.
+              </li>
+              <li>
+                Missão: jogo de adivinhação com dicas de “maior” ou “menor”,
+                limite de tentativas e pontuação, usando o módulo random.
+              </li>
+              <li>
+                Baú: calcular os dias de vida de cada tripulante, com uma
+                introdução ao módulo datetime.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Trajeto 1 -->
+        <div class="trajeto" aria-hidden="true">
+          <img src="../assets/icons/trajeto-1-recortado.svg" alt="" />
+        </div>
+
+        <!-- Etapa 2: Ilha 2 -->
+        <article class="etapa etapa--icone-direita">
+          <div class="etapa-marco">
+            <img
+              src="../assets/icons/shipwreck-1.svg"
+              alt="Ilha 2"
+              class="etapa-icone"
+            />
+            <h3 class="etapa-nome">Ilha 2</h3>
+            <p class="etapa-tempo">Tempo da Parada: 6 meses</p>
+          </div>
+          <div class="etapa-card">
+            <p class="etapa-descricao">Ilha 2, Ilha dos Mapas</p>
+            <ul class="etapa-lista">
+              <li>
+                Conteúdo: listas, dicionários, funções e módulos, incluindo
+                lista de dicionários para representar itens com vários atributos
+                e a criação de um módulo próprio.
+              </li>
+              <li>
+                Missão: inventário do navio com menu no terminal para adicionar,
+                listar, buscar, atualizar e remover itens, com cada operação em
+                uma função separada.
+              </li>
+              <li>
+                Baú: ordenar o inventário sem usar o sort, implementando um
+                algoritmo simples como o selection sort.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Trajeto 2 -->
+        <div class="trajeto" aria-hidden="true">
+          <img src="../assets/icons/trajeto-2-recortado.svg" alt="" />
+        </div>
+
+        <!-- Etapa 3: Alto Mar -->
+        <article class="etapa etapa--icone-esquerda">
+          <div class="etapa-marco">
+            <img
+              src="../assets/icons/ship-1.svg"
+              alt="Alto Mar"
+              class="etapa-icone"
+            />
+            <h3 class="etapa-nome">Alto Mar</h3>
+            <p class="etapa-tempo">Tempo da Navegação: 6 meses</p>
+          </div>
+          <div class="etapa-card">
+            <p class="etapa-descricao">Alto Mar, Enseada dos Arquivos</p>
+            <ul class="etapa-lista">
+              <li>
+                Conteúdo: leitura e escrita de arquivos TXT, CSV e JSON, e
+                tratamento de exceções com try e except, cobrindo erros comuns
+                como FileNotFoundError e JSONDecodeError.
+              </li>
+              <li>
+                Missão: salvar o inventário em JSON, carregá-lo ao iniciar o
+                programa e gerar um relatório em TXT ou CSV.
+              </li>
+              <li>
+                Baú: validar a leitura de um arquivo corrompido, tratando cada
+                tipo de erro para o programa seguir sem quebrar.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Trajeto 3 -->
+        <div class="trajeto" aria-hidden="true">
+          <img src="../assets/icons/trajeto-1-recortado.svg" alt="" />
+        </div>
+
+        <!-- Etapa 4: Ilha do Tesouro -->
+        <article class="etapa etapa--icone-direita">
+          <div class="etapa-marco">
+            <button
+              type="button"
+              class="botao-tesouro botao-tesouro--ilha"
+              data-quiz="python"
+              aria-label="Abrir desafio da Ilha do Tesouro"
+              aria-haspopup="dialog"
+            >
+              <img
+                src="../assets/icons/treasure-1.svg"
+                alt=""
+                class="etapa-icone"
+              />
+            </button>
+            <h3 class="etapa-nome">Ilha do Tesouro</h3>
+            <p class="etapa-tempo">Tempo da Aventura: 6 meses</p>
+          </div>
+          <div class="etapa-card">
+            <p class="etapa-descricao">Ilha 4, Estaleiro do Tesouro!</p>
+            <ul class="etapa-lista">
+              <li>
+                Conteúdo: classes (sem herança) com Item e Inventario, Git
+                básico (commit, push), convenções de estilo da PEP 8 e estrutura
+                de um README em Markdown.
+              </li>
+              <li>
+                Missão: reescrever o inventário com classes, mantendo a
+                persistência em JSON, e publicá-lo no GitHub com README.
+              </li>
+              <li>
+                Baú: um post contando o que o projeto resolve, escrito para um
+                público não técnico.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- Seção 5: Investimentos -->
+      <section class="secao-5">
+        <div class="card-investimento">
+          <img
+            src="../assets/icons/inverstimento.png"
+            alt="Baú do tesouro na ilha"
+            class="imagem-investimento"
+          />
+          <div class="conteudo-investimento">
+            <h2 class="titulo-investimento">Investimento na sua jornada:</h2>
+            <p class="opcao-investimento">10× de R$ 179 sem juros</p>
+            <p class="opcao-investimento">ou R$ 1.611 à vista</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 6: Perguntas Frequentes (FAQ) -->
+      <section class="secao-6" aria-labelledby="titulo-faq">
+        <h2 class="titulo-faq" id="titulo-faq">
+          Dúvidas Frequentes da Marujada (FAQ):
+        </h2>
+
+        <div class="lista-faq">
+          <article class="item-faq">
+            <h3 class="pergunta-faq">Nunca programei, vou conseguir?</h3>
+            <p class="resposta-faq">
+              Vai. O curso não exige nenhum conhecimento prévio e a Ilha 1
+              começa do zero, desde a instalação do Python e do VS Code. Você
+              aprende primeiro a usar o terminal e a rodar o seu primeiro
+              script, e só depois entra em variáveis, condicionais e laços. O
+              ritmo foi pensado para quem nunca escreveu uma linha de código:
+              cada conceito aparece em um exemplo curto, é praticado em
+              exercícios e só então é usado na missão. Se travar, o laboratório
+              presencial é o momento de tirar dúvidas direto com o instrutor. O
+              que o curso pede é constância, não talento: quem faz as 8h
+              semanais e conclui as missões chega ao final.
+            </p>
+          </article>
+
+          <article class="item-faq">
+            <h3 class="pergunta-faq">Preciso de um computador bom?</h3>
+            <p class="resposta-faq">
+              Não. Python e VS Code são leves e rodam em qualquer computador
+              razoável, inclusive modelos mais antigos, desde que tenha acesso à
+              internet para assistir às aulas e baixar as ferramentas. Nenhuma
+              das missões exige processamento pesado, porque são programas de
+              terminal, como o jogo de adivinhação e o inventário. Se você não
+              tem computador próprio ou o seu está com problemas, o laboratório
+              presencial tem máquinas disponíveis, então você não fica sem
+              praticar. Todas as ferramentas usadas no curso (Python, VS Code,
+              Git e GitHub) são gratuitas, então não há custo extra além do
+              valor do curso.
+            </p>
+          </article>
+
+          <article class="item-faq">
+            <h3 class="pergunta-faq">
+              Dá pra conciliar com trabalho ou faculdade?
+            </h3>
+            <p class="resposta-faq">
+              Dá. A carga é de cerca de 8h por semana ao longo de 8 semanas, e
+              as aulas são gravadas, então você escolhe o horário e pode pausar,
+              voltar e rever quando precisar. A única atividade com data marcada
+              é o laboratório presencial, que acontece de 15 em 15 dias, um por
+              ilha. Isso dá a você tempo para organizar a agenda com
+              antecedência. Uma divisão comum é reservar algumas horas durante a
+              semana para as aulas e uma sessão maior no fim de semana para a
+              missão da ilha. Se a semana apertar, as aulas gravadas permitem
+              compensar na seguinte sem perder o fio.
+            </p>
+          </article>
+
+          <article class="item-faq">
+            <h3 class="pergunta-faq">O curso garante emprego?</h3>
+            <p class="resposta-faq">
+              Não, e desconfie de quem garante. Nenhum curso controla o mercado,
+              o seu esforço depois do curso ou o processo seletivo de uma
+              empresa. O que o curso entrega é o que depende dele: uma base
+              sólida de Python e lógica de programação, um projeto seu publicado
+              no GitHub, com README e histórico de commits, e treino de
+              entrevista para você saber se apresentar e explicar o que
+              construiu. Esse conjunto é o ponto de partida para buscar estágios
+              e vagas júnior, ou para seguir para conteúdos mais avançados. O
+              resultado depende de você continuar praticando e usar o portfólio
+              para se candidatar.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Depoimento de aluno (entre a seção 6 e a seção 7) -->
+      <section class="secao-depoimento" aria-labelledby="titulo-depoimento">
+        <h2 class="titulo-depoimento" id="titulo-depoimento">
+          Depoimento de aluno
+        </h2>
+
+        <p class="depoimento-autor">
+          <strong>Pedro Moreira - Estudante de TI</strong>
+        </p>
+
+        <blockquote class="depoimento-texto">
+          Trabalhava no administrativo de uma loja, passando boa parte do dia
+          copiando dados entre planilhas. Ao começar o curso, achava que
+          programação não era para mim, e travei várias vezes na segunda aula. O
+          laboratório, com apoio constante para resolver problemas, fez a
+          diferença. No projeto final, criei um script que automatizava a união
+          das planilhas da loja. Usei esse projeto em uma entrevista e consegui
+          meu primeiro estágio em TI.
+        </blockquote>
+
+        <p class="depoimento-convite">
+          Se você chegou até aqui volte ao ícone da ilha do tesouro e clique
+          nele, há uma oportunidade te esperando...
+        </p>
+      </section>
+
+      <!-- Seção 7: Chamada Final (CTA) -->
+      <section class="secao-7">
+        <div class="container-cta">
+          <!-- Imagem do Pirata (Esquerda) -->
+          <img
+            src="../assets/icons/Pirata-design.svg"
+            alt="Ilustração de um pirata segurando um computador e megafone"
+            class="imagem-pirata-cta"
+          />
+
+          <!-- Bloco Direita: Card de Texto + Botão -->
+          <div class="bloco-conteudo-cta">
+            <div class="card-texto-cta">
+              <p>
+                O horizonte está lá, esperando por você. Hasteie a vela, pegue o
+                leme e comece a criar animações que ninguém vai esquecer!
+              </p>
+            </div>
+            <a href="formulario.html" class="botao-cta">Embarcar na aventura</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé inserido -->
+    <div id="rodape"></div>
+
+    <!-- Navbar e rodapé: cada um carrega o próprio CSS e HTML (caminhos a partir de pages/) -->
+    <script type="module" src="../components/rodape/rodape.js"></script>
+    <script type="module" src="../components/navbar/navbar.js"></script>
+
+    <div id="quiz"></div>
+    <script type="module" src="../components/quiz/quiz.js"></script>
+  </body>
 </html>
