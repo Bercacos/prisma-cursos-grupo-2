@@ -1,0 +1,304 @@
+
+@font-face {
+    font-family: "Karma";
+    src: url("../../assets/fonts/Karma-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Karma";
+    src: url("../../assets/fonts/Karma-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #30251F;
+    color: #DBDBDB;
+    font-family: "Karma", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 50px;
+    padding: 8px 4%;
+    background-color: #30251F;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.logo img {
+    display: block;
+    width: 135px;
+    max-height: 40px;
+    object-fit: contain;
+}
+
+
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.navegacao a {
+    color: #DBDBDB;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navegacao a:hover,
+.navegacao .link-ativo {
+    color: #D9A441;
+}
+
+.botao-cabecalho {
+    padding: 12px 22px;
+    background-color: #A52D2D;
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cabecalho:hover {
+    background-color: #812222;
+}
+
+/* APRESENTAÇÃO */
+
+
+.apresentacao {
+    padding: 42px 6% 20px;
+    text-align: left;
+}
+
+.apresentacao h1 {
+    margin: 0 0 18px;
+    color: #DBDBDB;
+    font-family: "Karma", serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+}
+
+.apresentacao p {
+    max-width: 900px;
+    margin: 0;
+    color: #DBDBDB;
+    font-family: "Karma", serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+
+/* CARDS DOS CURSOS */
+
+.lista-cursos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 60px;
+}
+.card-curso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+    background-color: transparent;
+    color: #DBDBDB;
+}
+
+.card-curso img {
+    display: block;
+    width: 180px;
+    height: 160px;
+    max-width: 100%;
+    margin: 0 auto 14px;
+    object-fit: contain;
+    object-position: center;
+}
+.card-curso:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+
+.card-curso h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 42px;
+    margin: 0 0 20px;
+    color: #DBDBDB;
+    font-family: "Karma", serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+}
+.botao-curso {
+    display: inline-block;
+    align-self: center;
+    margin-top: auto;
+    padding: 10px 16px;
+    background-color: #FFFFFF;
+    color: #30251F;
+    border: none;
+    border-radius: 7px;
+    font-family: "Karma", serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.botao-curso:hover {
+    background-color: #DBDBDB;
+}
+
+
+
+/* RODAPÉ */
+
+.rodape {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 50px;
+    padding: 50px 8%;
+    background-color: #241B17;
+    color: #DBDBDB;
+}
+
+.rodape-marca {
+    display: flex;
+    align-items: flex-start;
+}
+
+.rodape-marca img {
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.rodape-coluna h3 {
+    margin-bottom: 8px;
+    color: #DBDBDB;
+    font-size: 21px;
+}
+
+.rodape-coluna a,
+.rodape-coluna p {
+    color: #DBDBDB;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.rodape-coluna a:hover {
+    color: #D9A441;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navegacao {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .lista-cursos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .rodape {
+        gap: 30px;
+        padding: 40px 6%;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navegacao {
+        gap: 14px;
+    }
+
+    .navegacao a {
+        font-size: 14px;
+    }
+
+    .apresentacao {
+        padding: 45px 6% 25px;
+    }
+
+    .apresentacao h1 {
+        font-size: 30px;
+    }
+
+    .apresentacao p {
+        font-size: 16px;
+    }
+
+    .lista-cursos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px 20px 50px;
+    }
+
+    .card-curso img {
+        height: 200px;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px 8%;
+    }
+}
