@@ -6,8 +6,8 @@ A **Prisma Cursos** é uma plataforma de cursos profissionalizantes voltada para
 
 ## 🌐 Acesso ao projeto
 
-- **Site:** [https://bercacos.github.io/prisma-cursos-grupo-2/](https://bercacos.github.io/prisma-cursos-grupo-2/)
-- **Repositório:** [github.com/Bercacos/prisma-cursos-grupo-2](https://github.com/Bercacos/prisma-cursos-grupo-2)
+- **Site:** [https://bercacos.github.io/ prisma-cursos-site/](https://bercacos.github.io/ prisma-cursos-site/)
+- **Repositório:** [github.com/Bercacos/ prisma-cursos-site](https://github.com/Bercacos/ prisma-cursos-site)
 
 
 ## 🎯 Objetivo
@@ -194,11 +194,11 @@ Para visualizar ou modificar o projeto na sua máquina:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Bercacos/prisma-cursos-grupo-2.git
+   git clone https://github.com/Bercacos/ prisma-cursos-site.git
    ```
 2. Entre no diretório do projeto:
    ```bash
-   cd prisma-cursos-grupo-2
+   cd  prisma-cursos-site
    ```
 3. Inicie um servidor HTTP local na raiz do projeto. Com a extensão **Live Server** do VS Code, clique em **Go Live**; alternativamente, se tiver Python instalado, execute:
    ```bash
