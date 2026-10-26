@@ -232,7 +232,8 @@
                         <li>6.1 Online — Indicadores e qualidade das entregas</li>
                         <li>6.2 Online — Encerramento e lições aprendidas</li>
                         <li>6.3 Presencial — Apresentação e discussão do projeto final</li>
-                        <li>6.4 Avaliação — Entrega do projeto e reflexão sobre resultados</li>
+                        <li>6.4 Báu do tesouro à vista! – Clique no báu do tesouro ao lado para pegar sua recompensa!</li>
+                        <li>6.5 Avaliação — Entrega do projeto e reflexão sobre resultados</li>
                     </ul>
                     <p class="missao-secundaria">
                         ⭐ MISSÃO SECUNDÁRIA: Nova expedição: identificar uma melhoria
@@ -243,7 +244,15 @@
                     </p>
                 </div>
                 <div class="info-missao">
-                    <img src="../assets/icons/missao6.png" alt="" class="icone-missao">
+                    <button
+                        type="button"
+                        class="botao-tesouro botao-tesouro--ilha"
+                        data-quiz="gestao"
+                        aria-label="Abrir desafio da Ilha do Tesouro"
+                        aria-haspopup="dialog"
+                    >
+                        <img src="../assets/icons/treasure-1.svg" alt="" class="icone-missao">
+                    </button>
                     <h3>Ilha do Tesouro</h3>
                     <p>Tempo da Aventura: 20 horas</p>
                 </div>
@@ -328,5 +337,8 @@
     <script type="module" src="../components/navbar/navbar.js"></script>
 
     <script type="module" src="../components/rodape/rodape.js"></script>
+
+    <div id="quiz"></div>
+    <script type="module" src="../components/quiz/quiz.js"></script>
 </body>
 </html>
