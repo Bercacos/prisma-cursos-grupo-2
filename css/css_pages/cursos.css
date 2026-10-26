@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "Karma";
     src: url("../../assets/fonts/Karma-Regular.ttf") format("truetype");
@@ -32,8 +31,8 @@ a {
     text-decoration: none;
 }
 
-/* APRESENTAÇÃO */
 
+/* APRESENTAÇÃO */
 
 .apresentacao {
     padding: 42px 6% 20px;
@@ -62,7 +61,6 @@ a {
 
 /* CARDS DOS CURSOS */
 
-
 .lista-cursos {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -72,7 +70,6 @@ a {
     margin: 0 auto;
     padding: 20px 30px 60px;
 }
-
 
 .card-curso {
     display: flex;
@@ -93,11 +90,11 @@ a {
     object-fit: contain;
     object-position: center;
 }
+
 .card-curso:hover {
     transform: none;
     box-shadow: none;
 }
-
 
 .card-curso h2 {
     display: flex;
@@ -113,6 +110,19 @@ a {
     line-height: 1.4;
     text-align: center;
 }
+
+.descricao-curso {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    color: #DBDBDB;
+    font-family: "Karma", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+}
+
 .botao-curso {
     display: inline-block;
     align-self: center;
@@ -133,26 +143,25 @@ a {
     background-color: #DBDBDB;
 }
 
+
 /* TABLETS */
 
 @media (max-width: 900px) {
-
     .navegacao {
         flex-wrap: wrap;
         gap: 18px;
     }
 
     .lista-cursos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
     }
-    
 }
+
 
 /* CELULARES */
 
 @media (max-width: 600px) {
-
     .navegacao {
         gap: 14px;
     }
@@ -173,31 +182,20 @@ a {
         font-size: 16px;
     }
 
- .lista-cursos {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 25px 20px 50px;
-}
+    .lista-cursos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px 20px 50px;
+    }
 
     .card-curso img {
         height: 200px;
     }
-.card-curso h2 {
-    font-size: 22px;
-    line-height: 1.3;
-    min-height: auto;
-    margin-bottom: 15px;
-}
 
-}
-.descricao-curso {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto 20px;
-    color: #DBDBDB;
-    font-family: "Karma", serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
+    .card-curso h2 {
+        font-size: 22px;
+        line-height: 1.3;
+        min-height: auto;
+        margin-bottom: 15px;
+    }
 }

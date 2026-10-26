@@ -158,6 +158,7 @@ prisma-cursos-grupo-2/
 │       └── quem-somos.css
 │   └── global.css
 ├── docs/
+├── └── documentacao-de-alteracao.pdf
 │   └── organização.md
 ├── js/
 │   └── perguntas-quiz.js
