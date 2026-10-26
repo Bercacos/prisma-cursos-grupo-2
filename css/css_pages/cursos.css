@@ -32,60 +32,6 @@ a {
     text-decoration: none;
 }
 
-/* CABEÇALHO */
-
-.cabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    min-height: 50px;
-    padding: 8px 4%;
-    background-color: #30251F;
-    border-bottom: 1px solid #DBDBDB;
-}
-
-.logo img {
-    display: block;
-    width: 135px;
-    max-height: 40px;
-    object-fit: contain;
-}
-
-
-
-.navegacao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-}
-
-.navegacao a {
-    color: #DBDBDB;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.navegacao a:hover,
-.navegacao .link-ativo {
-    color: #D9A441;
-}
-
-.botao-cabecalho {
-    padding: 12px 22px;
-    background-color: #A52D2D;
-    color: #FFFFFF;
-    border-radius: 8px;
-    font-weight: bold;
-    white-space: nowrap;
-    transition: background-color 0.3s ease;
-}
-
-.botao-cabecalho:hover {
-    background-color: #812222;
-}
-
 /* APRESENTAÇÃO */
 
 
@@ -187,64 +133,9 @@ a {
     background-color: #DBDBDB;
 }
 
-
-
-/* RODAPÉ */
-
-.rodape {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 50px;
-    padding: 50px 8%;
-    background-color: #241B17;
-    color: #DBDBDB;
-}
-
-.rodape-marca {
-    display: flex;
-    align-items: flex-start;
-}
-
-.rodape-marca img {
-    display: block;
-    width: 190px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.rodape-coluna {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.rodape-coluna h3 {
-    margin-bottom: 8px;
-    color: #DBDBDB;
-    font-size: 21px;
-}
-
-.rodape-coluna a,
-.rodape-coluna p {
-    color: #DBDBDB;
-    font-size: 15px;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
-}
-
-.rodape-coluna a:hover {
-    color: #D9A441;
-}
-
 /* TABLETS */
 
 @media (max-width: 900px) {
-    .cabecalho {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
     .navegacao {
         flex-wrap: wrap;
@@ -254,20 +145,13 @@ a {
     .lista-cursos {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
-}
-    .rodape {
-        gap: 30px;
-        padding: 40px 6%;
     }
+    
 }
 
 /* CELULARES */
 
 @media (max-width: 600px) {
-    .cabecalho {
-        flex-direction: column;
-        padding: 20px;
-    }
 
     .navegacao {
         gap: 14px;
@@ -304,11 +188,7 @@ a {
     min-height: auto;
     margin-bottom: 15px;
 }
-    .rodape {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding: 35px 8%;
-    }
+
 }
 .descricao-curso {
     width: 100%;

@@ -24,14 +24,6 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: #30251F;
-}
-
 /* Nome da empresa */
 
 .logo {
@@ -39,19 +31,6 @@ header {
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
-}
-
-/* Links de navegação */
-
-nav {
-    display: flex;
-    gap: 24px;
-}
-
-nav a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 14px;
 }
 
 /* Botão para ver os cursos */
@@ -64,21 +43,6 @@ nav a {
     border-radius: 6px;
     font-size: 14px;
 }
-
-/* Ajustes para telas menores */
-
-@media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-}
-
 
 /* Apresentação do curso */
 
@@ -323,6 +287,16 @@ nav a {
     line-height: 1.6;
 }
 
+/* Ícone de cada missão */
+
+.icone-missao {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    margin: 0 auto 12px;
+}
+
 /* Adaptação para telas menores */
 
 @media (max-width: 768px) {
@@ -362,6 +336,11 @@ nav a {
     .conteudo-missao h3 {
         font-size: 19px;
         overflow-wrap: break-word;
+    }
+
+    .icone-missao {
+        max-width: 100px;
+        margin-bottom: 8px;
     }
 }
 
@@ -600,69 +579,6 @@ nav a {
     }
 }
 
-/* Rodapé */
-
-.rodape {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 32px;
-    padding: 40px 6%;
-    background-color: #30251F;
-    color: #FFFFFF;
-}
-
-.rodape h3 {
-    margin-top: 0;
-    margin-bottom: 16px;
-}
-
-.rodape p {
-    line-height: 1.6;
-}
-
-.rodape-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.rodape-links a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.rodape-links a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .rodape {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-}
-
-
-
-.rodape-cursos ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.rodape-cursos li {
-    margin-bottom: 10px;
-}
-
-.rodape-cursos a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.rodape-cursos a:hover {
-    text-decoration: underline;
-}
-
 /* Seção Diário de Bordo */
 .secao-2 {
     display: flex;
@@ -740,4 +656,3 @@ nav a {
         font-size: 16px;
     }
 }
-
