@@ -12,6 +12,15 @@
     font-style: normal;
 }
 /* Estilos do cabeçalho */
+:root {
+    --color-dark: #2F241A;
+    --color-light: #DBDBDB;
+    --color-red: #A52D2D;
+    --color-red-hover: #8A2424;
+    --font-primary: 'Karma', serif;
+    --shadow-text: 2px 3px 4px rgba(0, 0, 0, 0.6);
+    --margem-lateral: clamp(20px, 6.3vw, 120px);
+}
 
 body {
     margin: 0;
@@ -166,52 +175,98 @@ body {
 
 
 /* Público-alvo e objetivos */
-
 .publico-objetivos {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
-    padding: 48px 6%;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    column-gap: clamp(20px, 3vw, 60px);
+    align-items: start;
+    padding: 16px 5% 48px;
+    background-color: #FFFFFF;
+    color: #30251F;
+    font-family: var(--font-primary);
 }
-
+.imagem-navio {
+    display: block;
+    width: clamp(150px, 15vw, 320px);
+    height: auto;
+    align-self: center;
+    margin-top: 60px;
+}
 .bloco-informacao {
     min-width: 0;
 }
 
 .bloco-informacao h2 {
-    margin: 0 0 20px;
-    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    margin: 0;
+    padding: 10px 12px;
     background-color: #30251F;
     color: #FFFFFF;
-    border-radius: 24px;
+    border-radius: 999px;
     text-align: center;
-    font-size: 21px;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
 }
 
 .bloco-informacao ul {
-    padding-left: 24px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
 }
 
 .bloco-informacao li {
-    margin-bottom: 18px;
-    color: #51463F;
-    line-height: 1.7;
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 18px;
+    color: #30251F;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: justify;
 }
 
-/* Adaptação para celulares e tablets menores */
+.bloco-informacao li::before {
+    content: "";
+    position: absolute;
+    top: 0.55em;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #30251F;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
 
 @media (max-width: 768px) {
     .publico-objetivos {
         grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 32px 6%;
+        row-gap: 28px;
+        padding: 24px 6%;
     }
 
     .bloco-informacao h2 {
-        font-size: 19px;
+        font-size: 18px;
     }
+
+    .imagem-navio {
+        display: none;
+    }
+
+    .bloco-informacao li {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
 }
 
+
+/* Jornada de aprendizagem */
 
 /* Jornada de aprendizagem */
 
@@ -230,12 +285,11 @@ body {
 
 .missao {
     display: grid;
-    grid-template-columns: 1fr 220px;
+    grid-template-columns: minmax(0, 1fr) 220px;
     align-items: center;
     gap: 32px;
     margin-bottom: 40px;
 }
-
 .conteudo-missao {
     padding: 24px;
     background-color: #45352A;
@@ -264,29 +318,66 @@ body {
 }
 
 .missao-secundaria {
-    background-color: #F5E7BC;
-    color: #30251F;
+    background-color: #EAF4FF;
+    color: #000000;
+    margin-bottom: 8px;
 }
 
 .conquista {
-    background-color: #E8D2A0;
-    color: #30251F;
+    background-color: #FFF3CD;
+    color: #8B6914;
     font-weight: bold;
 }
 
 .info-missao {
-    text-align: center;
+text-align: center;
+font-family: var(--font-primary);
 }
 
 .info-missao h3 {
-    margin-bottom: 8px;
-    font-size: 24px;
+margin-bottom: 8px;
+font-family: inherit;
+font-size: 24px;
 }
 
 .info-missao p {
-    line-height: 1.6;
+font-family: inherit;
+line-height: 1.6;
 }
 
+.botao-tesouro {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    font-family: "Karma", serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botao-tesouro h3 {
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    font-family: "Karma", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.botao-tesouro p {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: "Karma", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
 /* Ícone de cada missão */
 
 .icone-missao {
@@ -387,159 +478,220 @@ body {
 /* Investimento na jornada */
 
 .investimento {
-    padding: 56px 6%;
-    text-align: center;
-    background-color: #F5EFE6;
-    color: #30251F;
+width: 100%;
+padding: clamp(40px, 5vw, 80px) 6%;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 24px;
+background-color: #30251F;
+color: #DBDBDB;
+box-sizing: border-box;
 }
 
-.investimento h2 {
-    margin: 0 0 24px;
-    font-size: 28px;
+.card-investimento {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+gap: 20px;
+width: fit-content;
+max-width: 100%;
+padding: 16px 24px;
+background-color: #A89273;
+border-radius: 20px;
+box-sizing: border-box;
+}
+
+
+.imagem-investimento {
+display: block;
+width: clamp(80px, 10vw, 120px);
+height: auto;
+object-fit: contain;
+flex-shrink: 0;
+}
+
+.conteudo-investimento {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 4px;
+flex: 1;
+min-width: 0;
+font-family: var(--font-primary);
+color: #DBDBDB;
+}
+
+.titulo-investimento {
+margin: 0;
+font-size: clamp(16px, 1.4vw, 20px);
+font-weight: bold;
+line-height: 1.3;
 }
 
 .preco-parcelado {
-    margin: 0 0 10px;
-    font-size: 30px;
-    font-weight: bold;
+margin: 0;
+font-size: clamp(14px, 1.2vw, 17px);
+line-height: 1.4;
 }
 
 .preco-vista {
-    margin: 0 0 28px;
-    font-size: 20px;
+margin: 0;
+font-size: clamp(14px, 1.2vw, 17px);
+line-height: 1.4;
 }
 
 .investimento .botao-principal {
-    margin-top: 8px;
+margin-top: 0;
 }
 
 /* Responsividade */
 
-@media (max-width: 768px) {
-    .investimento {
-        padding: 40px 6%;
-    }
+@media (max-width: 480px) {
+.investimento {
+padding: 32px 6%;
+gap: 20px;
+}
+.card-investimento {
+    gap: 12px;
+    padding: 14px;
+    border-radius: 16px;
+}
 
-    .investimento h2 {
-        font-size: 24px;
-    }
+.imagem-investimento {
+    width: 76px;
+}
 
-    .preco-parcelado {
-        font-size: 25px;
-    }
+.titulo-investimento {
+    font-size: 15px;
+}
 
-    .preco-vista {
-        font-size: 18px;
-    }
+.preco-parcelado,
+.preco-vista {
+    font-size: 13px;
+}
 }
 
 
 /* Perguntas frequentes */
 
 .faq {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 56px 6%;
+width: 100%;
+max-width: 1312px;
+margin: 0 auto;
+padding: 40px 6%;
+background-color: #30251F;
+color: #DBDBDB;
+box-sizing: border-box;
 }
 
 .faq > h2 {
-    margin: 0 0 32px;
-    color: #30251F;
-    text-align: center;
-    font-size: 28px;
+margin: 0 0 clamp(32px, 4vw, 56px);
+color: #DBDBDB;
+text-align: left;
+font-size: clamp(24px, 3.2vw, 48px);
+line-height: 1.25;
+text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 .faq-item {
-    margin-bottom: 20px;
-    padding: 22px;
-    background-color: #F5EFE6;
-    border-radius: 10px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+margin-bottom: clamp(28px, 3.5vw, 48px);
+padding: 0;
+background-color: transparent;
+border-radius: 0;
 }
 
 .faq-item h3 {
-    margin: 0 0 12px;
-    color: #30251F;
-    font-size: 19px;
+margin: 0;
+color: #DBDBDB;
+font-size: clamp(16px, 1.8vw, 26px);
+font-weight: bold;
+line-height: 1.35;
+text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 .faq-item p {
-    margin: 0;
-    color: #51463F;
-    line-height: 1.7;
+margin: 0;
+color: #DBDBDB;
+font-size: clamp(14px, 1.45vw, 22px);
+line-height: 1.6;
+text-align: justify;
+hyphens: auto;
+opacity: 0.95;
 }
 
 /* Responsividade */
 
 @media (max-width: 768px) {
-    .faq {
-        padding: 40px 6%;
-    }
-
-    .faq > h2 {
-        font-size: 24px;
-    }
-
-    .faq-item {
-        padding: 18px;
-    }
-
-    .faq-item h3 {
-        font-size: 17px;
-    }
+.faq {
+padding: 32px 6%;
 }
+.faq-item {
+    margin-bottom: 28px;
+}
+}
+
 
 /* Depoimento de aluno */
 
 .depoimento {
-    padding: 56px 6%;
-    background-color: #30251F;
-    color: #FFFFFF;
-    text-align: center;
+width: 100%;
+max-width: 1312px;
+margin: 0 auto;
+padding: clamp(40px, 4vw, 64px) 6% clamp(48px, 5vw, 80px);
+background-color: #30251F;
+color: #DBDBDB;
+text-align: left;
+box-sizing: border-box;
 }
 
 .depoimento h2 {
-    margin: 0 0 28px;
-    font-size: 28px;
+margin: 0 0 clamp(24px, 3vw, 44px);
+font-size: clamp(24px, 3.2vw, 48px);
+font-weight: bold;
+line-height: 1.25;
+text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 .depoimento blockquote {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 28px;
-    background-color: #45352A;
-    border-radius: 12px;
+    max-width: 1312px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
 }
-
 .depoimento blockquote p {
-    margin: 0 0 24px;
-    line-height: 1.8;
-    font-size: 17px;
+margin: 0 0 0.5em;
+font-size: clamp(16px, 2vw, 32px);
+font-weight: normal;
+line-height: 1.75;
 }
 
 .depoimento blockquote footer {
-    line-height: 1.6;
-    color: #F5EFE6;
+line-height: 1.75;
+font-size: clamp(16px, 2vw, 32px);
+color: #DBDBDB;
+}
+
+.depoimento blockquote footer strong {
+font-weight: bold;
 }
 
 /* Responsividade */
 
 @media (max-width: 768px) {
-    .depoimento {
-        padding: 40px 6%;
-    }
-
-    .depoimento h2 {
-        font-size: 24px;
-    }
-
-    .depoimento blockquote {
-        padding: 20px;
-    }
-
-    .depoimento blockquote p {
-        font-size: 16px;
-    }
+.depoimento blockquote p {
+font-size: 16px;
 }
+.depoimento blockquote footer {
+    font-size: 16px;
+}
+}
+
 
 
 /* Chamada final */
@@ -587,7 +739,7 @@ body {
     padding: 60px 6%;
     background-color: #30251F;
     color: #DBDBDB;
-    font-family: Georgia, serif;
+    font-family: "Karma", serif;
 }
 
 .conteudo-imagem {
@@ -618,7 +770,7 @@ body {
     display: inline-block;
     padding: 12px 24px;
     border-radius: 30px;
-    background-color: #DBDBDB;
+    background-color: #FFFFFF;
     color: #30251F;
     font-size: 28px;
     margin-bottom: 16px;
@@ -654,5 +806,202 @@ body {
 
     .detalhes-curso {
         font-size: 16px;
+    }
+}
+/* CHAMADA FINAL — adaptada da página-modelo */
+
+.secao-7 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(40px, 5vw, 80px) var(--margem-lateral);
+    background-color: var(--color-dark);
+}
+
+.container-cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(32px, 4vw, 56px);
+    width: 100%;
+    max-width: 1110px;
+}
+
+.imagem-pirata-cta {
+    display: block;
+    width: clamp(200px, 18vw, 280px);
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.bloco-conteudo-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    max-width: 780px;
+}
+
+.card-texto-cta {
+    background-color: #A38C6D;
+    padding: clamp(32px, 4vw, 56px) clamp(28px, 3.5vw, 48px);
+    border-radius: clamp(20px, 2.5vw, 32px);
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-texto-cta p {
+    font-family: var(--font-primary);
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: bold;
+    color: var(--color-light);
+    line-height: 1.5;
+    text-align: center;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.botao-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: clamp(16px, 1.8vw, 24px) clamp(24px, 3vw, 40px);
+    background-color: var(--color-red);
+    color: var(--color-light);
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: clamp(18px, 2vw, 28px);
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao-cta:hover {
+    background-color: var(--color-red-hover);
+    transform: scale(1.02);
+}
+
+/* Responsividade da chamada final */
+@media (max-width: 768px) {
+    .secao-7 {
+        padding: 32px 20px 60px;
+    }
+
+    .container-cta {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .imagem-pirata-cta {
+        display: none;
+    }
+
+    .bloco-conteudo-cta {
+        width: 100%;
+        max-width: none;
+        gap: 16px;
+    }
+
+    .card-texto-cta {
+        padding: 24px 20px;
+    }
+
+    .card-texto-cta p {
+        font-size: 16px;
+    }
+
+    .botao-cta {
+        font-size: 18px;
+        padding: 14px 20px;
+        border-radius: 16px;
+    }
+
+    .botao-cta:hover {
+        transform: none;
+    }
+}
+/* Trajetos entre as missões */
+
+.trajeto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 24px;
+}
+
+.trajeto img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 768px) {
+    .jornada {
+        width: 100%;
+        max-width: 100%;
+        padding: 32px 6%;
+        box-sizing: border-box;
+    }
+
+    .missao,
+    .missao-direita {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        box-sizing: border-box;
+    }
+
+    .conteudo-missao {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    .trajeto img {
+        width: 100%;
+        max-width: 220px;
+    }
+}
+/* Trajetos no celular */
+@media screen and (max-width: 768px) {
+    .trajeto {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0;
+        margin: 0 auto 24px;
+    }
+
+    .trajeto img {
+        display: none;
+    }
+
+    .trajeto::after {
+        content: "";
+        display: block;
+        width: 3px;
+        height: 55px;
+        background-color: #DBDBDB;
+    }
+
+    .trajeto::before {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        width: 14px;
+        height: 14px;
+        border-right: 3px solid #DBDBDB;
+        border-bottom: 3px solid #DBDBDB;
+        transform: rotate(45deg);
     }
 }
