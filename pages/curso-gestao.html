@@ -49,24 +49,6 @@
             </div>
         </section>
 
-        <section class="diario-bordo">
-            <h2>Diário de Bordo</h2>
-            <ul>
-                <li>
-                    <strong>Duração da viagem:</strong>
-                    120 horas ao longo de 4 meses
-                </li>
-                <li>
-                    <strong>Modalidade:</strong>
-                    Híbrida, com atividades online e encontros presenciais
-                </li>
-                <li>
-                    <strong>Patente exigida:</strong>
-                    Iniciante/intermediário. Não exige experiência prévia em gestão.
-                </li>
-            </ul>
-        </section>
-
         <section class="publico-objetivos">
             <div class="bloco-informacao">
                 <h2>Quem pode entrar na tripulação</h2>
@@ -86,7 +68,11 @@
                     </li>
                 </ul>
             </div>
-
+<img
+        src="../assets/icons/pirate_boat-cuate_1.png"
+        alt="Ilustração de um navio pirata no mar"
+        class="imagem-navio"
+    >
             <div class="bloco-informacao">
                 <h2>Seu butim ao final da viagem</h2>
                 <ul>
@@ -101,6 +87,7 @@
         </section>
 
         <section class="jornada" id="jornada">
+            
             <h2 class="titulo-jornada">
                 Içar a âncora, marujos! A primeira aventura de vocês está para começar
             </h2>
@@ -128,7 +115,9 @@
                     <p>Tempo da Parada: 20 horas</p>
                 </div>
             </article>
-
+<div class="trajeto trajeto-2" aria-hidden="true">
+    <img src="../assets/icons/trajeto-2-recortado.svg" alt="">
+</div>
             <article class="missao missao-direita">
                 <div class="conteudo-missao">
                     <h3>Traçar a rota: Escopo e planejamento 🗺️</h3>
@@ -152,7 +141,9 @@
                     <p>Tempo da Parada: 20 horas</p>
                 </div>
             </article>
-
+<div class="trajeto trajeto-1" aria-hidden="true">
+    <img src="../assets/icons/trajeto-1-recortado.svg" alt="">
+</div>
             <article class="missao missao-esquerda">
                 <div class="conteudo-missao">
                     <h3>Organizar as provisões: Custos e recursos 💰</h3>
@@ -176,7 +167,9 @@
                     <p>Tempo da Navegação: 20 horas</p>
                 </div>
             </article>
-
+<div class="trajeto trajeto-2" aria-hidden="true">
+    <img src="../assets/icons/trajeto-2-recortado.svg" alt="">
+</div>
             <article class="missao missao-direita">
                 <div class="conteudo-missao">
                     <h3>Conduzir a tripulação: Liderança e comunicação ⚔️</h3>
@@ -200,7 +193,9 @@
                     <p>Tempo da Aventura: 20 horas</p>
                 </div>
             </article>
-
+<div class="trajeto trajeto-1" aria-hidden="true">
+    <img src="../assets/icons/trajeto-1-recortado.svg" alt="">
+</div>
             <article class="missao missao-esquerda">
                 <div class="conteudo-missao">
                     <h3>Ajustar as velas: Riscos e práticas ágeis ⛵</h3>
@@ -224,7 +219,9 @@
                     <p>Tempo da Navegação: 20 horas</p>
                 </div>
             </article>
-
+<div class="trajeto trajeto-2" aria-hidden="true">
+    <img src="../assets/icons/trajeto-2-recortado.svg" alt="">
+</div>
             <article class="missao missao-direita">
                 <div class="conteudo-missao">
                     <h3>Chegar ao destino: Monitoramento e encerramento 🏝️</h3>
@@ -243,34 +240,38 @@
                         🏆 CAPITÃO DA EXPEDIÇÃO
                     </p>
                 </div>
-                <div class="info-missao">
-                    <button
-                        type="button"
-                        class="botao-tesouro botao-tesouro--ilha"
-                        data-quiz="gestao"
-                        aria-label="Abrir desafio da Ilha do Tesouro"
-                        aria-haspopup="dialog"
-                    >
-                        <img src="../assets/icons/treasure-1.svg" alt="" class="icone-missao">
-                    </button>
-                    <h3>Ilha do Tesouro</h3>
-                    <p>Tempo da Aventura: 20 horas</p>
-                </div>
+                <button type="button" class="info-missao botao-tesouro" data-quiz="gestao">
+    <img src="../assets/icons/missao6.png" alt="" class="icone-missao">
+    <h3>Ilha do Tesouro</h3>
+    <p>Tempo da Aventura: 20 horas</p>
+</button>
+
             </article>
         </section>
 
         <section class="investimento">
-            <h2>Investimento na sua jornada:</h2>
-            <p class="preco-parcelado">
-                12× de R$ 199 sem juros
-            </p>
-            <p class="preco-vista">
-                ou R$ 2.149,20 à vista
-            </p>
-            <a href="formulario.html" class="botao-principal">
-                Quero embarcar!
-            </a>
-        </section>
+    <div class="card-investimento">
+        <img
+            src="../assets/icons/investimento.png"
+            alt="Baú do tesouro"
+            class="imagem-investimento"
+        >
+
+    <div class="conteudo-investimento">
+        <h2 class="titulo-investimento">
+            Investimento na sua jornada:
+        </h2>
+
+        <p class="preco-parcelado">
+            12× de R$ 199 sem juros
+        </p>
+
+        <p class="preco-vista">
+            ou R$ 2.149,20 à vista
+        </p>
+    </div>
+</section>
+
 
         <section class="faq">
             <h2>Dúvidas Frequentes da Marujada (FAQ):</h2>
@@ -305,6 +306,10 @@
         <section class="depoimento">
             <h2>Depoimento de aluno</h2>
             <blockquote>
+            
+                <footer>
+                    <strong>Mariana Santos</strong> — Estudante de Administração
+                </footer>
                 <p>
                     “Eu já participava de projetos na faculdade, mas tinha dificuldade
                     para transformar as ideias do grupo em um plano que todos
@@ -314,31 +319,44 @@
                     graduação. Hoje consigo explicar melhor minhas decisões e
                     apresentar um projeto com mais segurança.”
                 </p>
-                <footer>
-                    <strong>Mariana Santos</strong> — Estudante de Administração
-                </footer>
             </blockquote>
         </section>
 
-        <section class="chamada-final">
-            <h2>O horizonte está lá, esperando por você.</h2>
-            <p>
-                Hasteie a vela, pegue o leme e comece a criar experiências
-                que ninguém vai esquecer.
-            </p>
-            <a href="formulario.html" class="botao-principal">
+
+<section class="secao-7">
+    <div class="container-cta">
+
+        <img
+            src="../assets/icons/Pirata-design.svg"
+            alt="Ilustração de um pirata segurando um computador e um megafone"
+            class="imagem-pirata-cta"
+        >
+
+        <div class="bloco-conteudo-cta">
+
+            <div class="card-texto-cta">
+                <p>
+                    O horizonte está lá, esperando por você.
+                    Hasteie a vela, pegue o leme e comece a criar
+                    experiências que ninguém vai esquecer.
+                </p>
+            </div>
+
+            <a href="formulario.html" class="botao-cta">
                 Embarcar na aventura
             </a>
-        </section>
-    </main>
 
+        </div>
+    </div>
+</section>
+
+    </main>
+    <div id="quiz"></div>
     <div id="rodape"></div>
 
     <script type="module" src="../components/navbar/navbar.js"></script>
 
     <script type="module" src="../components/rodape/rodape.js"></script>
-
-    <div id="quiz"></div>
     <script type="module" src="../components/quiz/quiz.js"></script>
 </body>
 </html>
