@@ -12,6 +12,15 @@
     font-style: normal;
 }
 /* Estilos do cabeçalho */
+:root {
+    --color-dark: #2F241A;
+    --color-light: #DBDBDB;
+    --color-red: #A52D2D;
+    --color-red-hover: #8A2424;
+    --font-primary: 'Karma', serif;
+    --shadow-text: 2px 3px 4px rgba(0, 0, 0, 0.6);
+    --margem-lateral: clamp(20px, 6.3vw, 120px);
+}
 
 body {
     margin: 0;
@@ -275,18 +284,54 @@ body {
 }
 
 .info-missao {
-    text-align: center;
+text-align: center;
+font-family: var(--font-primary);
 }
 
 .info-missao h3 {
-    margin-bottom: 8px;
-    font-size: 24px;
+margin-bottom: 8px;
+font-family: inherit;
+font-size: 24px;
 }
 
 .info-missao p {
-    line-height: 1.6;
+font-family: inherit;
+line-height: 1.6;
 }
 
+.botao-tesouro {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    font-family: "Karma", serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botao-tesouro h3 {
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    font-family: "Karma", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.botao-tesouro p {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: "Karma", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
 /* Ícone de cada missão */
 
 .icone-missao {
@@ -654,5 +699,124 @@ body {
 
     .detalhes-curso {
         font-size: 16px;
+    }
+}
+/* CHAMADA FINAL — adaptada da página-modelo */
+
+.secao-7 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(40px, 5vw, 80px) var(--margem-lateral);
+    background-color: var(--color-dark);
+}
+
+.container-cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(32px, 4vw, 56px);
+    width: 100%;
+    max-width: 1110px;
+}
+
+.imagem-pirata-cta {
+    display: block;
+    width: clamp(200px, 18vw, 280px);
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.bloco-conteudo-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    max-width: 780px;
+}
+
+.card-texto-cta {
+    background-color: #A38C6D;
+    padding: clamp(32px, 4vw, 56px) clamp(28px, 3.5vw, 48px);
+    border-radius: clamp(20px, 2.5vw, 32px);
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-texto-cta p {
+    font-family: var(--font-primary);
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: bold;
+    color: var(--color-light);
+    line-height: 1.5;
+    text-align: center;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.botao-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: clamp(16px, 1.8vw, 24px) clamp(24px, 3vw, 40px);
+    background-color: var(--color-red);
+    color: var(--color-light);
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: clamp(18px, 2vw, 28px);
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao-cta:hover {
+    background-color: var(--color-red-hover);
+    transform: scale(1.02);
+}
+
+/* Responsividade da chamada final */
+@media (max-width: 768px) {
+    .secao-7 {
+        padding: 32px 20px 60px;
+    }
+
+    .container-cta {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .imagem-pirata-cta {
+        display: none;
+    }
+
+    .bloco-conteudo-cta {
+        width: 100%;
+        max-width: none;
+        gap: 16px;
+    }
+
+    .card-texto-cta {
+        padding: 24px 20px;
+    }
+
+    .card-texto-cta p {
+        font-size: 16px;
+    }
+
+    .botao-cta {
+        font-size: 18px;
+        padding: 14px 20px;
+        border-radius: 16px;
+    }
+
+    .botao-cta:hover {
+        transform: none;
     }
 }

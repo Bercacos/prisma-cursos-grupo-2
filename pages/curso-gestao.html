@@ -224,11 +224,12 @@
                         🏆 CAPITÃO DA EXPEDIÇÃO
                     </p>
                 </div>
-                <div class="info-missao">
-                    <img src="../assets/icons/missao6.png" alt="" class="icone-missao">
-                    <h3>Ilha do Tesouro</h3>
-                    <p>Tempo da Aventura: 20 horas</p>
-                </div>
+                <button type="button" class="info-missao botao-tesouro" data-quiz="gestao">
+    <img src="../assets/icons/missao6.png" alt="" class="icone-missao">
+    <h3>Ilha do Tesouro</h3>
+    <p>Tempo da Aventura: 20 horas</p>
+</button>
+
             </article>
         </section>
 
@@ -293,22 +294,41 @@
             </blockquote>
         </section>
 
-        <section class="chamada-final">
-            <h2>O horizonte está lá, esperando por você.</h2>
-            <p>
-                Hasteie a vela, pegue o leme e comece a criar experiências
-                que ninguém vai esquecer.
-            </p>
-            <a href="formulario.html" class="botao-principal">
+
+<section class="secao-7">
+    <div class="container-cta">
+
+        <img
+            src="../assets/icons/Pirata-design.svg"
+            alt="Ilustração de um pirata segurando um computador e um megafone"
+            class="imagem-pirata-cta"
+        >
+
+        <div class="bloco-conteudo-cta">
+
+            <div class="card-texto-cta">
+                <p>
+                    O horizonte está lá, esperando por você.
+                    Hasteie a vela, pegue o leme e comece a criar
+                    experiências que ninguém vai esquecer.
+                </p>
+            </div>
+
+            <a href="formulario.html" class="botao-cta">
                 Embarcar na aventura
             </a>
-        </section>
-    </main>
 
+        </div>
+    </div>
+</section>
+
+    </main>
+    <div id="quiz"></div>
     <div id="rodape"></div>
 
     <script type="module" src="../components/navbar/navbar.js"></script>
 
     <script type="module" src="../components/rodape/rodape.js"></script>
+    <script type="module" src="../components/quiz/quiz.js"></script>
 </body>
 </html>
