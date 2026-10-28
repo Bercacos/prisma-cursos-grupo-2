@@ -1,14 +1,8 @@
-/* ============================================================
-   HOME — CSS ORGANIZADO
-   Regras e valores originais preservados; @media consolidados.
-   ============================================================ */
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Karma:wght@400;500;600;700&display=swap");
 
 
-/* ===================== 01. ESTILOS GERAIS ===================== */
+/* eestilo geral */
 body {
     margin: 0;
     background-color: #2F241A;
@@ -21,7 +15,7 @@ h3 {
 }
 
 
-/* ===================== 02. INÍCIO / HERO ===================== */
+/* sessão 1 - inicio */
 .inicio {
     background-image: url("../../assets/img/fundo_navio_inicio.png");
     background-size: cover;
@@ -47,11 +41,9 @@ h3 {
 .titulo-frase-efeito h1,
 .titulo-frase-efeito h2 {
     margin: 0;
-    font-size: clamp(36px, 6.5vw, 96px);
+    font-size: clamp(32px, 5.5vw, 80px);
     font-weight: 600;
     line-height: 1.2;
-    /* Contorno discreto para destacar sobre a imagem */
-    -webkit-text-stroke: 1px #171310;
     paint-order: stroke fill;
 }
 
@@ -73,7 +65,7 @@ h3 {
 }
 
 
-/* ===================== 03. CURSOS ===================== */
+/* sessão 2 - cursos */
 .cursos {
     background-size: cover;
     background-position: center;
@@ -99,14 +91,14 @@ h3 {
 
 .sub-titulo h2 {
     font-family: "Karma", serif;
-    font-size: 100px;
+    font-size: 72px;
     font-weight: bold;
     color: #A89273;
 }
 
 .sub-titulo p {
     font-family: "Karma", serif;
-    font-size: 35px;
+    font-size: 24px;
     color: #dbdbdb;
     font-weight: bold;
 }
@@ -119,7 +111,7 @@ h3 {
 
 .adobe-effects h3 {
     font-family: "Karma", serif;
-    font-size: 35px;
+    font-size: 28px;
     color: #dbdbdb;
     font-weight: bold;
 }
@@ -138,7 +130,7 @@ h3 {
 
 .descricao-adobe p {
     font-family: "Karma", serif;
-    font-size: 25px;
+    font-size: 20px;
     color: #dbdbdb;
     font-weight: bold;
     display: flex;
@@ -152,7 +144,7 @@ h3 {
 
 .programaçao-python h3 {
     font-family: "Karma", serif;
-    font-size: 35px;
+    font-size: 28px;
     color: #dbdbdb;
     font-weight: bold;
 }
@@ -171,7 +163,7 @@ h3 {
 
 .descricao-python p {
     font-family: "Karma", serif;
-    font-size: 25px;
+    font-size: 20px;
     color: #dbdbdb;
     font-weight: bold;
     display: flex;
@@ -187,7 +179,7 @@ h3 {
 
 .markting-digital h3 {
     font-family: "Karma", serif;
-    font-size: 35px;
+    font-size: 28px;
     color: #dbdbdb;
     font-weight: bold;
 }
@@ -206,7 +198,7 @@ h3 {
 
 .descricao-markting p {
     font-family: "Karma", serif;
-    font-size: 25px;
+    font-size: 20px;
     color: #dbdbdb;
     font-weight: bold;
     display: flex;
@@ -222,7 +214,7 @@ h3 {
 
 .empreendedorismo-digital h3 {
     font-family: "Karma", serif;
-    font-size: 35px;
+    font-size: 28px;
     color: #dbdbdb;
     font-weight: bold;
 }
@@ -241,7 +233,7 @@ h3 {
 
 .descricao-empreendedorismo p {
     font-family: "Karma", serif;
-    font-size: 25px;
+    font-size: 20px;
     color: #dbdbdb;
     font-weight: bold;
     display: flex;
@@ -257,7 +249,7 @@ h3 {
 
 .gestao h3 {
     font-family: "Karma", serif;
-    font-size: 35px;
+    font-size: 28px;
     color: #dbdbdb;
     font-weight: bold;
 }
@@ -276,7 +268,7 @@ h3 {
 
 .descricao-gestao p {
     font-family: "Karma", serif;
-    font-size: 25px;
+    font-size: 20px;
     color: #dbdbdb;
     font-weight: bold;
     display: flex;
@@ -285,7 +277,7 @@ h3 {
 }
 
 
-/* ===================== 04. QUEM SOMOS ===================== */
+/* sessão 3 - quem somos */
 .quem-somos {
     background-color: #dbdbdb;
     padding: 80px 64px 120px;
@@ -303,13 +295,13 @@ h3 {
 .quem-somos-container .sub-titulo p {
     color: #2F241A;
     font-family: "Karma", serif;
-    font-size: 35px;
+    font-size: 24px;
 }
 
 .descricao-quem-somos p {
     color: #2F241A;
     font-family: "Karma", serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -319,7 +311,7 @@ h3 {
 }
 
 
-/* ===================== 05. DEPOIMENTOS ===================== */
+/* sessão 4 - depoimentos */
 .depoimentos {
     background-color: #2F241A;
     padding: 80px 64px;
@@ -350,7 +342,7 @@ h3 {
     min-width: 0;
     color: #dbdbdb;
     font-family: "Karma", serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 1.6;
 }
@@ -365,7 +357,7 @@ h3 {
 }
 
 
-/* ===================== 06. CONTATO ===================== */
+/* sessão 5 - contato */
 .contato {
     background-color: #dbdbdb;
     padding: 80px 64px;
@@ -380,7 +372,7 @@ h3 {
 
 .contato-container .sub-titulo p {
     color: #2F241A;
-    padding-right: 320px;
+    padding-right: 0;
 }
 
 .descricao-contato {
@@ -395,7 +387,7 @@ h3 {
     flex-direction: column;
     flex: 1;
     min-width: 0;
-    gap: 40px;
+    gap: 28px;
 }
 
 .canal-contato {
@@ -406,10 +398,16 @@ h3 {
 
 .icone-contato {
     display: block;
-    width: 122px;
-    height: 122px;
+    width: 64px;
+    height: 64px;
     flex-shrink: 0;
     object-fit: contain;
+}
+
+.icone-contato-social {
+    width: 88px;
+    height: 88px;
+    margin-inline: -12px;
 }
 
 .canal-contato > div {
@@ -420,25 +418,25 @@ h3 {
     margin: 0;
     color: #2F241A;
     font-family: "Karma", serif;
-    font-size: 35px;
+    font-size: 28px;
     font-weight: bold;
 }
 
-.canal-contato p {
+.canal-contato p, .canal-contato address {
     margin: 4px 0 0;
     color: #2F241A;
     font-family: "Karma", serif;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1.5;
     overflow-wrap: anywhere;
     font-weight: bold;
 }
 
 .imagem-contato {
-    position: absolute;
-    top: 40px;
-    right: 64px;
-    width: 450px;
+    position: static;
+    align-self: flex-start;
+    width: 28%;
+    max-width: 280px;
     height: auto;
 }
 
@@ -447,13 +445,11 @@ h3 {
     margin-inline: auto;
 }
 
-/* CELULAR — até 768px */
-
-/* CELULAR PEQUENO — até 400px */
 
 
-/* ===================== 07. RESPONSIVIDADE ===================== */
+/* responsividade */
 
+/* tablet */
 @media (max-width: 1024px) {
     .inicio-container {
         padding: 0 32px;
@@ -471,7 +467,7 @@ h3 {
 
     .titulo-frase-efeito h1,
     .titulo-frase-efeito h2 {
-        font-size: clamp(40px, 6vw, 64px);
+        font-size: clamp(32px, 5.5vw, 56px);
     }
 
     .cursos,
@@ -482,18 +478,18 @@ h3 {
     }
 
     .sub-titulo h2 {
-        font-size: 72px;
+        font-size: 56px;
         line-height: 1.2;
     }
 
     .sub-titulo p,
     .quem-somos-container .sub-titulo p,
     .contato-container .sub-titulo p {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .cursos h3 {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .descricao-adobe,
@@ -521,12 +517,12 @@ h3 {
     .descricao-gestao p {
         flex: 1;
         min-width: 0;
-        font-size: 22px;
+        font-size: 18px;
         line-height: 1.5;
     }
 
     .descricao-quem-somos p {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.6;
     }
 
@@ -541,7 +537,7 @@ h3 {
     }
 
     .texto-depoimento {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .contato {
@@ -549,13 +545,10 @@ h3 {
     }
 
     .contato-container .sub-titulo {
-        padding-right: 210px;
+        padding-right: 0;
     }
 
     .imagem-contato {
-        position: absolute;
-        top: 32px;
-        right: 32px;
         width: 180px;
         height: auto;
     }
@@ -566,11 +559,11 @@ h3 {
     }
 
     .canal-contato h3 {
-        font-size: 30px;
+        font-size: 24px;
     }
 
-    .canal-contato p {
-        font-size: 23px;
+    .canal-contato p, .canal-contato address {
+        font-size: 19px;
     }
 
     .icone-contato {
@@ -578,9 +571,15 @@ h3 {
         height: 60px;
     }
 
+    .icone-contato-social {
+        width: 82px;
+        height: 82px;
+        margin-inline: -11px;
+    }
+
     main .botao-claro,
     main .botao-escuro {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .quem-somos {
@@ -590,6 +589,8 @@ h3 {
     }
 }
 
+
+/*mobile */
 @media (max-width: 768px) {
     .inicio-container {
         padding: 32px 24px;
@@ -609,7 +610,7 @@ h3 {
 
     .titulo-frase-efeito h1,
     .titulo-frase-efeito h2 {
-        font-size: clamp(36px, 7vw, 52px);
+        font-size: clamp(30px, 6vw, 44px);
         -webkit-text-stroke: 0.5px #171310;
     }
 
@@ -628,18 +629,18 @@ h3 {
     }
 
     .sub-titulo h2 {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .sub-titulo p,
     .quem-somos-container .sub-titulo p,
     .contato-container .sub-titulo p {
-        font-size: 26px;
+        font-size: 22px;
         line-height: 1.4;
     }
 
     .cursos h3 {
-        font-size: 28px;
+        font-size: 24px;
         line-height: 1.4;
     }
 
@@ -668,12 +669,12 @@ h3 {
     .descricao-empreendedorismo p,
     .descricao-gestao p {
         margin: 0;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .descricao-quem-somos p {
         margin: 0;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .descricao-depoimentos {
@@ -683,18 +684,17 @@ h3 {
     }
 
     .texto-depoimento {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 1.5;
     }
 
     .contato-container .sub-titulo {
-        padding-right: 120px;
-        min-height: 120px;
+        padding-right: 0;
+        min-height: 0;
     }
 
     .imagem-contato {
-        top: 32px;
-        right: 24px;
+        align-self: center;
         width: 110px;
     }
 
@@ -717,12 +717,19 @@ h3 {
         height: 52px;
     }
 
-    .canal-contato h3 {
-        font-size: 26px;
+    .icone-contato-social {
+        width: 72px;
+        height: 72px;
+        margin-inline: -10px;
     }
 
-    .canal-contato p {
-        font-size: 21px;
+    .canal-contato h3 {
+        font-size: 22px;
+    }
+
+
+    .canal-contato p, .canal-contato address {
+        font-size: 18px;
         overflow-wrap: anywhere;
     }
 
@@ -733,7 +740,7 @@ h3 {
         min-width: 0;
         margin-inline: auto;
         padding: 12px 20px;
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .cursos {
@@ -772,6 +779,8 @@ h3 {
     }
 }
 
+
+/*mobile pequeno */
 @media (max-width: 400px) {
     .inicio-container {
         padding-inline: 16px;
@@ -798,23 +807,22 @@ h3 {
         padding: 40px 16px;
     }
 
-    /* Mantém o padding-bottom de 80px definido em até 768px. */
     .cursos {
         padding-bottom: 80px;
     }
 
     .sub-titulo h2 {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .sub-titulo p,
     .quem-somos-container .sub-titulo p,
     .contato-container .sub-titulo p {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .cursos h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .descricao-adobe p,
@@ -823,7 +831,7 @@ h3 {
     .descricao-empreendedorismo p,
     .descricao-gestao p,
     .descricao-quem-somos p {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .descricao-depoimentos {
@@ -838,7 +846,7 @@ h3 {
     }
 
     .texto-depoimento {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .texto-depoimento + .imagem-depoimentos {
@@ -846,8 +854,8 @@ h3 {
     }
 
     .contato-container .sub-titulo {
-        padding-right: 85px;
-        min-height: 95px;
+        padding-right: 0;
+        min-height: 0;
     }
 
     .imagem-contato {
@@ -861,24 +869,32 @@ h3 {
         height: 40px;
     }
 
+    .icone-contato-social {
+        width: 56px;
+        height: 56px;
+        margin-inline: -8px;
+    }
+
     .canal-contato {
         gap: 12px;
     }
 
     .canal-contato h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
-
-    .canal-contato p {
-        font-size: 18px;
+    .canal-contato p, .canal-contato address{
+        font-size: 16px;
+        
     }
 
     main .botao-claro,
     main .botao-escuro {
         padding: 10px 16px;
-        font-size: 24px;
+        font-size: 20px;
     }
 }
+
+/*ajustes para corrigir interfaces intermediarias*/
 
 @media (min-width: 1025px) {
     .cursos {
