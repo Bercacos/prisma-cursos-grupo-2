@@ -27,7 +27,7 @@ async function iniciarQuiz() {
     let curso;
     let perguntaAtual = 0;
 
-    dialog.querySelector(".quiz-bau-imagem").src = new URL("../../assets/icons/inverstimento.png", pastaQuiz).href;
+    dialog.querySelector(".quiz-bau-imagem").src = new URL("../../assets/icons/investimento.png", pastaQuiz).href;
     dialog.querySelector(".quiz-voltar").href = new URL("../../index.html", pastaQuiz).href;
 
     function mudarTela(tela, textoTitulo, focar = true) {
